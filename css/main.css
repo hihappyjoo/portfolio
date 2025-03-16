@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+.name-marquee {
+    position: absolute;
+    top: 17%;
+    left: -450%;
+    z-index: 10000;
+
+    /* display: none; */
+}
+
+.name-marquee .hee,
+.name-marquee .joo {
+    display: flex;
+    width: fit-content;
+    height: 392px;
+    align-items: center;
+    overflow: hidden;
+
+    font-family: "Roboto Condensed";
+    font-weight: 900;
+    font-style: italic;
+    font-size: 43rem;
+    line-height: 0.85;
+    letter-spacing: -10px;
+    color: var(--main-color);
+    background: #000;
+}
+
+.info-text {
+    display: block;
+    width: 52rem;
+
+    font-weight: 700;
+    font-size: 6.4rem;
+    line-height: 1.2;
+    color: #fff;
+
+    margin-top: 15rem;
+    margin-left: 5rem;
+}
+
+.chrome img {
+    filter: drop-shadow(4px 24px 28px var(--black50p));
+    /* 그림자 개별로 넣기 */
+}
+
+.portfolio.chrome {
+    position: absolute;
+    top: 17%;
+    left: 50%;
+}
+
+.mode.chrome {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+}
+
+.heejoo.chrome {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+}
+
+.process.chrome {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+}
+
+.wandoo.chrome {
+    position: absolute;
+    top: -10%;
+    left: 60%;
+}
+/* e: section position 설정 */
+
+.popup section {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 2rem;
+    gap: 2rem;
+
+    background: var(--white50p);
+    border: 2px solid #fff;
+    border-radius: 2.4rem;
+    box-shadow: var(--glass-box-shadow);
+    backdrop-filter: blur(var(--glass-blur));
+
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.popup section.active {
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.popup section.active.process {
+    cursor: pointer;
+    pointer-events: initial;
+    user-select: initial;
+}
+
+.popup .process a {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.popup h2 {
+    width: fit-content;
+    padding: 1rem 3rem;
+    background: var(--point-color);
+    border: 2px solid var(--black70p);
+    border-radius: 56px;
+
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #fff;
+}
+
+.popup .popup-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.popup .popup-text dl {
+    display: flex;
+    align-items: start;
+    gap: 2rem;
+}
+
+.popup .popup-text dl dt,
+.popup .popup-text dl dd,
+.popup .popup-text dl .dd-wrap p {
+    display: inline;
+    padding: 1rem 3rem;
+    background: var(--main-color-light);
+    border: 2px solid var(--black70p);
+    border-radius: 5rem;
+}
+
+.popup .popup-text dl .dd-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 42rem;
+    padding: 0;
+    background: none;
+    border: none;
+    gap: 1rem;
+}
+
+.popup .popup-text dl .dd-wrap p:first-child {
+    width: 100%;
+}
+.popup .popup-text dl .dd-wrap p {
+    flex-grow: 1;
+}
+
+/* e: popup 공통설정*/
+
+.popup .portfolio {
+    top: 45%;
+    left: 40%;
+}
+
+.popup .mode {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    top: 80%;
+    left: 30%;
+}
+
+.popup .heejoo {
+    top: 35%;
+    right: 5%;
+}
+
+.popup .process {
+    top: 70%;
+    left: 60%;
+}
+
+.popup .wandoo {
+    top: 25%;
+    right: 27%;
+}
+
+/* e: popup 개별 위치 설정 */
+
+.skill-marquee-wrap::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 25%;
+    height: 100vh;
+
+    background: linear-gradient(90deg, rgba(44, 255, 5, 1) 0%, rgba(44, 255, 5, 0) 70%);
+}
+
+.skill-marquee-wrap::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    width: 25%;
+    height: 100vh;
+
+    background: linear-gradient(270deg, rgba(44, 255, 5, 1) 0%, rgba(44, 255, 5, 0) 70%);
+}
+
+.skill-marquee {
+    position: absolute;
+    top: 125%;
+    left: -50%;
+    transform: rotate(8deg);
+    z-index: -10;
+
+    display: flex;
+    white-space: nowrap;
+}
+
+.skill-marquee p {
+    display: inline-block;
+    padding: 1rem;
+    margin-right: -1px;
+    background: #000;
+
+    font-weight: 700;
+    font-size: 4.5vw;
+    color: #fff;
+
+    animation: marquee 15s linear infinite both;
+}
+
+@keyframes marquee {
+    100% {
+        transform: translateX(-100%);
+    }
+}

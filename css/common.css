@@ -1,0 +1,360 @@
+@charset "utf-8";
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+    font-family: "SF_HambakSnow";
+    src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --main-color: #2cff05;
+    --main-color-dark: #00da53;
+    --main-color-light: #ccff00;
+    --point-color: #ff4000;
+    --title-color: #1b1b1b;
+    --text-color: #444;
+    --text-color-light: #999;
+
+    --black20p: rgba(0, 0, 0, 0.2);
+    --black30p: rgba(0, 0, 0, 0.3);
+    --black40p: rgba(0, 0, 0, 0.4);
+    --black50p: rgba(0, 0, 0, 0.5);
+    --black60p: rgba(0, 0, 0, 0.6);
+    --black70p: rgba(0, 0, 0, 0.7);
+    --black80p: rgba(0, 0, 0, 0.8);
+    --black90p: rgba(0, 0, 0, 0.9);
+    --white20p: rgba(255, 255, 255, 0.2);
+    --white30p: rgba(255, 255, 255, 0.3);
+    --white40p: rgba(255, 255, 255, 0.4);
+    --white50p: rgba(255, 255, 255, 0.5);
+    --white60p: rgba(255, 255, 255, 0.6);
+    --white70p: rgba(255, 255, 255, 0.7);
+    --white80p: rgba(255, 255, 255, 0.8);
+    --white90p: rgba(255, 255, 255, 0.9);
+
+    --glass-box-shadow: 0 4px 16px var(--black20p), inset 4px 4px 4px var(--white20p);
+    --glassnu-box-shadow: 0 4px 32px rgba(44, 255, 5, 0.5), 0 4px 16px var(--black20p),
+        inset 4px 4px 4px var(--white20p);
+    --glass-blur: 12px;
+
+    --button-box-shadow1: 0 4px 16px rgba(44, 255, 5, 0.2);
+    --button-box-shadow2: 0 4px 16px var(--black20p);
+}
+
+::selection {
+    background: var(--point-color);
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+hr,
+.hidden {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body {
+    background: var(--main-color);
+
+    font: 1.6rem/1.6 "Pretendard", sans-serif;
+    word-break: keep-all;
+
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+
+    width: 100%;
+}
+
+header nav {
+    height: 12rem;
+    padding: 0 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    background: #000 url() 50% 50% / contain;
+}
+
+.btn-menu {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    padding: 2rem;
+
+    background: #000 url() 50% 50% / contain;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+
+    width: 100%;
+    height: 5rem;
+    padding: 0 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #fff;
+    backdrop-filter: blur(var(--glass-blur));
+}
+
+footer .mode-wrap #mode {
+    display: none;
+}
+
+footer .mode-wrap #mode + label {
+    width: 19rem;
+    height: 3.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+footer .mode-wrap #mode + label span {
+    font-weight: 900;
+}
+
+footer .mode-wrap #mode + label span:first-child {
+    font-family: "Roboto Condensed";
+    font-weight: 300;
+    font-style: italic;
+}
+
+footer .mode-wrap #mode + label::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-45%);
+
+    width: 8.5rem;
+    height: 3.5rem;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(153, 153, 153, 1) 45%,
+        rgba(204, 204, 204, 1) 63%,
+        rgba(67, 67, 67, 1) 70%,
+        rgba(204, 204, 204, 1) 100%
+    );
+
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 35px;
+    box-shadow: 1.5px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+footer .mode-wrap #mode + label::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, calc(-50% + 1.5px));
+
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+
+    background: var(--main-color) url() 50% 50% / contain;
+    box-shadow: -1.4px 0 1px var(--white20p), inset 2px 1.5px 2px var(--black60p), -0.7px 0.7px 2px 1px var(--white80p),
+        inset 3px 3.5px 8px 1.5px var(--black20p);
+}
+
+footer .update {
+    display: flex;
+    gap: 20px;
+
+    color: #fff;
+}
+
+footer .update strong {
+    font-weight: 700;
+}
+
+.mega-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 1000;
+
+    width: 100%;
+    height: 100vh;
+
+    background: var(--main-color);
+
+    transition: 0.4s;
+}
+
+.mega-menu.active {
+    right: 0;
+}
+
+#text-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.text-element {
+    position: absolute;
+}
+
+.text-element.logo a {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    background: #000 url() 50% 50% / contain;
+}
+
+.text-element.btn-close > button {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    padding: 2rem;
+
+    background: #000 url() 50% 50% / contain;
+    cursor: pointer;
+}
+
+.text-element.menu a {
+    display: inline-block;
+    padding: 3rem 8.5rem;
+    background: #fff;
+    border-radius: 14.4rem;
+
+    font-weight: 900;
+    font-size: 14.4rem;
+    line-height: 1.2;
+    color: var(--title-color);
+
+    transition: 0.3s;
+}
+
+.text-element.menu:hover a {
+    color: #fff;
+    -webkit-text-stroke: 3px var(--main-color);
+
+    background: var(--point-color);
+}
+
+.text-element.project a {
+    color: var(--point-color);
+}
+
+.text-element.menu-projectsub a {
+    display: inline-block;
+    padding: 1.5rem 5rem;
+    background: #fff;
+    border-radius: 10rem;
+
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 1.2;
+    color: var(--main-color);
+
+    transition: 0.3s;
+}
+
+.text-element.menu-projectsub:hover a {
+    background: var(--main-color-dark);
+    color: #fff;
+}
+
+.text-element.line {
+    display: inline-block;
+    padding: 0.8rem 4rem;
+    background: var(--white40p);
+    border: 3px solid #fff;
+    border-radius: 7rem;
+
+    font-weight: 900;
+    font-size: 2.8rem;
+    color: #fff;
+}
+
+.text-element.line7 i {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.text-element.line9 i {
+    font-family: "Roboto Condensed";
+    font-style: italic;
+}
+
+.text-element.line-deco {
+    display: inline-block;
+    padding: 2rem 3rem;
+    background: var(--point-color);
+    border-radius: 7rem;
+
+    line-height: 1.2;
+    color: #fff;
+}
+
+.text-element.line-deco.badge1 {
+    font-weight: 700;
+    font-size: 2.8rem;
+}
+
+.text-element.line-deco.badge2 {
+    font-weight: 900;
+    font-size: 6rem;
+}
+
+.text-element.line-deco.badge3 {
+    padding: 1rem 2rem;
+
+    font-weight: 600;
+}

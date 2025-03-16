@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PORTFOLIO::HEEJOO✌</title>
+
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/hell-heejoo.css" />
+
+        <script src="./js/jquery-3.7.1.min.js"></script>
+        <!-- matter.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+        <!-- GSAP -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+
+        <script src="./js/megaMenu.js"></script>
+        <script src="./js/hell-heejoo.js"></script>
+    </head>
+    <body>
+        <!-- MEGA menu -->
+        <section class="mega-menu">
+            <div id="canvas-container"></div>
+            <div class="text-container">
+                <div class="text-element logo">
+                    <a href="./index.html"><img src="" alt="희주의 포트폴리오" /></a>
+                </div>
+                <div class="text-element btn-close">
+                    <button type="button" id="btn-close"></button>
+                </div>
+                <div class="text-element menu home"><a href="./index.html">홈</a></div>
+                <div class="text-element menu name"><a href="./heejoo.html">정희주</a></div>
+                <div class="text-element menu contact"><a href="./contact.html">컨텍</a></div>
+                <div class="text-element menu project"><a href="./projects.html">프로젝트</a></div>
+                <div class="text-element menu-projectsub micro"><a href="#">마이크로사이트</a></div>
+                <div class="text-element menu-projectsub web"><a href="#">웹디자인</a></div>
+                <div class="text-element menu-projectsub banner"><a href="#">배너디자인</a></div>
+                <div class="text-element menu-projectsub app"><a href="#">앱디자인</a></div>
+                <div class="text-element menu-projectsub other"><a href="#">외</a></div>
+                <div class="text-element line line1">신입특) 객기부림👎👎👎</div>
+                <div class="text-element line line2">근데 희주 ;</div>
+                <div class="text-element line line3">자아없음 모드 ON🤓👍</div>
+                <div class="text-element line line4">시키는거 다해요</div>
+                <div class="text-element line line5">🏆수상이력</div>
+                <div class="text-element line line6">울아빠 선정 용돈주고 싶은 딸 TOP1</div>
+                <div class="text-element line line7">
+                    정완두<i>(집고양이, 10살추정)</i> 선정 간식 뜯고 싶은 언니 1위
+                </div>
+                <div class="text-element line line8">홍대 외국인 관광객 선정 꽤괜ㅎ 리스트 등극</div>
+                <div class="text-element line line9">눈 아플땐 😇<i>HEAVEN</i>😇 모드</div>
+                <div class="text-element line line10">👇천국으로 가는 길</div>
+                <div class="text-element line-deco badge1">울엄마 보증</div>
+                <div class="text-element line-deco badge2">FR</div>
+                <div class="text-element line-deco badge3">오늘도 <b>원</b> 받음!!!</div>
+                <div class="text-element stroke"><img src="./img/hell-menu-stroke.png" alt="프로젝트 리스트" /></div>
+            </div>
+        </section>
+        <!-- e: MEGA menu -->
+        <header>
+            <nav>
+                <h1 class="logo">
+                    <a href="./index.html"><img src="" alt="희주의 포트폴리오" /></a>
+                </h1>
+                <button type="button" class="btn-menu"></button>
+            </nav>
+        </header>
+        <!-- e: header -->
+
+        <main>
+            <h2 class="active">정희주</h2>
+            <ul class="info-list">
+                <li class="info about">ABOUT.</li>
+                <li class="info education">EDUCATION.</li>
+                <li class="info experince">EXPERINCE.</li>
+                <li class="info license">LICENSE.</li>
+                <li class="info skills">SKILLS.</li>
+            </ul>
+
+            <div class="popup-list">
+                <div class="popup about">
+                    <div class="name">
+                        <p>JUNG HEEJOO</p>
+                        <strong>정희주</strong>
+                    </div>
+                    <div class="address"><p>서울시 서대문구</p></div>
+                    <div class="birth"><p>1997. 09. 04</p></div>
+                    <div class="portrait"><img src="" alt="희주의 몽타주입니다." /></div>
+                    <div class="strength1"><p>외향적</p></div>
+                    <div class="strength2"><p>사회성</p></div>
+                    <div class="strength3"><p>근성</p></div>
+                </div>
+                <div class="popup education">
+                    <ul>
+                        <li>
+                            <strong>2016</strong>
+                            <dl>
+                                <dt>선정고등학교</dt>
+                                <dd>
+                                    <p>과학중점반</p>
+                                    <p>미술거점반</p>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <strong>2019</strong>
+                            <dl>
+                                <dt>단국대학교</dt>
+                                <dd>
+                                    <p>커뮤니케이션디자인과</p>
+                                    <p>수석입학</p>
+                                    <p>중퇴</p>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <strong>2025</strong>
+                            <dl>
+                                <dt>하이미디어</dt>
+                                <dd>
+                                    <p>UI/UX 반응형 웹디자인/웹퍼블리싱 과정</p>
+                                    <p>수료</p>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popup experince">
+                    <div class="line1"></div>
+                    <div class="dot1"></div>
+                    <div class="dot2"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                    <ul>
+                        <li>
+                            <strong>2020. 08 - 2021. 04</strong>
+                            <dl>
+                                <dt>닥터로빈 AK홍대점</dt>
+                                <dd>서버 정직원</dd>
+                                <dd>음료제조 고객응대 재고관리</dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <strong>2022. 02 - 2024. 05</strong>
+                            <dl>
+                                <dt>뷰맵 연남스토어</dt>
+                                <dd>판매 매니저</dd>
+                                <dd>외국어응대 인력/매출관리 SNS관리</dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popup license">
+                    <ul>
+                        <li>
+                            <strong>2022. 11</strong>
+                            <p>GTQ 1급</p>
+                        </li>
+                        <li>
+                            <strong>2023. 01</strong>
+                            <p>GTQi 1급</p>
+                        </li>
+                        <li>
+                            <strong>2023. 06</strong>
+                            <p>GTQid 1급</p>
+                        </li>
+                        <li>
+                            <strong>2024. 07</strong>
+                            <p>컴퓨터활용능력 1급</p>
+                        </li>
+                        <li>
+                            <strong>2024.09</strong>
+                            <p>TOEIC 825점</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="popup skills">
+                    <img src="" alt="피그마" />
+                    <img src="" alt="HTML" />
+                    <img src="" alt="CSS" />
+                    <img src="" alt="JavaScript" />
+                    <img src="" alt="JQuery" />
+                    <img src="" alt="Photoshop" />
+                    <img src="" alt="Illustrator" />
+                    <img src="" alt="Indesign" />
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="mode-wrap">
+                <input type="checkbox" id="mode" />
+                <label for="mode"><span>HEAVEN</span><span>HELL</span></label>
+            </div>
+            <div class="update">
+                <strong>LAST UPDATED.</strong>
+                <p>2025. 03. 12</p>
+            </div>
+        </footer>
+    </body>
+</html>

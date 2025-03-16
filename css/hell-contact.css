@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+.marquee {
+    margin-top: 14rem;
+}
+
+.marquee .text1,
+.marquee .text2 {
+    display: flex;
+    gap: 5rem;
+
+    font-weight: 700;
+    font-size: 9.6rem;
+    line-height: 1.2;
+    color: var(--point-color);
+    white-space: nowrap;
+
+    animation: marquee 7s linear infinite both;
+}
+
+.marquee .text2 {
+    font-size: 12.8rem;
+}
+
+.marquee .contact {
+    display: flex;
+
+    font-weight: 700;
+    font-size: 12.8rem;
+    line-height: 1.2;
+    color: #fff;
+    white-space: nowrap;
+
+    animation: marquee 15s linear infinite both;
+}
+
+.marquee .contact p {
+    padding: 0 2.5rem;
+    background: #000;
+}
+
+@keyframes marquee {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5rem;
+}
+
+.info li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 70%;
+    padding: 2rem 3rem;
+
+    border-bottom: 2px solid #000;
+
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.info li p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 4.8rem;
+}
+
+.info li p::before {
+    content: "";
+
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    background: url(../img/icon-star.png) 50% / contain;
+}
+
+.info li strong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    font-size: 5.6rem;
+}
+
+.info li strong::after {
+    content: "";
+
+    display: block;
+    width: 3.2rem;
+    height: 3.2rem;
+    background: url(../img/icon-copy.png) 50% / contain;
+}
