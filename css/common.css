@@ -252,32 +252,29 @@ footer .update strong {
 
 .text-element.logo a {
     display: block;
-    width: 7rem;
-    height: 7rem;
+    width: 3.65vw; /* 7rem -> 3.65vw */
+    height: 3.65vw; /* 7rem -> 3.65vw */
     background: #000 url() 50% 50% / contain;
 }
 
 .text-element.btn-close > button {
     display: block;
-    width: 7rem;
-    height: 7rem;
-    padding: 2rem;
-
+    width: 3.65vw; /* 7rem -> 3.65vw */
+    height: 3.65vw; /* 7rem -> 3.65vw */
+    padding: 1.04vw; /* 2rem -> 1.04vw */
     background: #000 url() 50% 50% / contain;
     cursor: pointer;
 }
 
 .text-element.menu a {
     display: inline-block;
-    padding: 3rem 8.5rem;
+    padding: 1.56vw 4.43vw; /* 3rem 8.5rem -> 1.56vw 4.43vw */
     background: #fff;
     border-radius: 14.4rem;
-
     font-weight: 900;
-    font-size: 14.4rem;
+    font-size: 7.5vw; /* 14.4rem -> 7.5vw */
     line-height: 1.2;
     color: var(--title-color);
-
     transition: 0.3s;
 }
 
@@ -294,12 +291,12 @@ footer .update strong {
 
 .text-element.menu-projectsub a {
     display: inline-block;
-    padding: 1.5rem 5rem;
+    padding: 0.78vw 2.6vw; /* 1.5rem 5rem -> 0.78vw 2.6vw */
     background: #fff;
     border-radius: 10rem;
 
     font-weight: 700;
-    font-size: 6rem;
+    font-size: 3.13vw; /* 6rem -> 3.13vw */
     line-height: 1.2;
     color: var(--main-color);
 
@@ -313,19 +310,19 @@ footer .update strong {
 
 .text-element.line {
     display: inline-block;
-    padding: 0.8rem 4rem;
+    padding: 0.42vw 2.08vw; /* 0.8rem 4rem -> 0.42vw 2.08vw */
     background: var(--white40p);
     border: 3px solid #fff;
     border-radius: 7rem;
 
     font-weight: 900;
-    font-size: 2.8rem;
+    font-size: 1.46vw; /* 2.8rem -> 1.46vw */
     color: #fff;
 }
 
 .text-element.line7 i {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.04vw; /* 2rem -> 1.04vw */
 }
 
 .text-element.line9 i {
@@ -335,7 +332,7 @@ footer .update strong {
 
 .text-element.line-deco {
     display: inline-block;
-    padding: 2rem 3rem;
+    padding: 1.04vw 1.56vw; /* 2rem 3rem -> 1.04vw 1.56vw */
     background: var(--point-color);
     border-radius: 7rem;
 
@@ -345,16 +342,16 @@ footer .update strong {
 
 .text-element.line-deco.badge1 {
     font-weight: 700;
-    font-size: 2.8rem;
+    font-size: 1.46vw; /* 2.8rem -> 1.46vw */
 }
 
 .text-element.line-deco.badge2 {
     font-weight: 900;
-    font-size: 6rem;
+    font-size: 3.13vw; /* 6rem -> 3.13vw */
 }
 
 .text-element.line-deco.badge3 {
-    padding: 1rem 2rem;
+    padding: 0.52vw 1.04vw; /* 1rem 2rem -> 0.52vw 1.04vw */
 
     font-weight: 600;
 }

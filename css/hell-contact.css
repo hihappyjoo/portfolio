@@ -7,7 +7,11 @@
 .marquee .text1,
 .marquee .text2 {
     display: flex;
-    gap: 5rem;
+}
+
+.marquee .text1 p,
+.marquee .text2 p {
+    padding: 0 2.5rem;
 
     font-weight: 700;
     font-size: 9.6rem;
@@ -15,15 +19,21 @@
     color: var(--point-color);
     white-space: nowrap;
 
-    animation: marquee 7s linear infinite both;
+    animation: marquee 4s linear infinite both;
 }
 
-.marquee .text2 {
+.marquee .text2 p {
     font-size: 12.8rem;
 }
 
 .marquee .contact {
     display: flex;
+}
+
+.marquee .contact p {
+    padding: 0 2.5rem;
+    margin-right: -1px;
+    background: #000;
 
     font-weight: 700;
     font-size: 12.8rem;
@@ -31,12 +41,7 @@
     color: #fff;
     white-space: nowrap;
 
-    animation: marquee 15s linear infinite both;
-}
-
-.marquee .contact p {
-    padding: 0 2.5rem;
-    background: #000;
+    animation: marquee 5s linear infinite both;
 }
 
 @keyframes marquee {
@@ -48,7 +53,7 @@
 .info {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    /* gap: 5rem; */
     justify-content: center;
     align-items: center;
 
@@ -56,6 +61,7 @@
 }
 
 .info li {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -94,6 +100,7 @@
     gap: 2rem;
 
     font-size: 5.6rem;
+    cursor: pointer;
 }
 
 .info li strong::after {
@@ -103,4 +110,22 @@
     width: 3.2rem;
     height: 3.2rem;
     background: url(../img/icon-copy.png) 50% / contain;
+}
+
+.info li i {
+    position: absolute;
+    top: -1rem;
+    right: -3rem;
+    transform: rotate(10deg);
+
+    padding: 1rem 1.5rem;
+    background: var(--white50p);
+    border: 3px solid #fff;
+    border-radius: 5rem;
+
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--point-color);
+
+    display: none;
 }

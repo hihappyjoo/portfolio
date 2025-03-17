@@ -8,31 +8,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 초기 위치 설정 (상단으로 이동)
     const initialPositions = [
-        { x: 50, y: 25 }, // 로고
-        { x: 1800, y: 25 }, // 닫기버튼
-        { x: 50, y: 130 }, // 홈
-        { x: 375, y: 130 }, // 정희주
-        { x: 1450, y: 630 }, // 컨텍
-        { x: 50, y: 380 }, // 프로젝트
-        { x: 980, y: 380 }, // 마이크로사이트
-        { x: 1550, y: 380 }, // 웹
-        { x: 980, y: 510 }, // 배너
-        { x: 1365, y: 510 }, // 앱
-        { x: 1700, y: 510 }, // 외
-        { x: 980, y: 130 }, // line1
-        { x: 980, y: 205 }, // line2
-        { x: 1200, y: 205 }, // line3
-        { x: 1400, y: 280 }, // line4
-        { x: 400, y: 635 }, // line5
-        { x: 640, y: 635 }, // line6
-        { x: 640, y: 710 }, // line7
-        { x: 640, y: 785 }, // line8
-        { x: 50, y: 740 }, // line9
-        { x: 50, y: 815 }, // line10
-        { x: 1430, y: 150, angle: Math.PI / 18 }, // badge1
-        { x: 1120, y: 225, angle: -Math.PI / 12 }, // badge2 (-45도 회전)
-        { x: 630, y: 600, angle: -Math.PI / 18 }, // badge3 (60도 회전)
-        { x: 750, y: 480 }, // stroke
+        { x: 2.6, y: 2.3 }, // 로고
+        { x: 93.75, y: 2.3 }, // 닫기버튼
+        { x: 2.6, y: 12.04 }, // 홈
+        { x: 19.53, y: 12.04 }, // 정희주
+        { x: 75.52, y: 67.33 }, // 컨텍
+        { x: 2.6, y: 40.19 }, // 프로젝트
+        { x: 51.04, y: 40.19 }, // 마이크로사이트
+        { x: 80.73, y: 40.19 }, // 웹
+        { x: 51.04, y: 54 }, // 배너
+        { x: 71.09, y: 54 }, // 앱
+        { x: 88.54, y: 54 }, // 외
+        { x: 51.04, y: 12.5 }, // line1
+        { x: 51.04, y: 21 }, // line2
+        { x: 62.5, y: 21 }, // line3
+        { x: 72.92, y: 29 }, // line4
+        { x: 20.83, y: 67.33 }, // line5
+        { x: 33.33, y: 67.33 }, // line6
+        { x: 33.33, y: 75.9 }, // line7
+        { x: 33.33, y: 84.69 }, // line8
+        { x: 2.6, y: 75.9 }, // line9
+        { x: 2.6, y: 84.69 }, // line10
+        { x: 74.48, y: 13.89, angle: Math.PI / 18 }, // badge1
+        { x: 58.83, y: 23.83, angle: -Math.PI / 12 }, // badge2 (-45도 회전)
+        { x: 32.81, y: 63.56, angle: -Math.PI / 18 }, // badge3 (60도 회전)
+        { x: 39.06, y: 50.44 }, // stroke
     ];
 
     // 초기 위치 즉시 적용
@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const textElements = document.querySelectorAll(".text-element");
         textElements.forEach((element, index) => {
             const pos = initialPositions[index];
-            const xPos = pos.x;
-            const yPos = pos.y;
+            const xPos = (pos.x / 100) * window.innerWidth;
+            const yPos = (pos.y / 100) * window.innerHeight;
             const angle = pos.angle || 0;
 
             element.style.left = "0";
@@ -173,8 +173,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const height = element.offsetHeight;
 
             // 2. 회전을 고려한 중심점 계산
-            const centerX = pos.x + width / 2;
-            const centerY = pos.y + height / 2;
+            const centerX = (pos.x / 100) * window.innerWidth + width / 2;
+            const centerY = (pos.y / 100) * window.innerHeight + height / 2;
 
             const body = Bodies.rectangle(centerX, centerY, width, height, {
                 render: { fillStyle: "transparent" },
