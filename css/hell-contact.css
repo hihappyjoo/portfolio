@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
 .marquee {
     margin-top: 14rem;
 }
@@ -73,6 +78,7 @@
 
     font-weight: 700;
     line-height: 1.2;
+    color: var(--title-color);
 }
 
 .info li p {

@@ -44,6 +44,7 @@
 
     --button-box-shadow1: 0 4px 16px rgba(44, 255, 5, 0.2);
     --button-box-shadow2: 0 4px 16px var(--black20p);
+    --button-box-innershadow: inset 4px 4px 4px var(--black20p);
 }
 
 ::selection {
@@ -56,9 +57,8 @@ a {
     color: inherit;
 }
 
-a:hover {
-    text-decoration: none;
-    color: var(--main-color);
+button {
+    cursor: pointer;
 }
 
 hr,
@@ -82,18 +82,22 @@ body {
 
     font: 1.6rem/1.6 "Pretendard", sans-serif;
     word-break: keep-all;
-
-    height: 100vh;
-    overflow: hidden;
 }
 
 header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 100;
 
     width: 100%;
+    background: rgba(44, 255, 5, 0.7);
+
+    transition: 0.25s;
+}
+
+header.hide {
+    top: -120px;
 }
 
 header nav {

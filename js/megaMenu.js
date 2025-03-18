@@ -1,4 +1,59 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const $window = $(window);
+    const $header = $("header");
+
+    let lastScrollTop = 0;
+
+    function toggleHeaderVisibility(isVisible) {
+        if (isVisible) {
+            $header.removeClass("hide");
+        } else {
+            $header.addClass("hide");
+        }
+    }
+
+    // lastscroll 변수활용방식으로 변경
+    function throttle(func, limit) {
+        let lastFunc;
+        let lastRan;
+        return function () {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function () {
+                    if (Date.now() - lastRan >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        };
+    }
+
+    // 마우스 휠을 조작했을 때
+    $window.on("wheel", (e) => {
+        toggleHeaderVisibility(e.originalEvent.deltaY < 0);
+    });
+
+    // 스크롤 이벤트가 일어나면
+    $window.on(
+        "scroll",
+        throttle(() => {
+            const scTop = $window.scrollTop();
+            console.log(scTop);
+
+            // 스크롤한 값이 저장된(마지막에 위치했던) 스크롤 값보다 작다면
+            toggleHeaderVisibility(scTop < lastScrollTop);
+
+            // 스크롤 갱신
+            lastScrollTop = scTop;
+        }, 200)
+    );
+
     // btn-menu 설정
     const $btnMenu = $(".btn-menu");
     const $btnClose = $("#btn-close");

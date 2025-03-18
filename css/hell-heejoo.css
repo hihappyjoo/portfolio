@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 body {
+    overflow: hidden;
     background: #000;
     color: var(--main-color);
 }
@@ -318,8 +319,6 @@ h2.thumb {
     font-size: 4.8rem;
 
     cursor: pointer;
-
-    transition: background 0.5s ease !important;
 }
 
 .info.active {
