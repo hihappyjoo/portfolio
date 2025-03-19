@@ -10,6 +10,7 @@
 
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/hell-common.css" />
         <link rel="stylesheet" href="./css/hell-projects.css" />
 
         <!-- swiper.js -->
@@ -39,11 +40,13 @@
                 <div class="text-element menu name"><a href="./heejoo.html">정희주</a></div>
                 <div class="text-element menu contact"><a href="./contact.html">컨텍</a></div>
                 <div class="text-element menu project"><a href="./projects.html">프로젝트</a></div>
-                <div class="text-element menu-projectsub micro"><a href="#">마이크로사이트</a></div>
-                <div class="text-element menu-projectsub web"><a href="#">웹디자인</a></div>
-                <div class="text-element menu-projectsub banner"><a href="#">배너디자인</a></div>
-                <div class="text-element menu-projectsub app"><a href="#">앱디자인</a></div>
-                <div class="text-element menu-projectsub other"><a href="#">외</a></div>
+                <div class="text-element menu-projectsub micro">
+                    <a href="projects.html#micro-site">마이크로사이트</a>
+                </div>
+                <div class="text-element menu-projectsub web"><a href="projects.html#web">웹디자인</a></div>
+                <div class="text-element menu-projectsub banner"><a href="projects.html#banner">배너디자인</a></div>
+                <div class="text-element menu-projectsub app"><a href="projects.html#app">앱디자인</a></div>
+                <div class="text-element menu-projectsub other"><a href="projects.html#other">외</a></div>
                 <div class="text-element line line1">신입특) 객기부림👎👎👎</div>
                 <div class="text-element line line2">근데 희주 ;</div>
                 <div class="text-element line line3">자아없음 모드 ON🤓👍</div>
@@ -90,10 +93,14 @@
                     </div>
                 </div>
                 <div class="sections">
-                    <section class="web">
+                    <section id="web">
                         <h3>WEB</h3>
                         <ol>
-                            <li data-img="" data-process="" data-link="">
+                            <li
+                                data-img="./img/other01.jpg"
+                                data-process="https://raw.githubusercontent.com/mattn/longcat/master/screenshot.png"
+                                data-link="https://www.naver.com"
+                            >
                                 <div class="project-date">
                                     <p>
                                         2024. 11. 27 <br />
@@ -117,7 +124,11 @@
                                     </dl>
                                 </div>
                             </li>
-                            <li data-img="" data-process="" data-link="">
+                            <li
+                                data-img="./img/other02.jpg"
+                                data-process="https://i.pinimg.com/236x/f6/16/d0/f616d044c7937dde2e8ec2b4f3e6f79c.jpg"
+                                data-link="https://www.google.com"
+                            >
                                 <div class="project-date">
                                     <p>
                                         2024. 12. 20 <br />
@@ -189,7 +200,7 @@
                                     </dl>
                                 </div>
                             </li>
-                            <li data-img="" data-process="" data-link="">
+                            <li data-img="" data-process="" data-link="" id="portfolio-process">
                                 <div class="project-date">
                                     <p>
                                         2025. 03. 04 <br />
@@ -215,7 +226,7 @@
                             </li>
                         </ol>
                     </section>
-                    <section class="app">
+                    <section id="app">
                         <h3>APP</h3>
                         <ol>
                             <li data-img="" data-process="" data-link="">
@@ -245,7 +256,7 @@
                             </li>
                         </ol>
                     </section>
-                    <section class="micro-site">
+                    <section id="micro-site">
                         <h3>MICRO SITE</h3>
                         <ol>
                             <li data-img="" data-process="" data-link="">
@@ -297,30 +308,42 @@
                 </div>
             </div>
 
-            <section class="banner">
+            <section id="banner">
                 <h3>BANNER</h3>
                 <div class="main-swiper-wrapper">
                     <div class="swiper main-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
+                                <figure>
+                                    <img
+                                        src="https://ilyo.co.kr/contents/article/images/2025/0214/1739531410621707.jpg"
+                                        alt=""
+                                    />
+                                </figure>
+                                <figure>
+                                    <img
+                                        src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-102458,resizemode-75,msid-118016442/magazines/panache/newjeans-rebrands-to-njz-k-pop-girl-band-officially-announces-new-name-amid-contract-dispute-what-really-happened.jpg"
+                                        alt=""
+                                    />
+                                </figure>
+                                <figure>
+                                    <img src="https://cdn.hankyung.com/photo/202501/BF.39030472.1.jpg" alt="" />
+                                </figure>
+                                <figure><img src="https://media.nudge-community.com/7870793" alt="" /></figure>
+                                <figure><img src="./img/other05.jpg" alt="" /></figure>
+                                <figure><img src="./img/other06.jpg" alt="" /></figure>
+                                <figure><img src="./img/other07.jpg" alt="" /></figure>
+                                <figure><img src="./img/other08.jpg" alt="" /></figure>
                             </div>
                             <div class="swiper-slide">
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
-                                <a href=""><img src="" alt="" /></a>
+                                <figure><img src="" alt="" /></figure>
+                                <figure><img src="" alt="" /></figure>
+                                <figure><img src="" alt="" /></figure>
+                                <figure><img src="" alt="" /></figure>
+                                <figure><img src="" alt="" /></figure>
+                                <figure><img src="" alt="" /></figure>
+                                <figure><img src="" alt="" /></figure>
+                                <figure><img src="" alt="" /></figure>
                             </div>
                         </div>
                     </div>
@@ -334,31 +357,48 @@
                         <div class="swiper-wrapper">
                             <!-- .swiper-slide>(fig>img)+.tags>p{#Photoshop} -->
                             <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
+                                <figure>
+                                    <img
+                                        src="https://ilyo.co.kr/contents/article/images/2025/0214/1739531410621707.jpg"
+                                        alt=""
+                                    />
+                                </figure>
                                 <div class="tags">
                                     <p>#Photoshop</p>
+                                    <p>#Illustrator</p>
+                                    <p>165*668</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
+                                <figure>
+                                    <img
+                                        src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-102458,resizemode-75,msid-118016442/magazines/panache/newjeans-rebrands-to-njz-k-pop-girl-band-officially-announces-new-name-amid-contract-dispute-what-really-happened.jpg"
+                                        alt=""
+                                    />
+                                </figure>
                                 <div class="tags">
-                                    <p></p>
+                                    <p>#Photoshop</p>
+                                    <p>8974*235</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
+                                <figure>
+                                    <img src="https://cdn.hankyung.com/photo/202501/BF.39030472.1.jpg" alt="" />
+                                </figure>
                                 <div class="tags">
-                                    <p></p>
+                                    <p>#Photoshop</p>
+                                    <p>8974*235</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
+                                <figure><img src="https://media.nudge-community.com/7870793" alt="" /></figure>
                                 <div class="tags">
-                                    <p></p>
+                                    <p>#Photoshop</p>
+                                    <p>8974*235</p>
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
+                                <figure><img src="./img/other05.jpg" alt="" /></figure>
                                 <div class="tags">
                                     <p></p>
                                 </div>
@@ -432,12 +472,12 @@
                         </div>
                     </div>
 
-                    <div class="swiper-button-prev"><img src="./img/icon-arrow.png" alt="이전" /></div>
-                    <div class="swiper-button-next"><img src="./img/icon-arrow.png" alt="다음" /></div>
+                    <div class="btn-prev"></div>
+                    <div class="btn-next"></div>
                 </div>
             </section>
 
-            <section class="other">
+            <section id="other">
                 <h3>OTHER</h3>
                 <div class="text">
                     <p>SNS 관리 당시 업로드한 게시물의 일부입니다</p>
@@ -476,7 +516,7 @@
         <div class="listpopup">
             <button type="button" class="btn-close"></button>
             <div class="inner">
-                <figure><img src="" alt="" /></figure>
+                <figure></figure>
             </div>
         </div>
     </body>

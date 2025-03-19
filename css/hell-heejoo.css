@@ -330,12 +330,12 @@ h2.thumb {
     display: block;
     width: 7rem;
     height: 7rem;
-    background: url(../img/hell-icon-aboutoff.png) 50% / contain;
+    background: url(../img/icon-aboutoff.svg) no-repeat 50% 50% / contain;
     transition: 0.3s;
 }
 
 .info.active::after {
-    background-image: url(../img/hell-icon-abouton.png);
+    background-image: url(../img/icon-abouton.svg);
 }
 
 /* e: 기본화면 */

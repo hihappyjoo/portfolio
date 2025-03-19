@@ -39,7 +39,15 @@ $(function () {
     tl.from($processChrome, { autoAlpha: 0, scale: 1.7, duration: 0.7, ease: "bounce.out" }, "-=0.5");
     tl.from($wandooChrome, { autoAlpha: 0, scale: 1.5, duration: 0.7, ease: "bounce.out" }, "-=0.5");
     tl.from($modeChrome, { autoAlpha: 0, scale: 1.2, duration: 0.7, ease: "bounce.out" }, "-=0.5");
-    tl.from($header, { y: -50, autoAlpha: 0 }, "-=2");
+    tl.from(
+        $header,
+        {
+            y: -120,
+            autoAlpha: 0,
+            onComplete: () => $header.css({ visibility: "visible", opacity: 1, transform: "translateY(0)" }),
+        },
+        "-=2"
+    );
     // e: gsap
 
     const $chrome = $(".chrome");

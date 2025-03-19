@@ -7,7 +7,10 @@
 
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
-        <link rel="stylesheet" href="./css/hell-contact.css" />
+        <!-- <link rel="stylesheet" href="./css/hell-common.css" /> -->
+        <link rel="stylesheet" href="./css/heaven-common.css" />
+        <!-- <link rel="stylesheet" href="./css/hell-contact.css" /> -->
+        <link rel="stylesheet" href="./css/heaven-contact.css" />
 
         <!-- JQuery -->
         <script src="./js/jquery-3.7.1.min.js"></script>
@@ -17,11 +20,11 @@
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 
         <script src="./js/megaMenu.js"></script>
-        <script src="./js/hell-contact.js"></script>
+        <script src="./js/contact.js"></script>
     </head>
     <body>
         <!-- MEGA menu -->
-        <div class="mega-menu">
+        <div class="mega-menu hell">
             <div id="canvas-container"></div>
             <div class="text-container">
                 <div class="text-element logo">
@@ -34,11 +37,13 @@
                 <div class="text-element menu name"><a href="./heejoo.html">정희주</a></div>
                 <div class="text-element menu contact"><a href="./contact.html">컨텍</a></div>
                 <div class="text-element menu project"><a href="./projects.html">프로젝트</a></div>
-                <div class="text-element menu-projectsub micro"><a href="#">마이크로사이트</a></div>
-                <div class="text-element menu-projectsub web"><a href="#">웹디자인</a></div>
-                <div class="text-element menu-projectsub banner"><a href="#">배너디자인</a></div>
-                <div class="text-element menu-projectsub app"><a href="#">앱디자인</a></div>
-                <div class="text-element menu-projectsub other"><a href="#">외</a></div>
+                <div class="text-element menu-projectsub micro">
+                    <a href="projects.html#micro-site">마이크로사이트</a>
+                </div>
+                <div class="text-element menu-projectsub web"><a href="projects.html#web">웹디자인</a></div>
+                <div class="text-element menu-projectsub banner"><a href="projects.html#banner">배너디자인</a></div>
+                <div class="text-element menu-projectsub app"><a href="projects.html#app">앱디자인</a></div>
+                <div class="text-element menu-projectsub other"><a href="projects.html#other">외</a></div>
                 <div class="text-element line line1">신입특) 객기부림👎👎👎</div>
                 <div class="text-element line line2">근데 희주 ;</div>
                 <div class="text-element line line3">자아없음 모드 ON🤓👍</div>
@@ -63,14 +68,20 @@
                 <h1 class="logo">
                     <a href="./index.html"><img src="" alt="희주의 포트폴리오" /></a>
                 </h1>
-                <button type="button" class="btn-menu"></button>
+                <ul class="gnb heaven">
+                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./heejoo.html">HEEJOO</a></li>
+                    <li><a href="./projects.html">PROJECT</a></li>
+                    <li class="active"><a href="./contact.html">CONTACT</a></li>
+                </ul>
+                <button type="button" class="btn-menu hell"></button>
             </nav>
         </header>
         <!-- e: header -->
 
         <main>
             <div class="marquee">
-                <div class="text1">
+                <div class="text1 hell">
                     <p>미친코딩살육머신을 가질 수 있는 마지막 기회</p>
                     <p>미친코딩살육머신을 가질 수 있는 마지막 기회</p>
                     <p>미친코딩살육머신을 가질 수 있는 마지막 기회</p>
@@ -78,12 +89,12 @@
 
                 <div class="contact">
                     <p>CONTACT ME</p>
-                    <p>CONTACT ME</p>
-                    <p>CONTACT ME</p>
-                    <p>CONTACT ME</p>
+                    <p class="hell">CONTACT ME</p>
+                    <p class="hell">CONTACT ME</p>
+                    <p class="hell">CONTACT ME</p>
                 </div>
 
-                <div class="text2">
+                <div class="text2 hell">
                     <p>명품과 희주 임금은 지금이 제일 싸다</p>
                     <p>명품과 희주 임금은 지금이 제일 싸다</p>
                     <p>명품과 희주 임금은 지금이 제일 싸다</p>
