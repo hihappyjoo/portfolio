@@ -7,22 +7,25 @@
 
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
-        <link rel="stylesheet" href="./css/hell-common.css" />
-        <link rel="stylesheet" href="./css/main.css" />
+        <!-- <link rel="stylesheet" href="./css/hell-common.css" /> -->
+        <link rel="stylesheet" href="./css/heaven-common.css" />
+        <!-- <link rel="stylesheet" href="./css/hell-main.css" /> -->
+        <link rel="stylesheet" href="./css/heaven-main.css" />
 
         <!-- JQuery -->
         <script src="./js/jquery-3.7.1.min.js"></script>
         <!-- matter.js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script> -->
         <!-- GSAP -->
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script> -->
 
-        <script src="./js/megaMenu.js"></script>
-        <script src="./js/main.js"></script>
+        <!-- <script src="./js/megaMenu.js"></script> -->
+        <!-- <script src="./js/hell-main.js"></script> -->
+        <script src="./js/heaven-main.js"></script>
     </head>
     <body>
         <!-- MEGA menu -->
-        <div class="mega-menu">
+        <div class="mega-menu hell">
             <div id="canvas-container"></div>
             <div class="text-container">
                 <div class="text-element logo">
@@ -66,33 +69,47 @@
                 <h1 class="logo">
                     <a href="./index.html"><img src="" alt="희주의 포트폴리오" /></a>
                 </h1>
-                <button type="button" class="btn-menu"></button>
+                <ul class="gnb heaven">
+                    <li class="active"><a href="./index.html">HOME</a></li>
+                    <li><a href="./heejoo.html">HEEJOO</a></li>
+                    <li><a href="./projects.html">PROJECT</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+                <button type="button" class="btn-menu hell"></button>
             </nav>
         </header>
         <!-- e: header -->
 
         <main>
-            <div class="name-marquee">
+            <div class="name-marquee hell">
                 <strong class="hee">HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</strong>
                 <strong class="joo">JOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</strong>
             </div>
 
-            <strong class="info-text">UI/UX 디자이너 퍼블리셔 포트폴리오</strong>
+            <strong class="info-text hell">UI/UX 디자이너 퍼블리셔 포트폴리오</strong>
 
-            <div class="portfolio chrome"><img src="./img/hell-portfolio-임시.png" alt="포트폴리오" /></div>
-
-            <div class="mode chrome"><img src="./img/hell-mode-임시.png" alt="모드" /></div>
-
-            <div class="heejoo chrome">
-                <img src="./img/hell-hee-임시.png" alt="희" />
-                <img src="./img/hell-joo-임시.png" alt="주" />
+            <div class="hell">
+                <div class="portfolio chrome"><img src="./img/hell-portfolio-임시.png" alt="포트폴리오" /></div>
+                <div class="mode chrome"><img src="./img/hell-mode-임시.png" alt="모드" /></div>
+                <div class="heejoo chrome">
+                    <img src="./img/hell-hee-임시.png" alt="희" />
+                    <img src="./img/hell-joo-임시.png" alt="주" />
+                </div>
+                <div class="process chrome">
+                    <a href="./projects.html#portfolio-process"
+                        ><img src="./img/hell-process-임시.png" alt="프로세스"
+                    /></a>
+                </div>
+                <div class="wandoo chrome"><img src="./img/hell-wandoo-임시.png" alt="완두" /></div>
             </div>
 
-            <div class="process chrome">
-                <a href="./projects.html#portfolio-process"><img src="./img/hell-process-임시.png" alt="프로세스" /></a>
+            <div class="title-wrap heaven">
+                <strong class="portfolio">PORTFOLIO</strong>
+                <strong class="mode">MODE</strong>
+                <strong class="heejoo">HEEJOO</strong>
+                <strong class="process">PROCESS</strong>
+                <strong class="wandoo">WANDOO</strong>
             </div>
-
-            <div class="wandoo chrome"><img src="./img/hell-wandoo-임시.png" alt="완두" /></div>
 
             <div class="popup">
                 <section class="portfolio">
@@ -120,14 +137,19 @@
                     <h2>MODE</h2>
                     <div class="popup-text">
                         <dl>
-                            <dt>TO HEAVEN.</dt>
-                            <dd>천국가기</dd>
+                            <dt class="hell">TO HEAVEN.</dt>
+                            <dt class="heaven">TO HELL.</dt>
+                            <dd class="hell">천국가기</dd>
+                            <dd class="heaven">
+                                정적인 분위기가 지루하시다면, <br />
+                                토글을 눌러 헬모드를 이용해보세요.
+                            </dd>
                         </dl>
                     </div>
                 </section>
                 <section class="heejoo">
                     <h2>HEEJOO</h2>
-                    <div class="popup-text">
+                    <div class="popup-text hell">
                         <dl>
                             <dt>NAME.</dt>
                             <dd>정희주</dd>
@@ -145,6 +167,28 @@
                             <dd>heehappyjoo@gmail.com</dd>
                         </dl>
                     </div>
+                    <div class="popup-text heaven">
+                        <div class="left">
+                            <dl>
+                                <dt>NAME.</dt>
+                                <dd>정희주</dd>
+                            </dl>
+                            <dl>
+                                <dt>BIRTH.</dt>
+                                <dd>1997. 09. 04</dd>
+                            </dl>
+                        </div>
+                        <div class="right">
+                            <dl>
+                                <dt>PHONE.</dt>
+                                <dd>010.2679.2914</dd>
+                            </dl>
+                            <dl>
+                                <dt>EMAIL.</dt>
+                                <dd>heehappyjoo@gmail.com</dd>
+                            </dl>
+                        </div>
+                    </div>
                 </section>
                 <section class="process">
                     <h2>PROCESS</h2>
@@ -161,7 +205,7 @@
                 </section>
             </div>
 
-            <div class="skill-marquee-wrap">
+            <div class="skill-marquee-wrap hell">
                 <div class="skill-marquee">
                     <p>
                         에이치티엠엘 씨에스에스 자바스크립트 제이쿼리 포토샵 일러스트레이터 인디자인 피그마 서비스 판매
