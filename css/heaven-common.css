@@ -1,5 +1,5 @@
 .hell {
-    display: none;
+    display: none !important;
 }
 
 header nav {
