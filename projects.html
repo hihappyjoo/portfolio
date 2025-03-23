@@ -10,24 +10,27 @@
 
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
-        <link rel="stylesheet" href="./css/hell-common.css" />
-        <link rel="stylesheet" href="./css/hell-projects.css" />
+        <!-- <link rel="stylesheet" href="./css/hell-common.css" /> -->
+        <link rel="stylesheet" href="./css/heaven-common.css" />
+        <!-- <link rel="stylesheet" href="./css/hell-projects.css" /> -->
+        <link rel="stylesheet" href="./css/heaven-projects.css" />
 
         <!-- swiper.js -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!-- JQuery -->
         <script src="./js/jquery-3.7.1.min.js"></script>
         <!-- matter.js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script> -->
         <!-- GSAP -->
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script> -->
 
-        <script src="./js/megaMenu.js"></script>
-        <script src="./js/hell-project.js"></script>
+        <!-- <script src="./js/megaMenu.js"></script> -->
+        <!-- <script src="./js/hell-project.js"></script> -->
+        <script src="./js/heaven-project.js"></script>
     </head>
     <body>
         <!-- MEGA menu -->
-        <div class="mega-menu">
+        <div class="mega-menu hell">
             <div id="canvas-container"></div>
             <div class="text-container">
                 <div class="text-element logo">
@@ -71,7 +74,13 @@
                 <h1 class="logo">
                     <a href="./index.html"><img src="" alt="희주의 포트폴리오" /></a>
                 </h1>
-                <button type="button" class="btn-menu"></button>
+                <ul class="gnb heaven">
+                    <li><a href="./index.html">HOME</a></li>
+                    <li class="active"><a href="./heejoo.html">HEEJOO</a></li>
+                    <li><a href="./projects.html">PROJECT</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+                <button type="button" class="btn-menu hell"></button>
             </nav>
         </header>
         <!-- e: header -->
@@ -83,7 +92,7 @@
             </h2>
 
             <!-- ol>li*5>(.project-date>p)+(.project-con>dl>(dt>strong+p)+(dd>p+i)) -->
-            <div class="worklist">
+            <div class="worklist hell">
                 <div class="sticky">
                     <figure><img src="" alt="" /></figure>
                     <div class="title"></div>
@@ -308,172 +317,443 @@
                 </div>
             </div>
 
-            <section id="banner">
-                <h3>BANNER</h3>
-                <div class="main-swiper-wrapper">
-                    <div class="swiper main-swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img
-                                        src="https://ilyo.co.kr/contents/article/images/2025/0214/1739531410621707.jpg"
-                                        alt=""
-                                    />
-                                </figure>
-                                <figure>
-                                    <img
-                                        src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-102458,resizemode-75,msid-118016442/magazines/panache/newjeans-rebrands-to-njz-k-pop-girl-band-officially-announces-new-name-amid-contract-dispute-what-really-happened.jpg"
-                                        alt=""
-                                    />
-                                </figure>
-                                <figure>
-                                    <img src="https://cdn.hankyung.com/photo/202501/BF.39030472.1.jpg" alt="" />
-                                </figure>
-                                <figure><img src="https://media.nudge-community.com/7870793" alt="" /></figure>
-                                <figure><img src="./img/other05.jpg" alt="" /></figure>
-                                <figure><img src="./img/other06.jpg" alt="" /></figure>
-                                <figure><img src="./img/other07.jpg" alt="" /></figure>
-                                <figure><img src="./img/other08.jpg" alt="" /></figure>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
-                                <figure><img src="" alt="" /></figure>
-                                <figure><img src="" alt="" /></figure>
-                                <figure><img src="" alt="" /></figure>
-                                <figure><img src="" alt="" /></figure>
-                                <figure><img src="" alt="" /></figure>
-                                <figure><img src="" alt="" /></figure>
-                                <figure><img src="" alt="" /></figure>
+            <!-- section#web.heaven>h3{WEB}+.info>ul.info-list>li*5>(.title>(.title-detail>strong+.tags>p)+h4)+(.datetool>dl*2>dt+dd)+.buttons>button:button.btn-process{PROCESS}+a.link-website{WEBSITE} -->
+            <section id="web" class="heaven">
+                <div class="inner">
+                    <h3>WEB</h3>
+                    <div class="info">
+                        <ul class="info-list">
+                            <li>
+                                <div class="info-text">
+                                    <div class="info-title">
+                                        <div class="detail">
+                                            <strong>기획</strong>
+                                            <div class="tags"><i>#기획</i> <i>#와이어프레임</i></div>
+                                        </div>
+                                        <h4>폴바셋</h4>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
+                                        distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
+                                    </p>
+                                    <dl class="period">
+                                        <dt>기간</dt>
+                                        <dd>2024. 11. 27 - 12. 06</dd>
+                                    </dl>
+                                </div>
+                                <div class="buttons">
+                                    <button
+                                        type="button"
+                                        class="btn-process"
+                                        data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
+                                    >
+                                        PROCESS
+                                    </button>
+                                    <a href="" class="link-website">WEBSITE</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-text">
+                                    <div class="info-title">
+                                        <div class="detail">
+                                            <strong>리디자인</strong>
+                                            <div class="tags"><i>#반응형</i> <i>#식품</i></div>
+                                        </div>
+                                        <h4>매드포갈릭</h4>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
+                                        distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
+                                    </p>
+                                    <dl class="period">
+                                        <dt>기간</dt>
+                                        <dd>2024. 12. 20 - 2025. 02. 12</dd>
+                                    </dl>
+                                </div>
+                                <div class="buttons">
+                                    <button
+                                        type="button"
+                                        class="btn-process"
+                                        data-process="https://i.pinimg.com/236x/f6/16/d0/f616d044c7937dde2e8ec2b4f3e6f79c.jpg"
+                                    >
+                                        PROCESS
+                                    </button>
+                                    <a href="" class="link-website">WEBSITE</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-text">
+                                    <div class="info-title">
+                                        <div class="detail">
+                                            <strong>리디자인</strong>
+                                            <div class="tags">
+                                                <i>#반응형</i>
+                                                <i>#글라스모피즘</i>
+                                                <i>#기관</i>
+                                            </div>
+                                        </div>
+                                        <h4>천리포수목원</h4>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
+                                        distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
+                                    </p>
+                                    <dl class="period">
+                                        <dt>기간</dt>
+                                        <dd>2025. 02. 15 - 03. 04</dd>
+                                    </dl>
+                                </div>
+                                <div class="buttons">
+                                    <button
+                                        type="button"
+                                        class="btn-process"
+                                        data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
+                                    >
+                                        PROCESS
+                                    </button>
+                                    <a href="" class="link-website">WEBSITE</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-text">
+                                    <div class="info-title">
+                                        <div class="detail">
+                                            <strong>클론코딩</strong>
+                                            <div class="tags"><i>#스크롤트리거</i> <i>#뷰티</i></div>
+                                        </div>
+                                        <h4>비앙글로</h4>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
+                                        distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
+                                    </p>
+                                    <dl class="period">
+                                        <dt>기간</dt>
+                                        <dd>2025. 03. 05 - 03. 06</dd>
+                                    </dl>
+                                </div>
+                                <div class="buttons">
+                                    <button
+                                        type="button"
+                                        class="btn-process"
+                                        data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
+                                    >
+                                        PROCESS
+                                    </button>
+                                    <a href="" class="link-website">WEBSITE</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info-text">
+                                    <div class="info-title">
+                                        <div class="detail">
+                                            <strong>포트폴리오</strong>
+                                            <div class="tags">
+                                                <i>#css교체</i>
+                                                <i>#gsap</i>
+                                                <i>#matter.js</i>
+                                            </div>
+                                        </div>
+                                        <h4>H34V3N vs H311</h4>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
+                                        distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
+                                    </p>
+                                    <dl class="period">
+                                        <dt>기간</dt>
+                                        <dd>2025. 03. 04 - 03.</dd>
+                                    </dl>
+                                </div>
+                                <div class="buttons">
+                                    <button
+                                        type="button"
+                                        class="btn-process"
+                                        data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
+                                    >
+                                        PROCESS
+                                    </button>
+                                    <a href="" class="link-website">WEBSITE</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="web-swiper-wrap">
+                            <div class="swiper web-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <figure><img src="" alt="" /></figure>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <figure><img src="" alt="" /></figure>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <figure><img src="" alt="" /></figure>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <figure><img src="" alt="" /></figure>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <figure><img src="" alt="" /></figure>
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-scrollbar"></div>
                 </div>
+            </section>
 
-                <div class="sub-swiper-wrapper">
-                    <button type="button" class="btn-close"></button>
+            <section id="app" class="heaven">
+                <div class="inner">
+                    <h3>APP</h3>
+                    <figure><img src="" alt="" /></figure>
+                    <div class="info-con">
+                        <div class="info-text">
+                            <div class="info-title">
+                                <div class="detail">
+                                    <strong>프로토타이핑</strong>
+                                    <div class="tags">
+                                        <i>#독서기록</i>
+                                        <i>#커뮤니티</i>
+                                        <i>#프로토타이핑</i>
+                                    </div>
+                                </div>
+                                <h4>토독</h4>
+                            </div>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
+                                distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
+                            </p>
+                            <dl class="period">
+                                <dt>기간</dt>
+                                <dd>2025. 01. 21 - 02. 26</dd>
+                            </dl>
+                        </div>
+                        <div class="buttons">
+                            <button
+                                type="button"
+                                class="btn-process"
+                                data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
+                            >
+                                PROCESS
+                            </button>
+                            <a href="" class="link-website">WEBSITE</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                    <div class="swiper sub-swiper">
-                        <div class="swiper-wrapper">
-                            <!-- .swiper-slide>(fig>img)+.tags>p{#Photoshop} -->
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img
-                                        src="https://ilyo.co.kr/contents/article/images/2025/0214/1739531410621707.jpg"
-                                        alt=""
-                                    />
-                                </figure>
-                                <div class="tags">
-                                    <p>#Photoshop</p>
-                                    <p>#Illustrator</p>
-                                    <p>165*668</p>
+            <section id="micro-site" class="heaven">
+                <div class="inner">
+                    <h3>MICRO SITE</h3>
+                    <ul>
+                        <li>
+                            <div class="card">
+                                <h4>인사이드아웃2</h4>
+                                <dl>
+                                    <dt>기간</dt>
+                                    <dd>2025. 01. 06 - 01. 14</dd>
+                                </dl>
+                            </div>
+                            <div class="popup">
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum porro, fugit magni
+                                    minus esse quia.
+                                </p>
+                                <div class="buttons">
+                                    <button type="button" class="btn-process" data-process="">PROCESS</button>
+                                    <a href="" class="link-website">MICROSITE</a>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img
-                                        src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-102458,resizemode-75,msid-118016442/magazines/panache/newjeans-rebrands-to-njz-k-pop-girl-band-officially-announces-new-name-amid-contract-dispute-what-really-happened.jpg"
-                                        alt=""
-                                    />
-                                </figure>
-                                <div class="tags">
-                                    <p>#Photoshop</p>
-                                    <p>8974*235</p>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <h4>다키스트던전</h4>
+                                <dl>
+                                    <dt>기간</dt>
+                                    <dd>2025. 03</dd>
+                                </dl>
+                            </div>
+                            <div class="popup">
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, tenetur facilis.
+                                    Esse, eos?
+                                </p>
+                                <div class="buttons">
+                                    <button type="button" class="btn-process" data-process="">PROCESS</button>
+                                    <a href="" class="link-website">MICROSITE</a>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img src="https://cdn.hankyung.com/photo/202501/BF.39030472.1.jpg" alt="" />
-                                </figure>
-                                <div class="tags">
-                                    <p>#Photoshop</p>
-                                    <p>8974*235</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="banner">
+                <div class="inner">
+                    <h3>BANNER</h3>
+                    <div class="main-swiper-wrapper">
+                        <div class="swiper main-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure>
+                                        <img
+                                            src="https://ilyo.co.kr/contents/article/images/2025/0214/1739531410621707.jpg"
+                                            alt=""
+                                        />
+                                    </figure>
+                                    <figure>
+                                        <img
+                                            src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-102458,resizemode-75,msid-118016442/magazines/panache/newjeans-rebrands-to-njz-k-pop-girl-band-officially-announces-new-name-amid-contract-dispute-what-really-happened.jpg"
+                                            alt=""
+                                        />
+                                    </figure>
+                                    <figure>
+                                        <img src="https://cdn.hankyung.com/photo/202501/BF.39030472.1.jpg" alt="" />
+                                    </figure>
+                                    <figure><img src="https://media.nudge-community.com/7870793" alt="" /></figure>
+                                    <figure><img src="./img/other05.jpg" alt="" /></figure>
+                                    <figure><img src="./img/other06.jpg" alt="" /></figure>
+                                    <figure><img src="./img/other07.jpg" alt="" /></figure>
+                                    <figure><img src="./img/other08.jpg" alt="" /></figure>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="https://media.nudge-community.com/7870793" alt="" /></figure>
-                                <div class="tags">
-                                    <p>#Photoshop</p>
-                                    <p>8974*235</p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="./img/other05.jpg" alt="" /></figure>
-                                <div class="tags">
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
-                                <div class="tags">
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
-                                <div class="tags">
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
-                                <div class="tags">
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
-                                <div class="tags">
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
-                                <div class="tags">
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
-                                <div class="tags">
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
-                                <div class="tags">
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
-                                <div class="tags">
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
-                                <div class="tags">
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
-                                <div class="tags">
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure><img src="" alt="" /></figure>
-                                <div class="tags">
-                                    <p></p>
+                                <div class="swiper-slide">
+                                    <figure><img src="" alt="" /></figure>
+                                    <figure><img src="" alt="" /></figure>
+                                    <figure><img src="" alt="" /></figure>
+                                    <figure><img src="" alt="" /></figure>
+                                    <figure><img src="" alt="" /></figure>
+                                    <figure><img src="" alt="" /></figure>
+                                    <figure><img src="" alt="" /></figure>
+                                    <figure><img src="" alt="" /></figure>
                                 </div>
                             </div>
                         </div>
+                        <div class="swiper-scrollbar"></div>
                     </div>
-
-                    <div class="btn-prev"></div>
-                    <div class="btn-next"></div>
+                    <div class="sub-swiper-wrapper">
+                        <button type="button" class="btn-close"></button>
+                        <div class="swiper sub-swiper">
+                            <div class="swiper-wrapper">
+                                <!-- .swiper-slide>(fig>img)+.tags>p{#Photoshop} -->
+                                <div class="swiper-slide">
+                                    <figure>
+                                        <img
+                                            src="https://ilyo.co.kr/contents/article/images/2025/0214/1739531410621707.jpg"
+                                            alt=""
+                                        />
+                                    </figure>
+                                    <div class="tags">
+                                        <p>#Photoshop</p>
+                                        <p>#Illustrator</p>
+                                        <p>165*668</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure>
+                                        <img
+                                            src="https://img.etimg.com/thumb/width-1200,height-1200,imgsize-102458,resizemode-75,msid-118016442/magazines/panache/newjeans-rebrands-to-njz-k-pop-girl-band-officially-announces-new-name-amid-contract-dispute-what-really-happened.jpg"
+                                            alt=""
+                                        />
+                                    </figure>
+                                    <div class="tags">
+                                        <p>#Photoshop</p>
+                                        <p>8974*235</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure>
+                                        <img src="https://cdn.hankyung.com/photo/202501/BF.39030472.1.jpg" alt="" />
+                                    </figure>
+                                    <div class="tags">
+                                        <p>#Photoshop</p>
+                                        <p>8974*235</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure><img src="https://media.nudge-community.com/7870793" alt="" /></figure>
+                                    <div class="tags">
+                                        <p>#Photoshop</p>
+                                        <p>8974*235</p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure><img src="./img/other05.jpg" alt="" /></figure>
+                                    <div class="tags">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure><img src="" alt="" /></figure>
+                                    <div class="tags">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure><img src="" alt="" /></figure>
+                                    <div class="tags">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure><img src="" alt="" /></figure>
+                                    <div class="tags">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure><img src="" alt="" /></figure>
+                                    <div class="tags">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure><img src="" alt="" /></figure>
+                                    <div class="tags">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure><img src="" alt="" /></figure>
+                                    <div class="tags">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure><img src="" alt="" /></figure>
+                                    <div class="tags">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure><img src="" alt="" /></figure>
+                                    <div class="tags">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure><img src="" alt="" /></figure>
+                                    <div class="tags">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure><img src="" alt="" /></figure>
+                                    <div class="tags">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure><img src="" alt="" /></figure>
+                                    <div class="tags">
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-prev"></div>
+                        <div class="btn-next"></div>
+                    </div>
                 </div>
             </section>
 

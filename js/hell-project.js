@@ -129,7 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
             $listpopupImg.html(`<img src="${$processSrc}" alt="${$titleSrc}" />`);
             $listpopupImg.find("img").show();
         });
-
         $listpopupClose.on("click", () => {
             $listpopup.fadeOut();
         });
@@ -158,8 +157,8 @@ document.addEventListener("DOMContentLoaded", () => {
         subSwiper.slideToLoop(index, 500);
     }
 
+    const $subSwiper = $("#banner .sub-swiper-wrapper");
     function openPopup() {
-        const $subSwiper = $("#banner .sub-swiper-wrapper");
         $subSwiper.fadeIn();
         console.log($mainImg);
     }
