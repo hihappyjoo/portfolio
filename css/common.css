@@ -178,7 +178,7 @@ footer .mode-wrap #mode + label::after {
     height: 2.5rem;
     border-radius: 50%;
 
-    background: 50% 50% / contain;
+    background: no-repeat 50% 50% / contain;
 }
 
 footer .update {

@@ -90,6 +90,7 @@
 .list1 ul {
     display: flex;
     justify-content: center;
+    gap: 1rem;
 
     width: 100%;
     margin-top: 5rem;
@@ -102,17 +103,28 @@
     justify-content: center;
     align-items: center;
 
-    width: 14rem;
-    height: 14rem;
+    width: 15rem;
+    height: 15rem;
 
-    border: 1px solid #000;
-    border-radius: 50%;
-
+    font-family: "SF_Hambaksnow";
     font-weight: 800;
-    font-size: 2.4rem;
-    color: var(--title-color);
+    font-size: 2.8rem;
+    color: #fff;
+    /* text-shadow: 0 0 4px #000, 0 0 4px var(--black50p); */
+    -webkit-text-stroke: 2px #000;
+    paint-order: stroke fill;
 
-    margin: 0 -1.5rem;
+    background: no-repeat 50% 50% / contain;
+}
+
+.list1 ul li:nth-child(1) {
+    background-image: url(../img/heaven-str2.svg);
+}
+.list1 ul li:nth-child(2) {
+    background-image: url(../img/heaven-str1.svg);
+}
+.list1 ul li:nth-child(3) {
+    background-image: url(../img/heaven-str3.svg);
 }
 
 /* e: list1 */

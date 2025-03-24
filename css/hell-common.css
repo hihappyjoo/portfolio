@@ -41,8 +41,10 @@ footer .mode-wrap #mode + label::after {
     left: 50%;
     transform: translate(60%, -50%);
 
-    background-color: var(--main-color);
-    background-image: url();
+    background: no-repeat 80% 50% / contain;
+    background-color: var(--main-color-dark);
+    background-image: url(../img/hell-icon-toggle.svg);
+    background-size: 85%;
     box-shadow: -1.4px 0 1px var(--white20p), inset 2px 1.5px 2px var(--black60p), -0.7px 0.7px 2px 1px var(--white80p),
         inset 3px 3.5px 8px 1.5px var(--black20p);
 }

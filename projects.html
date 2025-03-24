@@ -20,9 +20,9 @@
         <!-- JQuery -->
         <script src="./js/jquery-3.7.1.min.js"></script>
         <!-- matter.js -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
         <!-- GSAP -->
-        <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 
         <!-- <script src="./js/megaMenu.js"></script> -->
         <!-- <script src="./js/hell-project.js"></script> -->
@@ -76,8 +76,8 @@
                 </h1>
                 <ul class="gnb heaven">
                     <li><a href="./index.html">HOME</a></li>
-                    <li class="active"><a href="./heejoo.html">HEEJOO</a></li>
-                    <li><a href="./projects.html">PROJECT</a></li>
+                    <li><a href="./heejoo.html">HEEJOO</a></li>
+                    <li class="active"><a href="./projects.html">PROJECT</a></li>
                     <li><a href="./contact.html">CONTACT</a></li>
                 </ul>
                 <button type="button" class="btn-menu hell"></button>
@@ -86,7 +86,7 @@
         <!-- e: header -->
 
         <main>
-            <h2>
+            <h2 class="hell">
                 PROJ <br />
                 ECTS
             </h2>
@@ -318,7 +318,7 @@
             </div>
 
             <!-- section#web.heaven>h3{WEB}+.info>ul.info-list>li*5>(.title>(.title-detail>strong+.tags>p)+h4)+(.datetool>dl*2>dt+dd)+.buttons>button:button.btn-process{PROCESS}+a.link-website{WEBSITE} -->
-            <section id="web" class="heaven">
+            <section id="heaven-web" class="heaven">
                 <div class="inner">
                     <h3>WEB</h3>
                     <div class="info">
@@ -443,7 +443,7 @@
                                     <a href="" class="link-website">WEBSITE</a>
                                 </div>
                             </li>
-                            <li>
+                            <li id="portfolio">
                                 <div class="info-text">
                                     <div class="info-title">
                                         <div class="detail">
@@ -481,13 +481,13 @@
                             <div class="swiper web-swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <figure><img src="" alt="" /></figure>
+                                        <figure><img src="./img/hell-portfolio-임시.png" alt="" /></figure>
                                     </div>
                                     <div class="swiper-slide">
-                                        <figure><img src="" alt="" /></figure>
+                                        <figure><img src="./img/other05.jpg" alt="" /></figure>
                                     </div>
                                     <div class="swiper-slide">
-                                        <figure><img src="" alt="" /></figure>
+                                        <figure><img src="./img/other02.jpg" alt="" /></figure>
                                     </div>
                                     <div class="swiper-slide">
                                         <figure><img src="" alt="" /></figure>
@@ -496,54 +496,56 @@
                                         <figure><img src="" alt="" /></figure>
                                     </div>
                                 </div>
-                                <div class="swiper-pagination"></div>
                             </div>
+                            <div class="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="app" class="heaven">
+            <section id="heaven-app" class="heaven">
                 <div class="inner">
                     <h3>APP</h3>
-                    <figure><img src="" alt="" /></figure>
-                    <div class="info-con">
-                        <div class="info-text">
-                            <div class="info-title">
-                                <div class="detail">
-                                    <strong>프로토타이핑</strong>
-                                    <div class="tags">
-                                        <i>#독서기록</i>
-                                        <i>#커뮤니티</i>
-                                        <i>#프로토타이핑</i>
+                    <div class="info">
+                        <figure><img src="" alt="" /></figure>
+                        <div class="info-con">
+                            <div class="info-text">
+                                <div class="info-title">
+                                    <div class="detail">
+                                        <strong>프로토타이핑</strong>
+                                        <div class="tags">
+                                            <i>#독서기록</i>
+                                            <i>#커뮤니티</i>
+                                            <i>#프로토타이핑</i>
+                                        </div>
                                     </div>
+                                    <h4>토독</h4>
                                 </div>
-                                <h4>토독</h4>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
+                                    distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
+                                </p>
+                                <dl class="period">
+                                    <dt>기간</dt>
+                                    <dd>2025. 01. 21 - 02. 26</dd>
+                                </dl>
                             </div>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
-                                distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
-                            </p>
-                            <dl class="period">
-                                <dt>기간</dt>
-                                <dd>2025. 01. 21 - 02. 26</dd>
-                            </dl>
-                        </div>
-                        <div class="buttons">
-                            <button
-                                type="button"
-                                class="btn-process"
-                                data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
-                            >
-                                PROCESS
-                            </button>
-                            <a href="" class="link-website">WEBSITE</a>
+                            <div class="buttons">
+                                <button
+                                    type="button"
+                                    class="btn-process"
+                                    data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
+                                >
+                                    PROCESS
+                                </button>
+                                <a href="naver.com" target="_blank" class="link-website">WEBSITE</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="micro-site" class="heaven">
+            <section id="heaven-micro-site" class="heaven">
                 <div class="inner">
                     <h3>MICRO SITE</h3>
                     <ul>
@@ -558,7 +560,8 @@
                             <div class="popup">
                                 <p>
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum porro, fugit magni
-                                    minus esse quia.
+                                    minus esse quia.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                                    porro, fugit magni minus esse quia.
                                 </p>
                                 <div class="buttons">
                                     <button type="button" class="btn-process" data-process="">PROCESS</button>

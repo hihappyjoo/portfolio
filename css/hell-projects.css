@@ -484,6 +484,7 @@ h3 {
 
 #other .text p + p i {
     font-weight: 700;
+    margin-right: 0.5rem;
 }
 
 #other .other-swiper-wrapper {

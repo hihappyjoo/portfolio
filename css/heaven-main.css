@@ -58,8 +58,6 @@
     font-weight: 900;
     font-size: 10rem;
     color: var(--title-color);
-    -webkit-text-stroke: 10px #fff;
-    paint-order: stroke fill;
 
     box-shadow: inset 4px 4px 4px var(--white20p);
     backdrop-filter: blur(2.5px);
@@ -75,6 +73,52 @@
 }
 
 /* e: h2 */
+
+.grid-wrap .portfolio {
+    overflow: hidden;
+}
+
+.grid-wrap .portfolio h2::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: -30%;
+    transform: rotate(90deg);
+    z-index: -1;
+
+    width: 80rem;
+    height: 14rem;
+
+    filter: blur(8px);
+
+    background: url(../img/deco-worm.svg) no-repeat 0 0 / contain;
+
+    animation: rotateY 3s infinite both;
+}
+
+.grid-wrap .portfolio h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    left: 35%;
+    transform: rotate(90deg);
+    z-index: -1;
+
+    width: 18rem;
+    height: 18rem;
+
+    filter: blur(8px);
+
+    background: url(../img/deco-softflower.svg) no-repeat 0 0 / contain;
+
+    animation: rotateY 8s infinite both;
+}
+
+@keyframes rotateY {
+    100% {
+        transform: rotate(90deg) rotateX(360deg);
+    }
+}
 
 .grid-wrap .behind {
     display: flex;

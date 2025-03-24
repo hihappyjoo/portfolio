@@ -2,6 +2,7 @@
 
 body {
     overflow-x: hidden;
+    transition: 0.4s;
 }
 
 .inner {
@@ -43,51 +44,6 @@ h3::after {
 
 /* e: inner, heading */
 
-#web .info {
-    margin-top: 8rem;
-
-    width: 100%;
-
-    border: 1px solid dodgerblue;
-}
-
-#web .info .info-list {
-    width: 46.7rem;
-    height: 60rem;
-    border: 1px solid #000;
-
-    position: relative;
-}
-
-#web .info .info-list li {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 100%;
-    height: 100%;
-    padding: 0 2rem;
-
-    border: 1px solid red;
-}
-
-/* e: web 개별설정 */
-
-#app .info-con {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 46.7rem;
-    height: 60rem;
-}
-
-/* e: app 개별설정 */
-
 .info-text {
     display: flex;
     flex-direction: column;
@@ -116,18 +72,20 @@ h3::after {
     color: var(--text-color-light);
     background: #eee;
     border-radius: 3.6rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.3rem 1.5rem;
 }
 
 .info-text .info-title h4 {
     font-weight: 900;
-    font-size: 4rem;
+    font-size: 5.2rem;
     line-height: 1.2;
     color: var(--main-color-dark);
+
+    margin-top: 1.5rem;
 }
 
 .info-text p {
-    font-weight: 2rem;
+    font-size: 2rem;
     color: var(--text-color);
 
     margin-top: 3rem;
@@ -148,12 +106,15 @@ h3::after {
 
 /* e: web app text 설정 */
 
-/* .buttons {
+#heaven-web .buttons,
+#heaven-app .buttons {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    width: 22.2rem;
     gap: 1.5rem;
-} */
+}
+
+/* e: web app button 설정 */
 
 .buttons * {
     display: flex;
@@ -218,7 +179,232 @@ h3::after {
     filter: brightness(0) invert(1);
 }
 
-/* 절취선선 */
+/* e: button 공통설정 */
+
+#heaven-web {
+    padding-top: 20rem;
+}
+
+#heaven-web .info {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+
+    margin-top: 8rem;
+}
+
+#heaven-web .info .info-list {
+    flex-shrink: 0;
+    width: 46.7rem;
+    height: 60rem;
+
+    position: relative;
+}
+
+#heaven-web .info .info-list li {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem;
+
+    transform: translateX(-150%);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+#heaven-web .info .info-list li.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+#heaven-web .info .web-swiper-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    width: calc(100% - 48.7rem);
+    height: 64.5rem;
+}
+
+#heaven-web .info .web-swiper-wrap .web-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+#heaven-web .info .web-swiper-wrap .web-swiper .swiper-slide {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+#heaven-web .info .web-swiper-wrap .web-swiper figure {
+    width: 100%;
+    height: 100%;
+}
+
+#heaven-web .info .web-swiper-wrap .swiper-pagination {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#heaven-web .info .web-swiper-wrap .swiper-pagination .swiper-pagination-bullet {
+    background: var(--main-color-light);
+    opacity: 1;
+    border: 1px solid var(--main-color-dark);
+}
+
+#heaven-web .info .web-swiper-wrap .swiper-pagination .swiper-pagination-bullet-active {
+    width: 12px;
+    height: 12px;
+    border-radius: 0;
+    background: url(../img/deco-softflower.svg) no-repeat 50% 50% / contain;
+    border: none;
+}
+
+/* e: web 개별설정 */
+
+#heaven-app {
+    padding-top: 25rem;
+}
+
+#heaven-app .info {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: end;
+
+    margin-top: 8rem;
+}
+#heaven-app .info figure {
+    width: 59rem;
+    height: 75rem;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+#heaven-app .info .info-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 46.7rem;
+    height: 60rem;
+}
+
+/* e: app 개별설정 */
+
+#heaven-micro-site {
+    padding-top: 25rem;
+}
+
+#heaven-micro-site ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    margin-top: 8rem;
+}
+
+#heaven-micro-site ul li {
+    display: flex;
+    align-items: end;
+
+    width: calc((85% - 2rem) / 2);
+    aspect-ratio: 1;
+    padding: 7rem;
+    border-radius: 16px;
+    overflow: hidden;
+
+    position: relative;
+
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#heaven-micro-site ul li .card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    /* border: 1px solid red; */
+}
+
+#heaven-micro-site ul li .card h4 {
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.2;
+
+    color: #fff;
+    text-shadow: 0 0 4px #000;
+}
+
+#heaven-micro-site ul li .card dl {
+    display: flex;
+    gap: 3rem;
+
+    margin-left: 0.5rem;
+
+    color: #fff;
+    text-shadow: 0 0 4px #000;
+}
+
+#heaven-micro-site ul li .card dl dt {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+#heaven-micro-site ul li .card dl dd {
+    font-size: 2rem;
+}
+
+#heaven-micro-site ul li .popup {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50rem;
+    padding: 8rem;
+
+    background: var(--white50p);
+    box-shadow: var(--glassnu-box-shadow);
+    backdrop-filter: blur(var(--glass-blur));
+
+    border: 1px solid var(--main-color-light);
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    opacity: 0;
+    transition: 0.6s;
+}
+
+#heaven-micro-site ul li:hover .popup {
+    opacity: 1;
+    top: 50%;
+}
+
+#heaven-micro-site ul li .popup p {
+    text-align: center;
+}
+
+#heaven-micro-site ul li .popup .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    margin-top: 4rem;
+}
+
+/* e: micro-site */
 
 .listpopup {
     position: fixed;
@@ -294,23 +480,20 @@ h3::after {
 
 #banner .main-swiper-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
 
     width: 100%;
-    padding: 7rem;
     background: var(--white50p);
 
+    margin-top: 8rem;
+    padding-bottom: 7rem;
     position: relative;
-}
-
-#banner .main-swiper-wrapper .main-swiper {
-    width: 144rem;
 }
 
 #banner .main-swiper-wrapper .main-swiper .swiper-slide {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
 }
 #banner .main-swiper-wrapper .main-swiper .swiper-slide figure {
@@ -338,12 +521,12 @@ h3::after {
 #banner {
     position: relative;
 
-    margin-top: 15rem;
+    padding-top: 25rem;
 }
 
 #banner .sub-swiper-wrapper {
     position: absolute;
-    top: 57%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
@@ -446,32 +629,32 @@ h3::after {
 /* e: banner */
 
 #other {
-    margin: 15rem 0;
-}
-
-#other .text {
-    padding: 2rem 5rem;
+    padding: 25rem 0 15rem;
 }
 
 #other .text p {
     font-size: 2rem;
     color: var(--text-color);
-    text-align: end;
+    text-align: center;
+
+    margin-top: 3rem;
 }
 
 #other .text p + p {
     font-size: 1.6rem;
+    margin-top: 1rem;
 }
 
 #other .text p + p i {
     font-weight: 700;
+    margin-right: 0.5rem;
 }
 
 #other .other-swiper-wrapper {
     display: flex;
     justify-content: center;
 
-    margin-top: 5rem;
+    margin-top: 8rem;
 }
 
 #other .other-swiper-wrapper .other-swiper {

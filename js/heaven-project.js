@@ -52,9 +52,36 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 200)
     );
 
+    // e: scroll header
+
+    const webSwiper = new Swiper(".web-swiper", {
+        direction: "horizontal",
+        loop: true,
+
+        on: {
+            slideChange: function () {
+                const liEl = document.querySelectorAll("#heaven-web .info-list li");
+                liEl.forEach((item) => {
+                    item.classList.remove("active");
+                    setTimeout(() => {
+                        liEl[this.realIndex].classList.add("active");
+                    }, 350);
+                });
+            },
+        },
+
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+
     const mainSwiper = new Swiper(".main-swiper", {
         direction: "horizontal",
         loop: true,
+        autoplay: {
+            delay: 3000,
+            pauseOnMouseEnter: true,
+        },
         spaceBetween: 20,
 
         scrollbar: {
@@ -74,73 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
-    const otherSwiper = new Swiper(".other-swiper", {
-        direction: "horizontal",
-        loop: true,
-        autoplay: { delay: 0 },
-        speed: 3000,
-
-        slidesPerView: 4,
-        spaceBetween: 10,
-    });
-
-    const $worklistEl = $(".worklist li");
-    const $stickyImg = $(".sticky figure");
-    const $btnProcess = $(".btn-process");
-    const $btnLink = $(".link-website");
-    const $listpopup = $(".listpopup");
-    const $listpopupImg = $(".listpopup .inner figure");
-    const $listpopupClose = $(".listpopup .btn-close");
-
-    $btnLink.on("click", function (event) {
-        event.preventDefault();
-    });
-
-    function giveClass(item) {
-        $worklistEl.removeClass("active");
-        $(item).addClass("active");
-    }
-
-    window.onload = function () {
-        const hash = location.hash;
-        if (hash) {
-            giveClass(hash);
-            worklistClick(hash);
-        }
-    };
-
-    function worklistClick(item) {
-        giveClass(item);
-
-        const $imgSrc = $(item).data("img");
-        const $titleSrc = $(item).find(".project-con strong").text();
-        const $processSrc = $(item).data("process");
-        const $linkSrc = $(item).data("link");
-
-        $stickyImg.html(`<img src="${$imgSrc}" alt="${$titleSrc}">`);
-        $stickyImg.find("img").show();
-
-        $btnLink.off("click");
-        $btnLink.attr("href", $linkSrc).attr("target", "_blank");
-
-        $btnProcess.on("click", () => {
-            $listpopup.fadeIn();
-            $listpopup.css("display", "flex");
-            $listpopupImg.html(`<img src="${$processSrc}" alt="${$titleSrc}" />`);
-            $listpopupImg.find("img").show();
-        });
-        $listpopupClose.on("click", () => {
-            $listpopup.fadeOut();
-        });
-    }
-
-    $worklistEl.on("click", function () {
-        worklistClick(this);
-    });
-
     const $mainImg = $(".main-swiper .swiper-wrapper .swiper-slide figure img");
-
     const $btnClose = $("#banner .sub-swiper-wrapper .btn-close");
+    const $subSwiper = $("#banner .sub-swiper-wrapper");
 
     $btnClose.on("click", () => {
         $subSwiper.fadeOut();
@@ -157,9 +120,51 @@ document.addEventListener("DOMContentLoaded", () => {
         subSwiper.slideToLoop(index, 500);
     }
 
-    const $subSwiper = $("#banner .sub-swiper-wrapper");
     function openPopup() {
         $subSwiper.fadeIn();
         console.log($mainImg);
     }
+
+    // e: banner swiper
+
+    const $btnProcess = $(".btn-process");
+
+    $btnProcess.on("click", function () {
+        const $processSrc = $(this).data("process");
+
+        console.log($processSrc);
+        const $listpopup = $(".listpopup");
+        const $listpopupImg = $(".listpopup .inner figure");
+        const $listpopupClose = $(".listpopup .btn-close");
+
+        $listpopup.fadeIn();
+        $listpopup.css("display", "flex");
+        $listpopupImg.html(`<img src="${$processSrc}" />`);
+        $listpopupImg.find("img").show();
+
+        $listpopupClose.on("click", () => {
+            $listpopup.fadeOut();
+        });
+    });
+
+    // e: listpopup
+
+    const otherSwiper = new Swiper(".other-swiper", {
+        direction: "horizontal",
+        loop: true,
+        autoplay: { delay: 0 },
+        speed: 3000,
+
+        slidesPerView: 4,
+        spaceBetween: 10,
+    });
+
+    // e: other swiper
+
+    window.onload = function () {
+        const hash = location.hash;
+        if (hash) {
+            webSwiper.slideToLoop(4, 500);
+        }
+    };
 });
