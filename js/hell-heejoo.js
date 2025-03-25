@@ -1,18 +1,18 @@
 $(function () {
-    const $h2 = $("h2");
+    const $h2 = $(".hell-only h2");
 
-    const $infoList = $(".info-list li");
-    const $infoAbout = $(".info-list .about");
-    const $infoEducation = $(".info-list .education");
-    const $infoExperince = $(".info-list .experince");
-    const $infoLicense = $(".info-list .license");
-    const $infoSkills = $(".info-list .skills");
+    const $infoList = $(".hell-only .info-list li");
+    const $infoAbout = $(".hell-only .info-list .about");
+    const $infoEducation = $(".hell-only .info-list .education");
+    const $infoExperince = $(".hell-only .info-list .experince");
+    const $infoLicense = $(".hell-only .info-list .license");
+    const $infoSkills = $(".hell-only .info-list .skills");
 
-    const $popup = $(".popup");
-    const $popupAbout = $(".popup-list .about");
-    const $popupEducationEl = $(".popup-list .education ul li");
-    const $popupLicenseEl = $(".popup-list .license ul li");
-    const $popupSkillsEl = $(".popup-list .skills img");
+    const $popup = $(".hell-only .popup");
+    const $popupAbout = $(".hell-only .popup-list .about");
+    const $popupEducationEl = $(".hell-only .popup-list .education ul li");
+    const $popupLicenseEl = $(".hell-only .popup-list .license ul li");
+    const $popupSkillsEl = $(".hell-only .popup-list .skills img");
 
     setTimeout(() => {
         const tl = gsap.timeline();

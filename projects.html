@@ -10,10 +10,7 @@
 
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
-        <!-- <link rel="stylesheet" href="./css/hell-common.css" /> -->
-        <link rel="stylesheet" href="./css/heaven-common.css" />
-        <!-- <link rel="stylesheet" href="./css/hell-projects.css" /> -->
-        <link rel="stylesheet" href="./css/heaven-projects.css" />
+        <link rel="stylesheet" href="./css/projects.css" />
 
         <!-- swiper.js -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -24,13 +21,14 @@
         <!-- GSAP -->
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 
-        <!-- <script src="./js/megaMenu.js"></script> -->
-        <!-- <script src="./js/hell-project.js"></script> -->
+        <script src="./js/megaMenu.js"></script>
+        <script src="./js/hell-project.js"></script>
         <script src="./js/heaven-project.js"></script>
+        <script src="./js/toggle.js"></script>
     </head>
-    <body>
+    <body class="hell">
         <!-- MEGA menu -->
-        <div class="mega-menu hell">
+        <div class="mega-menu hell-only">
             <div id="canvas-container"></div>
             <div class="text-container">
                 <div class="text-element logo">
@@ -69,330 +67,458 @@
             </div>
         </div>
         <!-- e: MEGA menu -->
-        <header>
+        <header class="hell">
             <nav>
                 <h1 class="logo">
                     <a href="./index.html"><img src="" alt="희주의 포트폴리오" /></a>
                 </h1>
-                <ul class="gnb heaven">
+                <ul class="gnb heaven-only">
                     <li><a href="./index.html">HOME</a></li>
                     <li><a href="./heejoo.html">HEEJOO</a></li>
                     <li class="active"><a href="./projects.html">PROJECT</a></li>
                     <li><a href="./contact.html">CONTACT</a></li>
                 </ul>
-                <button type="button" class="btn-menu hell"></button>
+                <button type="button" class="btn-menu hell-only"></button>
             </nav>
         </header>
         <!-- e: header -->
-
-        <main>
-            <h2 class="hell">
+        <main class="hell">
+            <h2 class="hell-only">
                 PROJ <br />
                 ECTS
             </h2>
 
             <!-- ol>li*5>(.project-date>p)+(.project-con>dl>(dt>strong+p)+(dd>p+i)) -->
-            <div class="worklist hell">
-                <div class="sticky">
-                    <figure><img src="" alt="" /></figure>
-                    <div class="title"></div>
-                    <div class="buttons">
-                        <button type="button" class="btn-process">PROCESS</button>
-                        <a href="" class="link-website">WEBSITE</a>
+            <div class="hell-only">
+                <div class="works-wrap">
+                    <div class="sticky">
+                        <figure><img src="" alt="" /></figure>
+                        <div class="title"></div>
+                        <div class="buttons">
+                            <button type="button" class="btn-process">PROCESS</button>
+                            <a href="" class="link-website">WEBSITE</a>
+                        </div>
                     </div>
-                </div>
-                <div class="sections">
-                    <section id="web">
-                        <h3>WEB</h3>
-                        <ol>
-                            <li
-                                data-img="./img/other01.jpg"
-                                data-process="https://raw.githubusercontent.com/mattn/longcat/master/screenshot.png"
-                                data-link="https://www.naver.com"
-                            >
-                                <div class="project-date">
-                                    <p>
-                                        2024. 11. 27 <br />
-                                        - 12. 06
-                                    </p>
-                                </div>
-                                <div class="project-con">
-                                    <dl>
-                                        <dt>
-                                            <strong>폴바셋</strong>
-                                            <p>기획</p>
-                                        </dt>
-                                        <dd>
-                                            <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex
-                                                non est distinctio labore quidem itaque tenetur nulla? Perspiciatis,
-                                                quos?
-                                            </p>
-                                            <i>#기획 #와이어프레임</i>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </li>
-                            <li
-                                data-img="./img/other02.jpg"
-                                data-process="https://i.pinimg.com/236x/f6/16/d0/f616d044c7937dde2e8ec2b4f3e6f79c.jpg"
-                                data-link="https://www.google.com"
-                            >
-                                <div class="project-date">
-                                    <p>
-                                        2024. 12. 20 <br />
-                                        - 2025. 02. 12
-                                    </p>
-                                </div>
-                                <div class="project-con">
-                                    <dl>
-                                        <dt>
-                                            <strong>매드포갈릭</strong>
-                                            <p>리디자인</p>
-                                        </dt>
-                                        <dd>
-                                            <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex
-                                                non est distinctio labore quidem itaque tenetur nulla? Perspiciatis,
-                                                quos?
-                                            </p>
-                                            <i>#반응형 #식품</i>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </li>
-                            <li data-img="" data-process="" data-link="">
-                                <div class="project-date">
-                                    <p>
-                                        2025. 02. 15 <br />
-                                        - 03. 04
-                                    </p>
-                                </div>
-                                <div class="project-con">
-                                    <dl>
-                                        <dt>
-                                            <strong>천리포수목원</strong>
-                                            <p>리디자인</p>
-                                        </dt>
-                                        <dd>
-                                            <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex
-                                                non est distinctio labore quidem itaque tenetur nulla? Perspiciatis,
-                                                quos?
-                                            </p>
-                                            <i>#반응형 #글라스모피즘 #기관</i>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </li>
-                            <li data-img="" data-link="">
-                                <div class="project-date">
-                                    <p>
-                                        2025. 03. 05 <br />
-                                        - 03. 06
-                                    </p>
-                                </div>
-                                <div class="project-con">
-                                    <dl>
-                                        <dt>
-                                            <strong>비앙글로</strong>
-                                            <p>클론코딩</p>
-                                        </dt>
-                                        <dd>
-                                            <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex
-                                                non est distinctio labore quidem itaque tenetur nulla? Perspiciatis,
-                                                quos?
-                                            </p>
-                                            <i>#스크롤트리거 #뷰티</i>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </li>
-                            <li data-img="" data-process="" data-link="" id="portfolio-process">
-                                <div class="project-date">
-                                    <p>
-                                        2025. 03. 04 <br />
-                                        - 03.
-                                    </p>
-                                </div>
-                                <div class="project-con">
-                                    <dl>
-                                        <dt>
-                                            <strong>H34V3N vs H311</strong>
-                                            <p>포트폴리오</p>
-                                        </dt>
-                                        <dd>
-                                            <p>
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex
-                                                non est distinctio labore quidem itaque tenetur nulla? Perspiciatis,
-                                                quos?
-                                            </p>
-                                            <i>#css교체 #gsap #matter.js</i>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </li>
-                        </ol>
-                    </section>
-                    <section id="app">
-                        <h3>APP</h3>
-                        <ol>
-                            <li data-img="" data-process="" data-link="">
-                                <div class="project-date">
-                                    <p>
-                                        2025. 01. 21 <br />
-                                        - 02. 26
-                                    </p>
-                                </div>
-                                <div class="project-con">
-                                    <dl>
-                                        <dt>
-                                            <strong>토독</strong>
-                                            <p>프로토타이핑</p>
-                                        </dt>
-                                        <dd>
-                                            <p>
-                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum repellat
-                                                eius omnis aspernatur quos quia ipsum eaque fugiat voluptatibus, dolore,
-                                                fuga odio quisquam dolorum? Ab possimus modi accusamus necessitatibus
-                                                numquam.
-                                            </p>
-                                            <i>#독서기록 #커뮤니티 #와이어프레임 #프로토타이핑</i>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </li>
-                        </ol>
-                    </section>
-                    <section id="micro-site">
-                        <h3>MICRO SITE</h3>
-                        <ol>
-                            <li data-img="" data-process="" data-link="">
-                                <div class="project-date">
-                                    <p>
-                                        2025. 01. 06 <br />
-                                        - 01. 14
-                                    </p>
-                                </div>
-                                <div class="project-con">
-                                    <dl>
-                                        <dt>
-                                            <strong>
-                                                인사이드 <br />
-                                                아웃2
-                                            </strong>
-                                        </dt>
-                                        <dd>
-                                            <p>
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum porro,
-                                                fugit magni minus esse quia.
-                                            </p>
-                                            <i>#영화 #프로모션 #밝은 #몽환적</i>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </li>
-                            <li data-img="" data-process="" data-link="">
-                                <div class="project-date">
-                                    <p>2025. 03</p>
-                                </div>
-                                <div class="project-con">
-                                    <dl>
-                                        <dt>
-                                            <strong>다키스트던전</strong>
-                                        </dt>
-                                        <dd>
-                                            <p>
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, tenetur
-                                                facilis. Esse, eos?
-                                            </p>
-                                            <i>#게임 #프로모션 #어두운 #던전</i>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </li>
-                        </ol>
-                    </section>
+                    <div class="sections">
+                        <section id="web">
+                            <h3>WEB</h3>
+                            <ol>
+                                <li
+                                    data-img="./img/other01.jpg"
+                                    data-process="https://raw.githubusercontent.com/mattn/longcat/master/screenshot.png"
+                                    data-link="https://www.naver.com"
+                                >
+                                    <div class="project-date">
+                                        <p>
+                                            2024. 11. 27 <br />
+                                            - 12. 06
+                                        </p>
+                                    </div>
+                                    <div class="project-con">
+                                        <dl>
+                                            <dt>
+                                                <strong>폴바셋</strong>
+                                                <p>기획</p>
+                                            </dt>
+                                            <dd>
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
+                                                    ex non est distinctio labore quidem itaque tenetur nulla?
+                                                    Perspiciatis, quos?
+                                                </p>
+                                                <i>#기획 #와이어프레임</i>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li
+                                    data-img="./img/other02.jpg"
+                                    data-process="https://i.pinimg.com/236x/f6/16/d0/f616d044c7937dde2e8ec2b4f3e6f79c.jpg"
+                                    data-link="https://www.google.com"
+                                >
+                                    <div class="project-date">
+                                        <p>
+                                            2024. 12. 20 <br />
+                                            - 2025. 02. 12
+                                        </p>
+                                    </div>
+                                    <div class="project-con">
+                                        <dl>
+                                            <dt>
+                                                <strong>매드포갈릭</strong>
+                                                <p>리디자인</p>
+                                            </dt>
+                                            <dd>
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
+                                                    ex non est distinctio labore quidem itaque tenetur nulla?
+                                                    Perspiciatis, quos?
+                                                </p>
+                                                <i>#반응형 #식품</i>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li data-img="" data-process="" data-link="">
+                                    <div class="project-date">
+                                        <p>
+                                            2025. 02. 15 <br />
+                                            - 03. 04
+                                        </p>
+                                    </div>
+                                    <div class="project-con">
+                                        <dl>
+                                            <dt>
+                                                <strong>천리포수목원</strong>
+                                                <p>리디자인</p>
+                                            </dt>
+                                            <dd>
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
+                                                    ex non est distinctio labore quidem itaque tenetur nulla?
+                                                    Perspiciatis, quos?
+                                                </p>
+                                                <i>#반응형 #글라스모피즘 #기관</i>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li data-img="" data-link="">
+                                    <div class="project-date">
+                                        <p>
+                                            2025. 03. 05 <br />
+                                            - 03. 06
+                                        </p>
+                                    </div>
+                                    <div class="project-con">
+                                        <dl>
+                                            <dt>
+                                                <strong>비앙글로</strong>
+                                                <p>클론코딩</p>
+                                            </dt>
+                                            <dd>
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
+                                                    ex non est distinctio labore quidem itaque tenetur nulla?
+                                                    Perspiciatis, quos?
+                                                </p>
+                                                <i>#스크롤트리거 #뷰티</i>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li data-img="" data-process="" data-link="" id="portfolio-process">
+                                    <div class="project-date">
+                                        <p>
+                                            2025. 03. 04 <br />
+                                            - 03.
+                                        </p>
+                                    </div>
+                                    <div class="project-con">
+                                        <dl>
+                                            <dt>
+                                                <strong>H34V3N vs H311</strong>
+                                                <p>포트폴리오</p>
+                                            </dt>
+                                            <dd>
+                                                <p>
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
+                                                    ex non est distinctio labore quidem itaque tenetur nulla?
+                                                    Perspiciatis, quos?
+                                                </p>
+                                                <i>#css교체 #gsap #matter.js</i>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+                        <section id="app">
+                            <h3>APP</h3>
+                            <ol>
+                                <li data-img="" data-process="" data-link="">
+                                    <div class="project-date">
+                                        <p>
+                                            2025. 01. 21 <br />
+                                            - 02. 26
+                                        </p>
+                                    </div>
+                                    <div class="project-con">
+                                        <dl>
+                                            <dt>
+                                                <strong>토독</strong>
+                                                <p>프로토타이핑</p>
+                                            </dt>
+                                            <dd>
+                                                <p>
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum
+                                                    repellat eius omnis aspernatur quos quia ipsum eaque fugiat
+                                                    voluptatibus, dolore, fuga odio quisquam dolorum? Ab possimus modi
+                                                    accusamus necessitatibus numquam.
+                                                </p>
+                                                <i>#독서기록 #커뮤니티 #와이어프레임 #프로토타이핑</i>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+                        <section id="micro-site">
+                            <h3>MICRO SITE</h3>
+                            <ol>
+                                <li data-img="" data-process="" data-link="">
+                                    <div class="project-date">
+                                        <p>
+                                            2025. 01. 06 <br />
+                                            - 01. 14
+                                        </p>
+                                    </div>
+                                    <div class="project-con">
+                                        <dl>
+                                            <dt>
+                                                <strong>
+                                                    인사이드 <br />
+                                                    아웃2
+                                                </strong>
+                                            </dt>
+                                            <dd>
+                                                <p>
+                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                                                    porro, fugit magni minus esse quia.
+                                                </p>
+                                                <i>#영화 #프로모션 #밝은 #몽환적</i>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                <li data-img="" data-process="" data-link="">
+                                    <div class="project-date">
+                                        <p>2025. 03</p>
+                                    </div>
+                                    <div class="project-con">
+                                        <dl>
+                                            <dt>
+                                                <strong>다키스트던전</strong>
+                                            </dt>
+                                            <dd>
+                                                <p>
+                                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque,
+                                                    tenetur facilis. Esse, eos?
+                                                </p>
+                                                <i>#게임 #프로모션 #어두운 #던전</i>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+                    </div>
                 </div>
             </div>
 
             <!-- section#web.heaven>h3{WEB}+.info>ul.info-list>li*5>(.title>(.title-detail>strong+.tags>p)+h4)+(.datetool>dl*2>dt+dd)+.buttons>button:button.btn-process{PROCESS}+a.link-website{WEBSITE} -->
-            <section id="heaven-web" class="heaven">
-                <div class="inner">
-                    <h3>WEB</h3>
-                    <div class="info">
-                        <ul class="info-list">
-                            <li>
-                                <div class="info-text">
-                                    <div class="info-title">
-                                        <div class="detail">
-                                            <strong>기획</strong>
-                                            <div class="tags"><i>#기획</i> <i>#와이어프레임</i></div>
+            <div class="heaven-only">
+                <section class="web">
+                    <div class="inner">
+                        <h3>WEB</h3>
+                        <div class="info">
+                            <ul class="info-list">
+                                <li>
+                                    <div class="info-text">
+                                        <div class="info-title">
+                                            <div class="detail">
+                                                <strong>기획</strong>
+                                                <div class="tags"><i>#기획</i> <i>#와이어프레임</i></div>
+                                            </div>
+                                            <h4>폴바셋</h4>
                                         </div>
-                                        <h4>폴바셋</h4>
+                                        <p>
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non
+                                            est distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
+                                        </p>
+                                        <dl class="period">
+                                            <dt>기간</dt>
+                                            <dd>2024. 11. 27 - 12. 06</dd>
+                                        </dl>
                                     </div>
-                                    <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
-                                        distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
-                                    </p>
-                                    <dl class="period">
-                                        <dt>기간</dt>
-                                        <dd>2024. 11. 27 - 12. 06</dd>
-                                    </dl>
-                                </div>
-                                <div class="buttons">
-                                    <button
-                                        type="button"
-                                        class="btn-process"
-                                        data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
-                                    >
-                                        PROCESS
-                                    </button>
-                                    <a href="" class="link-website">WEBSITE</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="info-text">
-                                    <div class="info-title">
-                                        <div class="detail">
-                                            <strong>리디자인</strong>
-                                            <div class="tags"><i>#반응형</i> <i>#식품</i></div>
+                                    <div class="buttons">
+                                        <button
+                                            type="button"
+                                            class="btn-process"
+                                            data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
+                                        >
+                                            PROCESS
+                                        </button>
+                                        <a href="" class="link-website">WEBSITE</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info-text">
+                                        <div class="info-title">
+                                            <div class="detail">
+                                                <strong>리디자인</strong>
+                                                <div class="tags"><i>#반응형</i> <i>#식품</i></div>
+                                            </div>
+                                            <h4>매드포갈릭</h4>
                                         </div>
-                                        <h4>매드포갈릭</h4>
+                                        <p>
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non
+                                            est distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
+                                        </p>
+                                        <dl class="period">
+                                            <dt>기간</dt>
+                                            <dd>2024. 12. 20 - 2025. 02. 12</dd>
+                                        </dl>
                                     </div>
-                                    <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
-                                        distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
-                                    </p>
-                                    <dl class="period">
-                                        <dt>기간</dt>
-                                        <dd>2024. 12. 20 - 2025. 02. 12</dd>
-                                    </dl>
+                                    <div class="buttons">
+                                        <button
+                                            type="button"
+                                            class="btn-process"
+                                            data-process="https://i.pinimg.com/236x/f6/16/d0/f616d044c7937dde2e8ec2b4f3e6f79c.jpg"
+                                        >
+                                            PROCESS
+                                        </button>
+                                        <a href="" class="link-website">WEBSITE</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info-text">
+                                        <div class="info-title">
+                                            <div class="detail">
+                                                <strong>리디자인</strong>
+                                                <div class="tags">
+                                                    <i>#반응형</i>
+                                                    <i>#글라스모피즘</i>
+                                                    <i>#기관</i>
+                                                </div>
+                                            </div>
+                                            <h4>천리포수목원</h4>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non
+                                            est distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
+                                        </p>
+                                        <dl class="period">
+                                            <dt>기간</dt>
+                                            <dd>2025. 02. 15 - 03. 04</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="buttons">
+                                        <button
+                                            type="button"
+                                            class="btn-process"
+                                            data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
+                                        >
+                                            PROCESS
+                                        </button>
+                                        <a href="" class="link-website">WEBSITE</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info-text">
+                                        <div class="info-title">
+                                            <div class="detail">
+                                                <strong>클론코딩</strong>
+                                                <div class="tags"><i>#스크롤트리거</i> <i>#뷰티</i></div>
+                                            </div>
+                                            <h4>비앙글로</h4>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non
+                                            est distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
+                                        </p>
+                                        <dl class="period">
+                                            <dt>기간</dt>
+                                            <dd>2025. 03. 05 - 03. 06</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="buttons">
+                                        <button
+                                            type="button"
+                                            class="btn-process"
+                                            data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
+                                        >
+                                            PROCESS
+                                        </button>
+                                        <a href="" class="link-website">WEBSITE</a>
+                                    </div>
+                                </li>
+                                <li id="portfolio">
+                                    <div class="info-text">
+                                        <div class="info-title">
+                                            <div class="detail">
+                                                <strong>포트폴리오</strong>
+                                                <div class="tags">
+                                                    <i>#css교체</i>
+                                                    <i>#gsap</i>
+                                                    <i>#matter.js</i>
+                                                </div>
+                                            </div>
+                                            <h4>H34V3N vs H311</h4>
+                                        </div>
+                                        <p>
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non
+                                            est distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
+                                        </p>
+                                        <dl class="period">
+                                            <dt>기간</dt>
+                                            <dd>2025. 03. 04 - 03.</dd>
+                                        </dl>
+                                    </div>
+                                    <div class="buttons">
+                                        <button
+                                            type="button"
+                                            class="btn-process"
+                                            data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
+                                        >
+                                            PROCESS
+                                        </button>
+                                        <a href="" class="link-website">WEBSITE</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="web-swiper-wrap">
+                                <div class="swiper web-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <figure><img src="./img/hell-portfolio-임시.png" alt="" /></figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure><img src="./img/other05.jpg" alt="" /></figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure><img src="./img/other02.jpg" alt="" /></figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure><img src="" alt="" /></figure>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <figure><img src="" alt="" /></figure>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="buttons">
-                                    <button
-                                        type="button"
-                                        class="btn-process"
-                                        data-process="https://i.pinimg.com/236x/f6/16/d0/f616d044c7937dde2e8ec2b4f3e6f79c.jpg"
-                                    >
-                                        PROCESS
-                                    </button>
-                                    <a href="" class="link-website">WEBSITE</a>
-                                </div>
-                            </li>
-                            <li>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="app">
+                    <div class="inner">
+                        <h3>APP</h3>
+                        <div class="info">
+                            <figure><img src="" alt="" /></figure>
+                            <div class="info-con">
                                 <div class="info-text">
                                     <div class="info-title">
                                         <div class="detail">
-                                            <strong>리디자인</strong>
+                                            <strong>프로토타이핑</strong>
                                             <div class="tags">
-                                                <i>#반응형</i>
-                                                <i>#글라스모피즘</i>
-                                                <i>#기관</i>
+                                                <i>#독서기록</i>
+                                                <i>#커뮤니티</i>
+                                                <i>#프로토타이핑</i>
                                             </div>
                                         </div>
-                                        <h4>천리포수목원</h4>
+                                        <h4>토독</h4>
                                     </div>
                                     <p>
                                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
@@ -400,7 +526,7 @@
                                     </p>
                                     <dl class="period">
                                         <dt>기간</dt>
-                                        <dd>2025. 02. 15 - 03. 04</dd>
+                                        <dd>2025. 01. 21 - 02. 26</dd>
                                     </dl>
                                 </div>
                                 <div class="buttons">
@@ -411,188 +537,61 @@
                                     >
                                         PROCESS
                                     </button>
-                                    <a href="" class="link-website">WEBSITE</a>
+                                    <a href="naver.com" target="_blank" class="link-website">WEBSITE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="micro-site">
+                    <div class="inner">
+                        <h3>MICRO SITE</h3>
+                        <ul>
+                            <li>
+                                <div class="card">
+                                    <h4>인사이드아웃2</h4>
+                                    <dl>
+                                        <dt>기간</dt>
+                                        <dd>2025. 01. 06 - 01. 14</dd>
+                                    </dl>
+                                </div>
+                                <div class="popup">
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum porro, fugit
+                                        magni minus esse quia.Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                        Laborum porro, fugit magni minus esse quia.
+                                    </p>
+                                    <div class="buttons">
+                                        <button type="button" class="btn-process" data-process="">PROCESS</button>
+                                        <a href="" class="link-website">MICROSITE</a>
+                                    </div>
                                 </div>
                             </li>
                             <li>
-                                <div class="info-text">
-                                    <div class="info-title">
-                                        <div class="detail">
-                                            <strong>클론코딩</strong>
-                                            <div class="tags"><i>#스크롤트리거</i> <i>#뷰티</i></div>
-                                        </div>
-                                        <h4>비앙글로</h4>
-                                    </div>
-                                    <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
-                                        distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
-                                    </p>
-                                    <dl class="period">
+                                <div class="card">
+                                    <h4>다키스트던전</h4>
+                                    <dl>
                                         <dt>기간</dt>
-                                        <dd>2025. 03. 05 - 03. 06</dd>
+                                        <dd>2025. 03</dd>
                                     </dl>
                                 </div>
-                                <div class="buttons">
-                                    <button
-                                        type="button"
-                                        class="btn-process"
-                                        data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
-                                    >
-                                        PROCESS
-                                    </button>
-                                    <a href="" class="link-website">WEBSITE</a>
-                                </div>
-                            </li>
-                            <li id="portfolio">
-                                <div class="info-text">
-                                    <div class="info-title">
-                                        <div class="detail">
-                                            <strong>포트폴리오</strong>
-                                            <div class="tags">
-                                                <i>#css교체</i>
-                                                <i>#gsap</i>
-                                                <i>#matter.js</i>
-                                            </div>
-                                        </div>
-                                        <h4>H34V3N vs H311</h4>
-                                    </div>
+                                <div class="popup">
                                     <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
-                                        distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, tenetur
+                                        facilis. Esse, eos?
                                     </p>
-                                    <dl class="period">
-                                        <dt>기간</dt>
-                                        <dd>2025. 03. 04 - 03.</dd>
-                                    </dl>
-                                </div>
-                                <div class="buttons">
-                                    <button
-                                        type="button"
-                                        class="btn-process"
-                                        data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
-                                    >
-                                        PROCESS
-                                    </button>
-                                    <a href="" class="link-website">WEBSITE</a>
+                                    <div class="buttons">
+                                        <button type="button" class="btn-process" data-process="">PROCESS</button>
+                                        <a href="" class="link-website">MICROSITE</a>
+                                    </div>
                                 </div>
                             </li>
                         </ul>
-                        <div class="web-swiper-wrap">
-                            <div class="swiper web-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <figure><img src="./img/hell-portfolio-임시.png" alt="" /></figure>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <figure><img src="./img/other05.jpg" alt="" /></figure>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <figure><img src="./img/other02.jpg" alt="" /></figure>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <figure><img src="" alt="" /></figure>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <figure><img src="" alt="" /></figure>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
 
-            <section id="heaven-app" class="heaven">
-                <div class="inner">
-                    <h3>APP</h3>
-                    <div class="info">
-                        <figure><img src="" alt="" /></figure>
-                        <div class="info-con">
-                            <div class="info-text">
-                                <div class="info-title">
-                                    <div class="detail">
-                                        <strong>프로토타이핑</strong>
-                                        <div class="tags">
-                                            <i>#독서기록</i>
-                                            <i>#커뮤니티</i>
-                                            <i>#프로토타이핑</i>
-                                        </div>
-                                    </div>
-                                    <h4>토독</h4>
-                                </div>
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae ex non est
-                                    distinctio labore quidem itaque tenetur nulla? Perspiciatis, quos?
-                                </p>
-                                <dl class="period">
-                                    <dt>기간</dt>
-                                    <dd>2025. 01. 21 - 02. 26</dd>
-                                </dl>
-                            </div>
-                            <div class="buttons">
-                                <button
-                                    type="button"
-                                    class="btn-process"
-                                    data-process="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/89685.png"
-                                >
-                                    PROCESS
-                                </button>
-                                <a href="naver.com" target="_blank" class="link-website">WEBSITE</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="heaven-micro-site" class="heaven">
-                <div class="inner">
-                    <h3>MICRO SITE</h3>
-                    <ul>
-                        <li>
-                            <div class="card">
-                                <h4>인사이드아웃2</h4>
-                                <dl>
-                                    <dt>기간</dt>
-                                    <dd>2025. 01. 06 - 01. 14</dd>
-                                </dl>
-                            </div>
-                            <div class="popup">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum porro, fugit magni
-                                    minus esse quia.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
-                                    porro, fugit magni minus esse quia.
-                                </p>
-                                <div class="buttons">
-                                    <button type="button" class="btn-process" data-process="">PROCESS</button>
-                                    <a href="" class="link-website">MICROSITE</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="card">
-                                <h4>다키스트던전</h4>
-                                <dl>
-                                    <dt>기간</dt>
-                                    <dd>2025. 03</dd>
-                                </dl>
-                            </div>
-                            <div class="popup">
-                                <p>
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque, tenetur facilis.
-                                    Esse, eos?
-                                </p>
-                                <div class="buttons">
-                                    <button type="button" class="btn-process" data-process="">PROCESS</button>
-                                    <a href="" class="link-website">MICROSITE</a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="banner">
+            <section id="banner" class="hell">
                 <div class="inner">
                     <h3>BANNER</h3>
                     <div class="main-swiper-wrapper">
@@ -760,7 +759,7 @@
                 </div>
             </section>
 
-            <section id="other">
+            <section id="other" class="hell">
                 <h3>OTHER</h3>
                 <div class="text">
                     <p>SNS 관리 당시 업로드한 게시물의 일부입니다</p>
@@ -785,7 +784,7 @@
             </section>
         </main>
 
-        <footer>
+        <footer class="hell">
             <div class="mode-wrap">
                 <input type="checkbox" id="mode" />
                 <label for="mode"><span>HEAVEN</span><span>HELL</span></label>
@@ -796,7 +795,7 @@
             </div>
         </footer>
 
-        <div class="listpopup">
+        <div id="listpopup" class="hell">
             <button type="button" class="btn-close"></button>
             <div class="inner">
                 <figure></figure>

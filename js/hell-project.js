@@ -84,13 +84,13 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 10,
     });
 
-    const $worklistEl = $(".worklist li");
+    const $worklistEl = $(" .works-wrap li");
     const $stickyImg = $(".sticky figure");
     const $btnProcess = $(".btn-process");
     const $btnLink = $(".link-website");
-    const $listpopup = $(".listpopup");
-    const $listpopupImg = $(".listpopup .inner figure");
-    const $listpopupClose = $(".listpopup .btn-close");
+    const $listpopup = $("#listpopup");
+    const $listpopupImg = $("#listpopup .inner figure");
+    const $listpopupClose = $("#listpopup .btn-close");
 
     $btnLink.on("click", function (event) {
         event.preventDefault();

@@ -1,12 +1,16 @@
 @charset "utf-8";
 
-body {
+body.hell {
     overflow: hidden;
-    background: #000;
+    background: #000 !important;
     color: var(--main-color);
 }
 
-h2 {
+footer.hell .mode-wrap #mode + label {
+    color: #fff;
+}
+
+.hell-only h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +26,7 @@ h2 {
     transition: 2s;
 }
 
-h2.active {
+.hell-only h2.active {
     height: 100vh;
     margin: 0;
     font-size: 50rem;
@@ -30,7 +34,7 @@ h2.active {
     animation: text-flicker-out-glow 2s linear both;
 }
 
-h2.thumb {
+.hell-only h2.thumb {
     font-size: 50rem;
     color: #fff;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45),
@@ -307,7 +311,7 @@ h2.thumb {
     }
 }
 
-.info {
+.hell-only .info {
     display: flex;
     height: calc((100vh - 26rem) / 5);
     justify-content: space-between;
@@ -321,11 +325,11 @@ h2.thumb {
     cursor: pointer;
 }
 
-.info.active {
+.hell-only .info.active {
     background: linear-gradient(90deg, rgba(26, 153, 3, 0) 0%, rgba(44, 255, 5, 1) 65%, rgba(204, 255, 0, 1) 100%);
 }
 
-.info::after {
+.hell-only .info::after {
     content: "";
     display: block;
     width: 7rem;
@@ -334,13 +338,13 @@ h2.thumb {
     transition: 0.3s;
 }
 
-.info.active::after {
+.hell-only .info.active::after {
     background-image: url(../img/icon-abouton.svg);
 }
 
 /* e: 기본화면 */
 
-.popup-list .about {
+.hell-only .popup-list .about {
     position: absolute;
     top: 22rem;
     right: 25rem;
@@ -371,7 +375,7 @@ h2.thumb {
     pointer-events: none;
 }
 
-.popup-list .about > div {
+.hell-only .popup-list .about > div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -382,54 +386,54 @@ h2.thumb {
     color: #000;
 }
 
-.popup-list .about .name {
+.hell-only .popup-list .about .name {
     grid-area: name;
 
     display: flex;
     flex-direction: column;
 }
 
-.popup-list .about .name p {
+.hell-only .popup-list .about .name p {
     font-size: 2.4rem;
 }
 
-.popup-list .about .name strong {
+.hell-only .popup-list .about .name strong {
     font-size: 6.4rem;
     color: var(--point-color);
 }
 
-.popup-list .about .address {
+.hell-only .popup-list .about .address {
     grid-area: address;
     font-size: 3.2rem;
 }
 
-.popup-list .about .birth {
+.hell-only .popup-list .about .birth {
     grid-area: birth;
     font-size: 3.2rem;
 }
 
-.popup-list .about .portrait {
+.hell-only .popup-list .about .portrait {
     grid-area: portrait;
 }
 
-.popup-list .about .strength1 {
+.hell-only .popup-list .about .strength1 {
     grid-area: strength1;
     font-size: 2.8rem;
 }
 
-.popup-list .about .strength2 {
+.hell-only .popup-list .about .strength2 {
     grid-area: strength2;
     font-size: 2.8rem;
 }
 
-.popup-list .about .strength3 {
+.hell-only .popup-list .about .strength3 {
     grid-area: strength3;
     font-size: 2.8rem;
 }
 
 /* e: popup-about */
 
-.popup-list .education {
+.hell-only .popup-list .education {
     position: absolute;
     bottom: 15rem;
     right: 20rem;
@@ -439,13 +443,13 @@ h2.thumb {
     pointer-events: none;
 }
 
-.popup-list .education ul {
+.hell-only .popup-list .education ul {
     display: flex;
     flex-direction: column;
     gap: 7rem;
 }
 
-.popup-list .education ul li {
+.hell-only .popup-list .education ul li {
     display: flex;
     align-items: start;
     gap: 5rem;
@@ -455,7 +459,7 @@ h2.thumb {
     line-height: 1.2;
 }
 
-.popup-list .education ul li strong {
+.hell-only .popup-list .education ul li strong {
     display: block;
     padding: 1rem;
     background: var(--point-color);
@@ -463,31 +467,31 @@ h2.thumb {
     color: #fff;
 }
 
-.popup-list .education ul li dl {
+.hell-only .popup-list .education ul li dl {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 
     color: #000;
 }
-.popup-list .education ul li dl dt {
+.hell-only .popup-list .education ul li dl dt {
     padding: 1rem;
     width: fit-content;
     background: #fff;
 }
-.popup-list .education ul li dl dd {
+.hell-only .popup-list .education ul li dl dd {
     display: flex;
     gap: 1rem;
 }
 
-.popup-list .education ul li dl dd p {
+.hell-only .popup-list .education ul li dl dd p {
     padding: 1rem;
     background: #fff;
 }
 
 /* e: popup-education */
 
-.popup-list .experince {
+.hell-only .popup-list .experince {
     position: absolute;
     top: 60%;
     left: 55%;
@@ -504,7 +508,7 @@ h2.thumb {
     /* border: 1px solid red; */
 }
 
-.popup-list .experince ul li {
+.hell-only .popup-list .experince ul li {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -517,30 +521,30 @@ h2.thumb {
     color: #fff;
 }
 
-.popup-list .experince ul li dl {
+.hell-only .popup-list .experince ul li dl {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.popup-list .experince ul li dl dt {
+.hell-only .popup-list .experince ul li dl dt {
     font-weight: 900;
     font-size: 4rem;
 }
 
-.popup-list .experince ul li:nth-child(1) {
+.hell-only .popup-list .experince ul li:nth-child(1) {
     position: absolute;
     top: 0%;
     left: 37%;
 }
 
-.popup-list .experince ul li:nth-child(2) {
+.hell-only .popup-list .experince ul li:nth-child(2) {
     position: absolute;
     bottom: 8%;
     right: 3%;
 }
 
-.popup-list .experince .line1 {
+.hell-only .popup-list .experince .line1 {
     content: "";
 
     position: absolute;
@@ -554,7 +558,7 @@ h2.thumb {
     background: var(--main-color-light);
 }
 
-.popup-list .experince .dot1 {
+.hell-only .popup-list .experince .dot1 {
     content: "";
 
     position: absolute;
@@ -568,7 +572,7 @@ h2.thumb {
     background: var(--main-color-light);
 }
 
-.popup-list .experince .dot2 {
+.hell-only .popup-list .experince .dot2 {
     content: "";
 
     position: absolute;
@@ -581,7 +585,7 @@ h2.thumb {
     border-radius: 50%;
     background: var(--main-color-light);
 }
-.popup-list .experince .line2 {
+.hell-only .popup-list .experince .line2 {
     content: "";
 
     position: absolute;
@@ -593,7 +597,7 @@ h2.thumb {
     height: 7px;
     background: var(--main-color-light);
 }
-.popup-list .experince .line3 {
+.hell-only .popup-list .experince .line3 {
     content: "";
 
     position: absolute;
@@ -608,7 +612,7 @@ h2.thumb {
 
 /* e: popup-experince */
 
-.popup-list .license {
+.hell-only .popup-list .license {
     position: absolute;
     bottom: 5rem;
     right: 15%;
@@ -618,12 +622,12 @@ h2.thumb {
     pointer-events: none;
 }
 
-.popup-list .license ul {
+.hell-only .popup-list .license ul {
     display: flex;
     flex-direction: column;
 }
 
-.popup-list .license ul li {
+.hell-only .popup-list .license ul li {
     display: flex;
     align-items: center;
 
@@ -633,23 +637,23 @@ h2.thumb {
     color: #fff;
 }
 
-.popup-list .license ul li:nth-child(4) {
+.hell-only .popup-list .license ul li:nth-child(4) {
     color: #000;
 }
 
-.popup-list .license ul li strong {
+.hell-only .popup-list .license ul li strong {
     font-weight: 700;
     font-size: 3.2rem;
 }
 
-.popup-list .license ul li p {
+.hell-only .popup-list .license ul li p {
     font-weight: 900;
     font-size: 3.6rem;
 }
 
 /* e: popup-license */
 
-.popup-list .skills {
+.hell-only .popup-list .skills {
     position: absolute;
     bottom: 5rem;
     right: 10%;
@@ -664,7 +668,7 @@ h2.thumb {
     pointer-events: none;
 }
 
-.popup-list .skills img {
+.hell-only .popup-list .skills img {
     display: block;
     width: 7rem;
     height: 7rem;
@@ -672,3 +676,382 @@ h2.thumb {
 }
 
 /* e: popup-skills */
+/* e: hell */
+
+.heaven-only .sec-list {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    gap: 2rem;
+    padding: 14rem 0 7rem;
+}
+
+.heaven-only .list1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;
+
+    width: 78.8rem;
+
+    border-right: 3px solid var(--main-color);
+}
+
+.heaven-only .list1 .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heaven-only .list1 .name strong {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--point-color);
+}
+
+.heaven-only .list1 .name h2 {
+    font-family: "SF_HambakSnow";
+    font-size: 12.8rem;
+    line-height: 1;
+    color: var(--main-color);
+    -webkit-text-stroke: 2px var(--title-color);
+}
+
+.heaven-only .list1 .address {
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--title-color);
+}
+
+.heaven-only .list1 figure {
+    width: 100%;
+    height: 35rem;
+    padding: 3rem;
+}
+
+.heaven-only .list1 figure img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: orange;
+}
+
+.heaven-only .list1 ul::before {
+    content: "";
+
+    position: absolute;
+    top: -40%;
+    left: 0;
+
+    width: 3rem;
+    height: 3rem;
+    background: url(../img/deco-softflower.svg) no-repeat 50% 50% / contain;
+
+    animation: spin 5s infinite both;
+}
+
+.heaven-only .list1 ul::after {
+    content: "";
+
+    position: absolute;
+    top: -30%;
+    right: 0%;
+
+    width: 62rem;
+    height: 3px;
+    background: var(--main-color);
+}
+
+.heaven-only .list1 ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    width: 100%;
+    margin-top: 5rem;
+
+    position: relative;
+}
+
+.heaven-only .list1 ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 15rem;
+    height: 15rem;
+
+    font-family: "SF_Hambaksnow";
+    font-weight: 800;
+    font-size: 2.8rem;
+    color: #fff;
+    /* text-shadow: 0 0 4px #000, 0 0 4px var(--black50p); */
+    -webkit-text-stroke: 2px #000;
+    paint-order: stroke fill;
+
+    background: no-repeat 50% 50% / contain;
+}
+
+.heaven-only .list1 ul li:nth-child(1) {
+    background-image: url(../img/heaven-str2.svg);
+}
+.heaven-only .list1 ul li:nth-child(2) {
+    background-image: url(../img/heaven-str1.svg);
+}
+.heaven-only .list1 ul li:nth-child(3) {
+    background-image: url(../img/heaven-str3.svg);
+}
+
+/* e: list1 */
+
+.heaven-only .list2,
+.heaven-only .list3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 5rem;
+
+    width: calc((100% - 78.8rem) / 2);
+}
+
+.heaven-only h3 {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: var(--title-color);
+}
+
+.heaven-only h3::before {
+    content: "";
+
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+
+    background: url(../img/icon-star.svg) no-repeat 50% 50% / contain;
+}
+
+.heaven-only .list-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.heaven-only .list-block li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.7rem 3rem;
+
+    border-bottom: 2px solid var(--main-color);
+}
+
+.heaven-only .list-block li strong {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--main-color-dark);
+}
+
+.heaven-only .list-block li dl {
+    text-align: end;
+}
+
+.heaven-only .list-block li dl dt,
+.heaven-only .license .list-block li p {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--title-color);
+}
+
+.heaven-only .list-block li dl dd {
+    display: flex;
+    justify-content: end;
+    gap: 7px;
+
+    color: var(--text-color);
+}
+
+.heaven-only .list-block li dl dd p {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.heaven-only .list-block li dl dd p::after {
+    content: "";
+
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+
+    background: var(--main-color-dark);
+}
+
+.heaven-only .list-block li dl dd p:last-child::after {
+    display: none;
+}
+
+/* e: list2,3 공통설정 */
+
+.heaven-only .heaven section {
+    position: relative;
+}
+
+.heaven-only .heaven .education::before {
+    content: "";
+
+    position: absolute;
+    top: 50.7%;
+    left: 4rem;
+
+    display: block;
+    width: 27rem;
+    height: 4rem;
+    background: url(../img/deco-worm.svg) no-repeat 50% 50% / contain;
+
+    opacity: 0.6;
+
+    animation: spin2 5s infinite both;
+}
+
+.heaven-only .heaven .education::after {
+    content: "";
+
+    position: absolute;
+    top: 53.2%;
+    left: 60%;
+
+    display: block;
+    width: 11rem;
+    border-bottom: 8px dotted var(--main-color);
+
+    opacity: 0.5;
+}
+
+.heaven-only .heaven .experience::before {
+    content: "";
+
+    position: absolute;
+    top: 52.3%;
+    right: 5rem;
+
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: url(../img/deco-softflower.svg) no-repeat 50% 50% / contain;
+
+    opacity: 0.9;
+
+    animation: spin 3s infinite both;
+}
+
+.heaven-only .heaven .license::before {
+    content: "";
+
+    position: absolute;
+    top: 60%;
+    right: 5rem;
+    transform: rotate(10deg);
+
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    background: url(../img/deco-softasterisk.svg) no-repeat 50% 50% / contain;
+
+    opacity: 0.7;
+
+    animation: jello-vertical 3s infinite both;
+}
+
+.heaven-only .experience .list-block li:last-child {
+    border-bottom: none;
+}
+
+.heaven-only .list3 {
+    border-left: 3px solid var(--main-color);
+}
+
+.heaven-only .list3 .license ul li {
+    align-items: center;
+}
+
+.heaven-only .list3 .skills .icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding: 2rem;
+}
+
+.heaven-only .list3 .skills .icons img {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px var(--black30p);
+    background: orchid;
+}
+
+/* e: list 개별설정 */
+
+@keyframes spin {
+    50% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+@keyframes spin2 {
+    20% {
+        transform: rotateX(360deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+@keyframes jello-vertical {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1) rotate(10deg);
+    }
+    10% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+    16% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1) rotate(-10deg);
+    }
+    25% {
+        -webkit-transform: scale3d(0.85, 1.15, 1);
+        transform: scale3d(0.85, 1.15, 1);
+    }
+    30% {
+        -webkit-transform: scale3d(1.05, 0.95, 1) rotate(10deg);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+    40% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1) rotate(10deg);
+    }
+    50% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1) rotate(10deg);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1) rotate(10deg);
+    }
+}

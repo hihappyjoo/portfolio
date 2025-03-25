@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         on: {
             slideChange: function () {
-                const liEl = document.querySelectorAll("#heaven-web .info-list li");
+                const liEl = document.querySelectorAll(".heaven .web .info-list li");
                 liEl.forEach((item) => {
                     item.classList.remove("active");
                     setTimeout(() => {
@@ -133,9 +133,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const $processSrc = $(this).data("process");
 
         console.log($processSrc);
-        const $listpopup = $(".listpopup");
-        const $listpopupImg = $(".listpopup .inner figure");
-        const $listpopupClose = $(".listpopup .btn-close");
+        const $listpopup = $("#listpopup");
+        const $listpopupImg = $("#listpopup .inner figure");
+        const $listpopupClose = $("#listpopup .btn-close");
 
         $listpopup.fadeIn();
         $listpopup.css("display", "flex");

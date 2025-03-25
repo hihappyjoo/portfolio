@@ -1,5 +1,5 @@
 $(function () {
-    const $title = $(".grid-wrap h2");
+    const $title = $(".heaven-only .grid-wrap h2");
     const $window = $(window);
 
     $window.on("click", function (e) {

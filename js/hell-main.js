@@ -1,17 +1,17 @@
 $(function () {
-    const $body = $("body");
-    const $hee = $(".hee");
-    const $joo = $(".joo");
-    const $heeChrome = $(".heejoo.chrome img:nth-child(1)");
-    const $jooChrome = $(".heejoo.chrome img:nth-child(2)");
-    const $portChrome = $(".portfolio.chrome");
-    const $processChrome = $(".process.chrome");
-    const $wandooChrome = $(".wandoo.chrome");
-    const $modeChrome = $(".mode.chrome");
-    const $header = $("header");
-    const $infoText = $(".info-text");
-    const $skillMarquee = $(".skill-marquee p");
-    const $skillMarqueeWrap = $(".skill-marquee-wrap");
+    const $body = $("body.hell");
+    const $hee = $(".hell-only .hee");
+    const $joo = $(".hell-only .joo");
+    const $heeChrome = $(".hell-only .heejoo.chrome img:nth-child(1)");
+    const $jooChrome = $(".hell-only .heejoo.chrome img:nth-child(2)");
+    const $portChrome = $(".hell-only .portfolio.chrome");
+    const $processChrome = $(".hell-only .process.chrome");
+    const $wandooChrome = $(".hell-only .wandoo.chrome");
+    const $modeChrome = $(".hell-only .mode.chrome");
+    const $header = $("header.hell");
+    const $infoText = $(".hell-only .info-text");
+    const $skillMarquee = $(".hell-only .skill-marquee p");
+    const $skillMarqueeWrap = $(".hell-only .skill-marquee-wrap");
 
     console.log($modeChrome);
 

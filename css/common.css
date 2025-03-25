@@ -147,6 +147,10 @@ footer .mode-wrap #mode + label {
     cursor: pointer;
 }
 
+footer .mode-wrap #mode + label span {
+    transition: 0.8s;
+}
+
 footer .mode-wrap #mode + label span:first-child {
     font-family: "Roboto Condensed";
     font-style: italic;
@@ -166,6 +170,8 @@ footer .mode-wrap #mode + label::before {
     box-sizing: border-box;
     border: 2px solid rgba(255, 255, 255, 0.85);
     border-radius: 35px;
+
+    transition: 1.5s;
 }
 
 footer .mode-wrap #mode + label::after {
@@ -179,6 +185,8 @@ footer .mode-wrap #mode + label::after {
     border-radius: 50%;
 
     background: no-repeat 50% 50% / contain;
+
+    transition: 0.8s;
 }
 
 footer .update {
@@ -189,3 +197,300 @@ footer .update {
 footer .update strong {
     font-weight: 700;
 }
+
+/* e: 공통설정 */
+
+body.heaven {
+    background: #fff !important;
+}
+
+body.heaven main .heaven-only {
+    display: block;
+}
+
+body.heaven main .hell-only,
+body.heaven .mega-menu {
+    display: none;
+}
+
+header.heaven nav {
+    background: var(--white50p);
+    border-bottom: 3px solid var(--main-color);
+    backdrop-filter: blur(var(--glass-blur));
+}
+
+header.heaven .gnb {
+    display: flex;
+    gap: 1rem;
+}
+
+header.heaven .gnb li a {
+    display: block;
+    padding: 1.5rem 2rem;
+
+    font-weight: 500;
+    color: var(--title-color);
+
+    position: relative;
+}
+
+header.heaven .gnb li a::after {
+    content: "";
+
+    position: absolute;
+    top: 12%;
+    right: 7%;
+
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    background: var(--point-color);
+
+    display: none;
+}
+
+header.heaven .gnb li.active a::after {
+    display: block;
+}
+
+header.heaven .hell-only {
+    display: none;
+}
+
+footer.heaven {
+    border-color: var(--main-color);
+}
+
+footer.heaven .mode-wrap #mode + label span {
+    font-weight: 300;
+}
+
+footer.heaven .mode-wrap #mode + label span:first-child {
+    font-weight: 900;
+}
+
+footer.heaven .mode-wrap #mode + label::before {
+    background: #000;
+
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+footer.heaven .mode-wrap #mode + label::after {
+    right: 50%;
+    transform: translate(-20%, -50%);
+
+    background-color: #fff;
+    background-image: url(../img/heaven-icon-toggle.svg);
+    background-size: 75%;
+    box-shadow: 0 0 40px rgba(0, 255, 4, 1), 0 0 30px rgba(0, 255, 4, 0.7), 0 0 20px rgba(167, 255, 169, 0.7),
+        0 0 8px rgba(225, 225, 225, 0.4);
+}
+
+footer.heaven .update {
+    color: var(--main-color);
+}
+
+/* e: heaven  */
+
+body.hell {
+    background: var(--main-color);
+}
+
+body.hell .hell-only {
+    display: block;
+}
+
+body.hell .heaven-only {
+    display: none;
+}
+
+header.hell .btn-menu {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    padding: 2rem;
+
+    background: url(../img/hell-chrome-hamburger.png) 50% 50% / contain;
+    cursor: pointer;
+}
+
+header.hell .heaven-only {
+    display: none;
+}
+
+footer.hell .mode-wrap #mode + label span {
+    font-weight: 900;
+}
+
+footer.hell .mode-wrap #mode + label span:first-child {
+    font-weight: 300;
+}
+
+footer.hell .mode-wrap #mode + label::before {
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(153, 153, 153, 1) 45%,
+        rgba(204, 204, 204, 1) 63%,
+        rgba(67, 67, 67, 1) 70%,
+        rgba(204, 204, 204, 1) 100%
+    );
+
+    box-shadow: 1.5px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+footer.hell .mode-wrap #mode + label::after {
+    left: 50%;
+    transform: translate(60%, -50%);
+
+    background: no-repeat 80% 50% / contain;
+    background-color: var(--main-color-dark);
+    background-image: url(../img/hell-icon-toggle.svg);
+    background-size: 85%;
+    box-shadow: -1.4px 0 1px var(--white20p), inset 2px 1.5px 2px var(--black60p), -0.7px 0.7px 2px 1px var(--white80p),
+        inset 3px 3.5px 8px 1.5px var(--black20p);
+}
+
+footer.hell .update {
+    color: #fff;
+}
+
+body.hell .mega-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 1000;
+
+    width: 100%;
+    height: 100vh;
+
+    background: var(--main-color);
+
+    transition: 0.4s;
+}
+
+body.hell .mega-menu.active {
+    right: 0;
+}
+
+body.hell #text-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+body.hell .text-element {
+    position: absolute;
+}
+
+body.hell .text-element.logo a {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    background: #000 url() 50% 50% / contain;
+}
+
+body.hell .text-element.btn-close > button {
+    display: block;
+    width: 7rem;
+    height: 7rem;
+    padding: 2rem;
+    background: url(../img/hell-chrome-close.png) 50% 50% / contain;
+    cursor: pointer;
+}
+
+body.hell .text-element.menu a {
+    display: inline-block;
+    padding: 1.56vw 4.43vw; /* 3rem 8.5rem -> 1.56vw 4.43vw */
+    background: #fff;
+    border-radius: 14.4rem;
+    font-weight: 900;
+    font-size: 7.5vw; /* 14.4rem -> 7.5vw */
+    line-height: 1.2;
+    color: var(--title-color);
+    transition: 0.3s;
+}
+
+body.hell .text-element.menu:hover a {
+    color: #fff;
+    -webkit-text-stroke: 3px var(--main-color);
+
+    background: var(--point-color);
+}
+
+body.hell .text-element.project a {
+    color: var(--point-color);
+}
+
+body.hell .text-element.menu-projectsub a {
+    display: inline-block;
+    padding: 0.78vw 2.6vw; /* 1.5rem 5rem -> 0.78vw 2.6vw */
+    background: #fff;
+    border-radius: 10rem;
+
+    font-weight: 700;
+    font-size: 3.13vw; /* 6rem -> 3.13vw */
+    line-height: 1.2;
+    color: var(--main-color);
+
+    transition: 0.3s;
+}
+
+body.hell .text-element.menu-projectsub:hover a {
+    background: var(--main-color-dark);
+    color: #fff;
+}
+
+body.hell .text-element.line {
+    display: inline-block;
+    padding: 0.42vw 2.08vw; /* 0.8rem 4rem -> 0.42vw 2.08vw */
+    background: var(--white40p);
+    border: 3px solid #fff;
+    border-radius: 7rem;
+
+    font-weight: 900;
+    font-size: 1.46vw; /* 2.8rem -> 1.46vw */
+    color: #fff;
+}
+
+body.hell .text-element.line7 i {
+    font-weight: 700;
+    font-size: 1.04vw; /* 2rem -> 1.04vw */
+}
+
+body.hell .text-element.line9 i {
+    font-family: "Roboto Condensed";
+    font-style: italic;
+}
+
+body.hell .text-element.line-deco {
+    display: inline-block;
+    padding: 1.04vw 1.56vw; /* 2rem 3rem -> 1.04vw 1.56vw */
+    background: var(--point-color);
+    border-radius: 7rem;
+
+    line-height: 1.2;
+    color: #fff;
+}
+
+body.hell .text-element.line-deco.badge1 {
+    font-weight: 700;
+    font-size: 1.46vw; /* 2.8rem -> 1.46vw */
+}
+
+body.hell .text-element.line-deco.badge2 {
+    font-weight: 900;
+    font-size: 3.13vw; /* 6rem -> 3.13vw */
+}
+
+body.hell .text-element.line-deco.badge3 {
+    padding: 0.52vw 1.04vw; /* 1rem 2rem -> 0.52vw 1.04vw */
+
+    font-weight: 600;
+}
+
+/* e: hell */

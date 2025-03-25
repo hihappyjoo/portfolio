@@ -7,10 +7,7 @@
 
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
-        <!-- <link rel="stylesheet" href="./css/hell-common.css" /> -->
-        <link rel="stylesheet" href="./css/heaven-common.css" />
-        <!-- <link rel="stylesheet" href="./css/hell-contact.css" /> -->
-        <link rel="stylesheet" href="./css/heaven-contact.css" />
+        <link rel="stylesheet" href="./css/contact.css" />
 
         <!-- JQuery -->
         <script src="./js/jquery-3.7.1.min.js"></script>
@@ -21,10 +18,11 @@
 
         <script src="./js/megaMenu.js"></script>
         <script src="./js/contact.js"></script>
+        <script src="./js/toggle.js"></script>
     </head>
-    <body>
+    <body class="hell">
         <!-- MEGA menu -->
-        <div class="mega-menu hell">
+        <div class="mega-menu hell-only">
             <div id="canvas-container"></div>
             <div class="text-container">
                 <div class="text-element logo">
@@ -63,57 +61,74 @@
             </div>
         </div>
         <!-- e: MEGA menu -->
-        <header>
+        <header class="hell">
             <nav>
                 <h1 class="logo">
                     <a href="./index.html"><img src="" alt="희주의 포트폴리오" /></a>
                 </h1>
-                <ul class="gnb heaven">
+                <ul class="gnb heaven-only">
                     <li><a href="./index.html">HOME</a></li>
                     <li><a href="./heejoo.html">HEEJOO</a></li>
                     <li><a href="./projects.html">PROJECT</a></li>
                     <li class="active"><a href="./contact.html">CONTACT</a></li>
                 </ul>
-                <button type="button" class="btn-menu hell"></button>
+                <button type="button" class="btn-menu hell-only"></button>
             </nav>
         </header>
         <!-- e: header -->
 
-        <main>
-            <div class="marquee">
-                <div class="text1 hell">
-                    <p>미친코딩살육머신을 가질 수 있는 마지막 기회</p>
-                    <p>미친코딩살육머신을 가질 수 있는 마지막 기회</p>
-                    <p>미친코딩살육머신을 가질 수 있는 마지막 기회</p>
+        <main class="hell">
+            <div class="hell-only">
+                <div class="marquee">
+                    <div class="text1">
+                        <p>미친코딩살육머신을 가질 수 있는 마지막 기회</p>
+                        <p>미친코딩살육머신을 가질 수 있는 마지막 기회</p>
+                        <p>미친코딩살육머신을 가질 수 있는 마지막 기회</p>
+                    </div>
+                    <div class="contact">
+                        <p>CONTACT ME</p>
+                        <p>CONTACT ME</p>
+                        <p>CONTACT ME</p>
+                        <p>CONTACT ME</p>
+                    </div>
+                    <div class="text2">
+                        <p>명품과 희주 임금은 지금이 제일 싸다</p>
+                        <p>명품과 희주 임금은 지금이 제일 싸다</p>
+                        <p>명품과 희주 임금은 지금이 제일 싸다</p>
+                    </div>
                 </div>
-
-                <div class="contact">
-                    <p>CONTACT ME</p>
-                    <p class="hell">CONTACT ME</p>
-                    <p class="hell">CONTACT ME</p>
-                    <p class="hell">CONTACT ME</p>
-                </div>
-
-                <div class="text2 hell">
-                    <p>명품과 희주 임금은 지금이 제일 싸다</p>
-                    <p>명품과 희주 임금은 지금이 제일 싸다</p>
-                    <p>명품과 희주 임금은 지금이 제일 싸다</p>
-                </div>
+                <ul class="info">
+                    <li>
+                        <p>PHONE.</p>
+                        <strong>010-2679-2914</strong>
+                        <i>복사되었습니다!</i>
+                    </li>
+                    <li>
+                        <p>EMAIL.</p>
+                        <strong>heehappyjoo@gmail.com</strong>
+                        <i>복사되었습니다!</i>
+                    </li>
+                </ul>
             </div>
-            <ul class="info">
-                <li>
-                    <p>PHONE.</p>
-                    <strong>010-2679-2914</strong>
-                    <i>복사되었습니다!</i>
-                </li>
-                <li>
-                    <p>EMAIL.</p>
-                    <strong>heehappyjoo@gmail.com</strong>
-                    <i>복사되었습니다!</i>
-                </li>
-            </ul>
+
+            <div class="heaven-only">
+                <p class="contact">CONTACT ME</p>
+
+                <ul class="info">
+                    <li>
+                        <p>PHONE.</p>
+                        <strong>010-2679-2914</strong>
+                        <i>복사되었습니다!</i>
+                    </li>
+                    <li>
+                        <p>EMAIL.</p>
+                        <strong>heehappyjoo@gmail.com</strong>
+                        <i>복사되었습니다!</i>
+                    </li>
+                </ul>
+            </div>
         </main>
-        <footer>
+        <footer class="hell">
             <div class="mode-wrap">
                 <input type="checkbox" id="mode" />
                 <label for="mode"><span>HEAVEN</span><span>HELL</span></label>

@@ -1,0 +1,506 @@
+@charset "utf-8";
+body.hell {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hell-only .name-marquee {
+    position: absolute;
+    top: 17%;
+    left: -450%;
+    z-index: 10000;
+
+    /* display: none; */
+}
+
+.hell-only .name-marquee .hee,
+.hell-only .name-marquee .joo {
+    display: flex;
+    width: fit-content;
+    height: 392px;
+    align-items: center;
+    overflow: hidden;
+
+    font-family: "Roboto Condensed";
+    font-weight: 900;
+    font-style: italic;
+    font-size: 43rem;
+    line-height: 0.85;
+    letter-spacing: -10px;
+    color: var(--main-color);
+    background: #000;
+}
+
+.hell-only .info-text {
+    display: block;
+    width: 52rem;
+
+    font-weight: 700;
+    font-size: 6.4rem;
+    line-height: 1.2;
+    color: #fff;
+
+    margin-top: 15rem;
+    margin-left: 5rem;
+}
+
+.hell-only .chrome img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hell-only .portfolio.chrome img {
+    filter: drop-shadow(32px -32px 16px var(--black50p));
+}
+
+.hell-only .mode.chrome img {
+    filter: drop-shadow(-32px 16px 8px var(--black50p));
+}
+
+.hell-only .heejoo.chrome img:nth-child(1) {
+    filter: drop-shadow(32px -16px 8px var(--black50p));
+}
+
+.hell-only .heejoo.chrome img:nth-child(2) {
+    filter: drop-shadow(32px 16px 8px var(--black50p));
+}
+
+.hell-only .process.chrome img {
+    filter: drop-shadow(-32px 32px 8px var(--black50p));
+}
+
+.hell-only .wandoo.chrome img {
+    filter: drop-shadow(32px -36px 16px var(--black30p));
+}
+
+.hell-only .portfolio.chrome {
+    position: absolute;
+    top: 17%;
+    left: 36%;
+
+    width: 80rem;
+}
+
+.hell-only .mode.chrome {
+    position: absolute;
+    bottom: 7%;
+    left: 10%;
+
+    width: 15rem;
+}
+
+.hell-only .heejoo.chrome {
+    position: absolute;
+    top: 52%;
+    right: 2.5%;
+
+    width: 35rem;
+
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-50%);
+}
+
+.hell-only .process.chrome {
+    position: absolute;
+    top: 54%;
+    left: 32%;
+
+    width: 30rem;
+}
+
+.hell-only .wandoo.chrome {
+    position: absolute;
+    top: 7%;
+    left: 68%;
+
+    width: 18rem;
+}
+
+/* e: section position 설정 */
+
+.hell-only .popup section {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 2rem;
+    gap: 2rem;
+
+    background: var(--white50p);
+    border: 2px solid #fff;
+    border-radius: 2.4rem;
+    box-shadow: var(--glass-box-shadow);
+    backdrop-filter: blur(var(--glass-blur));
+
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.hell-only .popup section.active {
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.hell-only .popup h2 {
+    width: fit-content;
+    padding: 1rem 3rem;
+    background: var(--point-color);
+    border: 2px solid var(--black70p);
+    border-radius: 56px;
+
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: #fff;
+}
+
+.hell-only .popup .popup-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.hell-only .popup .popup-text dl {
+    display: flex;
+    align-items: start;
+    gap: 2rem;
+}
+
+.hell-only .popup .popup-text dl dt,
+.hell-only .popup .popup-text dl dd,
+.hell-only .popup .popup-text dl .dd-wrap p {
+    display: inline;
+    padding: 1rem 3rem;
+    background: var(--main-color-light);
+    border: 2px solid var(--black70p);
+    border-radius: 5rem;
+}
+
+.hell-only .popup .popup-text dl .dd-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 42rem;
+    padding: 0;
+    background: none;
+    border: none;
+    gap: 1rem;
+}
+
+.hell-only .popup .popup-text dl .dd-wrap p:first-child {
+    width: 100%;
+}
+.hell-only .popup .popup-text dl .dd-wrap p {
+    flex-grow: 1;
+}
+
+/* e: popup 공통설정*/
+
+.hell-only .popup .portfolio {
+    top: 45%;
+    left: 40%;
+}
+
+.hell-only .popup .mode {
+    top: 80%;
+    left: 30%;
+}
+
+.hell-only .popup .heejoo {
+    top: 35%;
+    right: 5%;
+}
+
+.hell-only .popup .process {
+    top: 70%;
+    left: 60%;
+}
+
+.hell-only .popup .wandoo {
+    top: 25%;
+    right: 27%;
+}
+
+/* e: popup 개별 위치 설정 */
+
+.hell-only .skill-marquee-wrap::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 25%;
+    height: 100vh;
+
+    background: linear-gradient(90deg, rgba(44, 255, 5, 1) 0%, rgba(44, 255, 5, 0) 70%);
+}
+
+.hell-only .skill-marquee-wrap::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    width: 25%;
+    height: 100vh;
+
+    background: linear-gradient(270deg, rgba(44, 255, 5, 1) 0%, rgba(44, 255, 5, 0) 70%);
+}
+
+.hell-only .skill-marquee {
+    position: absolute;
+    top: 125%;
+    left: -50%;
+    transform: rotate(8deg);
+    z-index: -10;
+
+    display: flex;
+    white-space: nowrap;
+}
+
+.hell-only .skill-marquee p {
+    display: inline-block;
+    padding: 1rem;
+    margin-right: -1px;
+    background: #000;
+
+    font-weight: 700;
+    font-size: 4.5vw;
+    color: #fff;
+
+    animation: marquee 15s linear infinite both;
+}
+
+@keyframes marquee {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* e: hell */
+
+.heaven-only .grid-wrap {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 2fr 2fr 1.5fr;
+    grid-template-areas:
+        "portfolio heejoo heejoo"
+        "portfolio process wandoo"
+        "mode process wandoo";
+
+    width: 100%;
+    height: 100vh;
+    padding: 12rem 0 5rem;
+}
+
+.heaven-only .grid-wrap .portfolio {
+    grid-area: portfolio;
+}
+
+.heaven-only .grid-wrap .mode {
+    grid-area: mode;
+}
+
+.heaven-only .grid-wrap .heejoo {
+    grid-area: heejoo;
+}
+
+.heaven-only .grid-wrap .process {
+    grid-area: process;
+}
+
+.heaven-only .grid-wrap .wandoo {
+    grid-area: wandoo;
+}
+
+/* e: grid */
+
+.heaven-only .grid-wrap section {
+    position: relative;
+}
+
+.heaven-only .grid-wrap h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+
+    border: 3px solid var(--main-color);
+
+    font-family: "Roboto Condensed";
+    font-weight: 900;
+    font-size: 10rem;
+    color: var(--title-color);
+
+    box-shadow: inset 4px 4px 4px var(--white20p);
+    backdrop-filter: blur(2.5px);
+
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.heaven-only .grid-wrap h2:hover {
+    color: #000;
+
+    background-color: var(--white50p);
+}
+
+/* e: h2 */
+
+.heaven-only .grid-wrap .portfolio {
+    overflow: hidden;
+}
+
+.heaven-only .grid-wrap .portfolio h2::before {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: -30%;
+    transform: rotate(90deg);
+    z-index: -1;
+
+    width: 80rem;
+    height: 14rem;
+
+    filter: blur(8px);
+
+    background: url(../img/deco-worm.svg) no-repeat 0 0 / contain;
+
+    animation: rotateY 3s infinite both;
+}
+
+.heaven-only .grid-wrap .portfolio h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    left: 35%;
+    transform: rotate(90deg);
+    z-index: -1;
+
+    width: 18rem;
+    height: 18rem;
+
+    filter: blur(8px);
+
+    background: url(../img/deco-softflower.svg) no-repeat 0 0 / contain;
+
+    animation: rotateY 8s infinite both;
+}
+
+@keyframes rotateY {
+    100% {
+        transform: rotate(90deg) rotateX(360deg);
+    }
+}
+
+.heaven-only .grid-wrap .behind {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    background: #fff;
+
+    border: 3px solid var(--main-color);
+}
+
+.heaven-only .grid-wrap .behind dl {
+    display: flex;
+    gap: 1rem;
+}
+
+.heaven-only .grid-wrap .behind dl dt {
+    width: 20rem;
+    font-weight: 700;
+    font-size: 4.4rem;
+    color: var(--main-color);
+    -webkit-text-stroke: 3px var(--title-color);
+    paint-order: stroke fill;
+}
+
+.heaven-only .grid-wrap .behind dl dd {
+    font-weight: 700;
+    font-size: 2.8rem;
+    color: var(--title-color);
+
+    margin-top: 2rem;
+}
+
+/* e: behind 공통설정 */
+
+.heaven-only .grid-wrap .portfolio .behind {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    padding: 0 12rem;
+}
+
+.heaven-only .grid-wrap .portfolio .behind dl dd {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.heaven-only .grid-wrap .portfolio .behind dl dd p {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.heaven-only .grid-wrap .portfolio .behind dl dd p::before {
+    content: "";
+
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background: orange;
+}
+
+.heaven-only .grid-wrap .mode .behind dl dt {
+    width: 24rem;
+}
+
+.heaven-only .grid-wrap .mode .behind dl dd {
+    font-size: 2.4rem;
+    margin-top: 0;
+}
+
+.heaven-only .grid-wrap .process .behind a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.heaven-only .grid-wrap .process .behind dl dt {
+    width: 30rem;
+}
+
+.heaven-only .grid-wrap .heejoo .behind {
+    gap: 5rem;
+}
+
+.heaven-only .grid-wrap .heejoo .behind .left dl dt {
+    width: 17rem;
+}

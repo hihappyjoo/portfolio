@@ -1,0 +1,1195 @@
+@charset "utf-8";
+
+body.hell {
+    overflow-x: hidden;
+}
+
+h2.hell-only {
+    margin-top: 12rem;
+    margin-left: 5rem;
+
+    font-weight: 900;
+    font-size: 20rem;
+    line-height: 1;
+    color: #000;
+}
+
+.hell h3 {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 5rem;
+    border-bottom: 1px solid #000;
+
+    font-weight: 700;
+    font-size: 9.6rem;
+    color: #000;
+}
+
+.hell-only .works-wrap {
+    display: flex;
+
+    margin-top: 2rem;
+}
+
+.hell-only .works-wrap .sticky {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 15rem 5rem 0;
+    gap: 1.5rem;
+
+    position: sticky;
+    top: 0rem;
+}
+
+.hell-only .works-wrap .sticky figure {
+    width: 41.7rem;
+    height: 47rem;
+
+    background: var(--white30p);
+    box-shadow: inset 0 0 56px #fff;
+}
+
+.hell-only .works-wrap .sticky figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    display: none;
+}
+
+.hell-only .works-wrap .sticky .title {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    padding: 0 1rem;
+}
+
+.hell-only .works-wrap .sticky .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hell-only .works-wrap .sticky .buttons * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0;
+    padding: 1.2rem 3rem;
+    gap: 0.5rem;
+
+    background: #fff;
+    box-shadow: var(--button-box-shadow2);
+    border: 2px solid var(--main-color);
+    border-radius: 1.6rem;
+
+    color: var(--text-color);
+
+    transition: 0.4s;
+}
+
+.hell-only .works-wrap .sticky .buttons *::before {
+    content: "";
+
+    width: 2rem;
+    height: 2rem;
+
+    background: #000;
+}
+
+.hell-only .works-wrap .sticky .buttons *::after {
+    content: "";
+
+    width: 0.6rem;
+    height: 1.1rem;
+    margin-left: -1rem;
+
+    background: url(../img/icon-arrow.svg) no-repeat 50% 50% / contain;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.hell-only .works-wrap .sticky .buttons *:hover {
+    color: var(--main-color-dark);
+}
+
+.hell-only .works-wrap .sticky .buttons *:hover::after {
+    margin-left: 3rem;
+    visibility: visible;
+    opacity: 1;
+}
+
+.hell-only .works-wrap .sticky .buttons *:active {
+    background: var(--main-color-dark);
+    box-shadow: var(--button-box-innershadow);
+    border: none;
+
+    color: #fff;
+}
+
+.hell-only .works-wrap .sticky .buttons *:active::after {
+    filter: brightness(0) invert(1);
+}
+
+/* e:sticky */
+
+.hell-only .works-wrap .sections ol {
+    counter-reset: project;
+}
+
+.hell-only .works-wrap .sections ol li {
+    display: flex;
+    height: 33rem;
+    padding-left: 5rem;
+    gap: 5rem;
+    border-bottom: 1px solid #000;
+
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hell-only .works-wrap .sections ol li.active {
+    background: #fff;
+}
+
+.hell-only .works-wrap .sections ol li .project-date {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: 20rem;
+    padding: 3rem 0;
+    align-items: end;
+}
+
+.hell-only .works-wrap .sections ol li .project-date::before {
+    counter-increment: project;
+    content: counter(project, decimal-leading-zero);
+
+    font-weight: 900;
+    font-size: 9.6rem;
+    line-height: 1;
+
+    color: var(--main-color);
+    -webkit-text-stroke: 1px var(--title-color);
+}
+
+.hell-only .works-wrap .sections ol li.active .project-date::before {
+    color: var(--point-color);
+}
+
+.hell-only .works-wrap .sections ol li .project-date p {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 1.2;
+    text-align: end;
+    color: var(--title-color);
+}
+
+.hell-only .works-wrap .sections ol li .project-con {
+    padding: 4rem 3rem;
+
+    border-left: 1px solid #000;
+}
+
+.hell-only .works-wrap .sections ol li .project-con dl {
+    display: flex;
+    height: 100%;
+    gap: 4rem;
+}
+
+.hell-only .works-wrap .sections ol li .project-con dl dt {
+    width: 30rem;
+    flex-shrink: 0;
+}
+
+.hell-only .works-wrap .sections ol li .project-con dl dt strong {
+    font-weight: 700;
+    font-size: 5.6rem;
+    line-height: 1;
+    color: var(--title-color);
+}
+
+.hell-only .works-wrap .sections ol li .project-con dl dt p {
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--title-color);
+
+    margin-top: 1rem;
+}
+
+.hell-only .works-wrap .sections ol li .project-con dl dd {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.hell-only .works-wrap .sections ol li .project-con dl dd i {
+    font-size: 1.6rem;
+    color: var(--title-color);
+}
+
+/* e: rightlists */
+
+#listpopup.hell {
+    position: fixed;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    width: 80%;
+    height: 85vh;
+    padding: 5rem 7rem;
+
+    background: var(--white50p);
+    box-shadow: var(--glass-box-shadow);
+    backdrop-filter: blur(var(--glass-blur));
+    border: 2px solid #fff;
+    border-radius: 16px;
+
+    display: none;
+}
+
+#listpopup.hell .btn-close {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    background: url(../img/icon-close.svg) no-repeat 50% 50% / contain;
+}
+
+#listpopup.hell .inner {
+    width: 100%;
+    overflow-y: auto;
+
+    margin-top: 2rem;
+}
+
+#listpopup.hell .inner::-webkit-scrollbar {
+    width: 1.8rem;
+}
+
+#listpopup.hell .inner::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    background-color: var(--main-color-dark);
+}
+
+#listpopup.hell .inner::-webkit-scrollbar-track {
+    background-color: var(--white30p);
+    border: 1.5px solid #fff;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 10px #fff;
+}
+
+#listpopup.hell figure {
+    flex-shrink: 0;
+    width: 100%;
+    background: dodgerblue;
+}
+
+#listpopup.hell figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    display: none;
+}
+
+/* e:listpopup */
+
+#banner.hell .main-swiper-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 7rem;
+    background: var(--white50p);
+
+    position: relative;
+}
+
+#banner.hell .main-swiper-wrapper .main-swiper {
+    width: 144rem;
+}
+
+#banner.hell .main-swiper-wrapper .main-swiper .swiper-slide {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+#banner.hell .main-swiper-wrapper .main-swiper .swiper-slide figure {
+    display: block;
+    width: 34.5rem;
+    height: 34.5rem;
+
+    cursor: pointer;
+}
+#banner.hell .main-swiper-wrapper .main-swiper .swiper-slide figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--black50p);
+}
+
+#banner.hell .main-swiper-wrapper .swiper-scrollbar.swiper-scrollbar-horizontal {
+    bottom: 3.5rem;
+    left: calc((100% - 1440px) / 2);
+    width: 144rem;
+}
+
+/* e: banner-main swiper */
+
+#banner.hell {
+    position: relative;
+
+    margin-top: 15rem;
+}
+
+#banner.hell .sub-swiper-wrapper {
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+
+    width: 65%;
+    height: 75rem;
+    padding: 8rem;
+    padding-bottom: 5rem;
+    background: var(--white70p);
+    box-shadow: var(--glass-box-shadow);
+    backdrop-filter: blur(var(--glass-blur));
+    border: 2px solid #fff;
+    border-radius: 16px;
+
+    display: none;
+}
+
+#banner.hell .sub-swiper-wrapper .btn-close {
+    position: absolute;
+    top: 3rem;
+    right: 5rem;
+
+    width: 3rem;
+    height: 3rem;
+    background: url(../img/icon-close.svg) no-repeat 50% 50% / contain;
+    filter: brightness(0) invert(1);
+
+    cursor: pointer;
+}
+
+#banner.hell .sub-swiper-wrapper .sub-swiper {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid dodgerblue; */
+}
+
+#banner.hell .sub-swiper-wrapper .sub-swiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#banner.hell .sub-swiper-wrapper .sub-swiper .swiper-slide figure {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 47px);
+    justify-content: center;
+    align-items: center;
+
+    /* border: 1px solid orange; */
+}
+
+#banner.hell .sub-swiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#banner.hell .sub-swiper-wrapper .sub-swiper .swiper-slide .tags {
+    display: flex;
+    gap: 1.5rem;
+}
+
+#banner.hell .sub-swiper-wrapper .sub-swiper .swiper-slide .tags p {
+    padding: 0.5rem 1.5rem;
+    background: #fff;
+    border-radius: 3.2rem;
+
+    color: var(--text-color);
+}
+
+#banner.hell .sub-swiper-wrapper .btn-prev {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%) scaleX(-1);
+
+    width: 3rem;
+    height: 5rem;
+    background: url(../img/icon-arrow.svg) no-repeat 50% 50% / contain;
+    filter: brightness(0) invert(1);
+
+    cursor: pointer;
+}
+
+#banner.hell .sub-swiper-wrapper .btn-next {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+
+    width: 3rem;
+    height: 5rem;
+    background: url(../img/icon-arrow.svg) no-repeat 50% 50% / contain;
+    filter: brightness(0) invert(1);
+
+    cursor: pointer;
+}
+
+/* e: banner */
+
+#other.hell {
+    margin: 15rem 0;
+}
+
+#other.hell .text {
+    padding: 2rem 5rem;
+}
+
+#other.hell .text p {
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: end;
+}
+
+#other.hell .text p + p {
+    font-size: 1.6rem;
+}
+
+#other.hell .text p + p i {
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+#other.hell .other-swiper-wrapper {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 5rem;
+}
+
+#other.hell .other-swiper-wrapper .other-swiper {
+    width: 220rem;
+    overflow: visible;
+}
+
+#other.hell .other-swiper-wrapper .other-swiper .swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+#other.hell .other-swiper-wrapper .other-swiper .swiper-wrapper .swiper-slide {
+    aspect-ratio: 1;
+}
+
+#other.hell .other-swiper-wrapper .other-swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* e: other */
+/* e: hell */
+
+body.heaven {
+    overflow-x: hidden;
+    transition: 0.4s;
+}
+
+body.heaven .inner {
+    width: 80%;
+    margin: 0 auto;
+}
+
+body.heaven h2 {
+    margin-top: 12rem;
+    margin-left: 5rem;
+
+    font-weight: 900;
+    font-size: 20rem;
+    line-height: 1;
+    color: #000;
+}
+
+body.heaven h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    font-weight: 900;
+    font-size: 6.4rem;
+    line-height: 1.2;
+    color: var(--title-color);
+}
+
+body.heaven h3::before,
+body.heaven h3::after {
+    content: "";
+
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    background: url(../img/icon-star.svg) no-repeat 50% 50% / contain;
+}
+
+/* e: inner, heading */
+
+.heaven-only .info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.heaven-only .info-text .info-title .detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heaven-only .info-text .info-title .detail strong {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--text-color-light);
+}
+
+.heaven-only .info-text .info-title .detail .tags {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.heaven-only .info-text .info-title .detail .tags i {
+    font-weight: 500;
+    color: var(--text-color-light);
+    background: #eee;
+    border-radius: 3.6rem;
+    padding: 0.3rem 1.5rem;
+}
+
+.heaven-only .info-text .info-title h4 {
+    font-weight: 900;
+    font-size: 5.2rem;
+    line-height: 1.2;
+    color: var(--main-color-dark);
+
+    margin-top: 1.5rem;
+}
+
+.heaven-only .info-text p {
+    font-size: 2rem;
+    color: var(--text-color);
+
+    margin-top: 3rem;
+}
+
+.heaven-only .info-text dl {
+    display: flex;
+    gap: 3rem;
+
+    font-size: 2rem;
+
+    margin-top: 5rem;
+}
+
+.heaven-only .info-text dl dt {
+    font-weight: 700;
+}
+
+/* e: web app text 설정 */
+
+.heaven-only .web .buttons,
+.heaven-only .app .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 22.2rem;
+    gap: 1.5rem;
+}
+
+/* e: web app button 설정 */
+
+.heaven-only .buttons * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0;
+    padding: 1.2rem 3rem;
+    gap: 0.5rem;
+
+    background: #fff;
+    box-shadow: var(--button-box-shadow1), var(--button-box-shadow2);
+    border: 2px solid var(--main-color);
+    border-radius: 1.6rem;
+
+    color: var(--text-color);
+
+    transition: 0.4s;
+}
+
+.heaven-only .buttons *::before {
+    content: "";
+
+    width: 2rem;
+    height: 2rem;
+
+    background: #000;
+}
+
+.heaven-only .buttons *::after {
+    content: "";
+
+    width: 0.6rem;
+    height: 1.1rem;
+    margin-left: -1rem;
+
+    background: url(../img/icon-arrow.svg) no-repeat 50% 50% / contain;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.heaven-only .buttons *:hover {
+    color: var(--main-color-dark);
+}
+
+.heaven-only .buttons *:hover::after {
+    margin-left: 3rem;
+    visibility: visible;
+    opacity: 1;
+}
+
+.heaven-only .buttons *:active {
+    background: var(--main-color-dark);
+    box-shadow: var(--button-box-innershadow);
+    border: none;
+
+    color: #fff;
+}
+
+.heaven-only .buttons *:active::after {
+    filter: brightness(0) invert(1);
+}
+
+/* e: button 공통설정 */
+
+.heaven-only .web {
+    padding-top: 20rem;
+}
+
+.heaven-only .web .info {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+
+    margin-top: 8rem;
+}
+
+.heaven-only .web .info .info-list {
+    flex-shrink: 0;
+    width: 46.7rem;
+    height: 60rem;
+
+    position: relative;
+}
+
+.heaven-only .web .info .info-list li {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem;
+
+    transform: translateX(-150%);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.heaven-only .web .info .info-list li.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.heaven-only .web .info .web-swiper-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    width: calc(100% - 48.7rem);
+    height: 64.5rem;
+}
+
+.heaven-only .web .info .web-swiper-wrap .web-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.heaven-only .web .info .web-swiper-wrap .web-swiper .swiper-slide {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.heaven-only .web .info .web-swiper-wrap .web-swiper figure {
+    width: 100%;
+    height: 100%;
+}
+
+.heaven-only .web .info .web-swiper-wrap .swiper-pagination {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.heaven-only .web .info .web-swiper-wrap .swiper-pagination .swiper-pagination-bullet {
+    background: var(--main-color-light);
+    opacity: 1;
+    border: 1px solid var(--main-color-dark);
+}
+
+.heaven-only .web .info .web-swiper-wrap .swiper-pagination .swiper-pagination-bullet-active {
+    width: 12px;
+    height: 12px;
+    border-radius: 0;
+    background: url(../img/deco-softflower.svg) no-repeat 50% 50% / contain;
+    border: none;
+}
+
+/* e: web 개별설정 */
+
+.heaven-only .app {
+    padding-top: 25rem;
+}
+
+.heaven-only .app .info {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: end;
+
+    margin-top: 8rem;
+}
+.heaven-only .app .info figure {
+    width: 59rem;
+    height: 75rem;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.heaven-only .app .info .info-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 46.7rem;
+    height: 60rem;
+}
+
+/* e: app 개별설정 */
+
+.heaven-only .micro-site {
+    padding-top: 25rem;
+}
+
+.heaven-only .micro-site ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    margin-top: 8rem;
+}
+
+.heaven-only .micro-site ul li {
+    display: flex;
+    align-items: end;
+
+    width: calc((85% - 2rem) / 2);
+    aspect-ratio: 1;
+    padding: 7rem;
+    border-radius: 16px;
+    overflow: hidden;
+
+    position: relative;
+
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.heaven-only .micro-site ul li .card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    /* border: 1px solid red; */
+}
+
+.heaven-only .micro-site ul li .card h4 {
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.2;
+
+    color: #fff;
+    text-shadow: 0 0 4px #000;
+}
+
+.heaven-only .micro-site ul li .card dl {
+    display: flex;
+    gap: 3rem;
+
+    margin-left: 0.5rem;
+
+    color: #fff;
+    text-shadow: 0 0 4px #000;
+}
+
+.heaven-only .micro-site ul li .card dl dt {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.heaven-only .micro-site ul li .card dl dd {
+    font-size: 2rem;
+}
+
+.heaven-only .micro-site ul li .popup {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 50rem;
+    padding: 8rem;
+
+    background: var(--white50p);
+    box-shadow: var(--glassnu-box-shadow);
+    backdrop-filter: blur(var(--glass-blur));
+
+    border: 1px solid var(--main-color-light);
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.heaven-only .micro-site ul li:hover .popup {
+    opacity: 1;
+    top: 50%;
+}
+
+.heaven-only .micro-site ul li .popup p {
+    text-align: center;
+}
+
+.heaven-only .micro-site ul li .popup .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+
+    margin-top: 4rem;
+}
+
+/* e: micro-site */
+
+#listpopup.heaven {
+    position: fixed;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    width: 80%;
+    height: 85vh;
+    padding: 5rem 7rem;
+
+    background: var(--white50p);
+    box-shadow: var(--glass-box-shadow);
+    backdrop-filter: blur(var(--glass-blur));
+    border: 2px solid #fff;
+    border-radius: 16px;
+
+    display: none;
+}
+
+#listpopup.heaven .btn-close {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    background: url(../img/icon-close.svg) no-repeat 50% 50% / contain;
+}
+
+#listpopup.heaven .inner {
+    width: 100%;
+    overflow-y: auto;
+
+    margin-top: 2rem;
+}
+
+#listpopup.heaven .inner::-webkit-scrollbar {
+    width: 1.8rem;
+}
+
+#listpopup.heaven .inner::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    background-color: var(--main-color-dark);
+}
+
+#listpopup.heaven .inner::-webkit-scrollbar-track {
+    background-color: var(--white30p);
+    border: 1.5px solid #fff;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 10px #fff;
+}
+
+#listpopup.heaven figure {
+    flex-shrink: 0;
+    width: 100%;
+    background: dodgerblue;
+}
+
+#listpopup.heaven figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    display: none;
+}
+
+/* e:listpopup */
+
+#banner.heaven .main-swiper-wrapper {
+    display: flex;
+
+    width: 100%;
+    background: var(--white50p);
+
+    margin-top: 8rem;
+    padding-bottom: 7rem;
+    position: relative;
+}
+
+#banner.heaven .main-swiper-wrapper .main-swiper .swiper-slide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+#banner.heaven .main-swiper-wrapper .main-swiper .swiper-slide figure {
+    display: block;
+    width: 34.5rem;
+    height: 34.5rem;
+
+    cursor: pointer;
+}
+#banner.heaven .main-swiper-wrapper .main-swiper .swiper-slide figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: var(--black50p);
+}
+
+#banner.heaven .main-swiper-wrapper .swiper-scrollbar.swiper-scrollbar-horizontal {
+    bottom: 3.5rem;
+    left: calc((100% - 1440px) / 2);
+    width: 144rem;
+}
+
+/* e: banner-main swiper */
+
+#banner.heaven {
+    position: relative;
+
+    padding-top: 25rem;
+}
+
+#banner.heaven .sub-swiper-wrapper {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+
+    width: 65%;
+    height: 75rem;
+    padding: 8rem;
+    padding-bottom: 5rem;
+    background: var(--white70p);
+    box-shadow: var(--glass-box-shadow);
+    backdrop-filter: blur(var(--glass-blur));
+    border: 2px solid #fff;
+    border-radius: 16px;
+
+    display: none;
+}
+
+#banner.heaven .sub-swiper-wrapper .btn-close {
+    position: absolute;
+    top: 3rem;
+    right: 5rem;
+
+    width: 3rem;
+    height: 3rem;
+    background: url(../img/icon-close.svg) no-repeat 50% 50% / contain;
+    filter: brightness(0) invert(1);
+
+    cursor: pointer;
+}
+
+#banner.heaven .sub-swiper-wrapper .sub-swiper {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid dodgerblue; */
+}
+
+#banner.heaven .sub-swiper-wrapper .sub-swiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#banner.heaven .sub-swiper-wrapper .sub-swiper .swiper-slide figure {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 47px);
+    justify-content: center;
+    align-items: center;
+
+    /* border: 1px solid orange; */
+}
+
+#banner.heaven .sub-swiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#banner.heaven .sub-swiper-wrapper .sub-swiper .swiper-slide .tags {
+    display: flex;
+    gap: 1.5rem;
+}
+
+#banner.heaven .sub-swiper-wrapper .sub-swiper .swiper-slide .tags p {
+    padding: 0.5rem 1.5rem;
+    background: #fff;
+    border-radius: 3.2rem;
+
+    color: var(--text-color);
+}
+
+#banner.heaven .sub-swiper-wrapper .btn-prev {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%) scaleX(-1);
+
+    width: 3rem;
+    height: 5rem;
+    background: url(../img/icon-arrow.svg) no-repeat 50% 50% / contain;
+    filter: brightness(0) invert(1);
+
+    cursor: pointer;
+}
+
+#banner.heaven .sub-swiper-wrapper .btn-next {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+
+    width: 3rem;
+    height: 5rem;
+    background: url(../img/icon-arrow.svg) no-repeat 50% 50% / contain;
+    filter: brightness(0) invert(1);
+
+    cursor: pointer;
+}
+
+/* e: banner */
+
+#other.heaven {
+    padding: 25rem 0 15rem;
+}
+
+#other.heaven .text p {
+    font-size: 2rem;
+    color: var(--text-color);
+    text-align: center;
+
+    margin-top: 3rem;
+}
+
+#other.heaven .text p + p {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+#other.heaven .text p + p i {
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+#other.heaven .other-swiper-wrapper {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 8rem;
+}
+
+#other.heaven .other-swiper-wrapper .other-swiper {
+    width: 220rem;
+    overflow: visible;
+}
+
+#other.heaven .other-swiper-wrapper .other-swiper .swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+#other.heaven .other-swiper-wrapper .other-swiper .swiper-wrapper .swiper-slide {
+    aspect-ratio: 1;
+}
+
+#other.heaven .other-swiper-wrapper .other-swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* e: other */

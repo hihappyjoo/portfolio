@@ -7,25 +7,23 @@
 
         <link rel="stylesheet" href="./css/reset.css" />
         <link rel="stylesheet" href="./css/common.css" />
-        <!-- <link rel="stylesheet" href="./css/hell-common.css" /> -->
-        <link rel="stylesheet" href="./css/heaven-common.css" />
-        <!-- <link rel="stylesheet" href="./css/hell-main.css" /> -->
-        <link rel="stylesheet" href="./css/heaven-main.css" />
+        <link rel="stylesheet" href="./css/main.css" />
 
         <!-- JQuery -->
         <script src="./js/jquery-3.7.1.min.js"></script>
         <!-- matter.js -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
         <!-- GSAP -->
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 
-        <!-- <script src="./js/megaMenu.js"></script> -->
-        <!-- <script src="./js/hell-main.js"></script> -->
+        <script src="./js/megaMenu.js"></script>
+        <script src="./js/hell-main.js"></script>
         <script src="./js/heaven-main.js"></script>
+        <script src="./js/toggle.js"></script>
     </head>
-    <body>
+    <body class="hell">
         <!-- MEGA menu -->
-        <div class="mega-menu hell">
+        <div class="mega-menu hell-only">
             <div id="canvas-container"></div>
             <div class="text-container">
                 <div class="text-element logo">
@@ -64,83 +62,78 @@
             </div>
         </div>
         <!-- e: MEGA menu -->
-        <header>
+        <header class="hell">
             <nav>
                 <h1 class="logo">
                     <a href="./index.html"><img src="" alt="희주의 포트폴리오" /></a>
                 </h1>
-                <ul class="gnb heaven">
+                <ul class="gnb heaven-only">
                     <li class="active"><a href="./index.html">HOME</a></li>
                     <li><a href="./heejoo.html">HEEJOO</a></li>
                     <li><a href="./projects.html">PROJECT</a></li>
                     <li><a href="./contact.html">CONTACT</a></li>
                 </ul>
-                <button type="button" class="btn-menu hell"></button>
+                <button type="button" class="btn-menu hell-only"></button>
             </nav>
         </header>
         <!-- e: header -->
 
-        <main>
-            <div class="name-marquee hell">
-                <strong class="hee">HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</strong>
-                <strong class="joo">JOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</strong>
-            </div>
-
-            <strong class="info-text hell">UI/UX 디자이너 퍼블리셔 포트폴리오</strong>
-
-            <div class="hell">
-                <div class="portfolio chrome"><img src="./img/hell-portfolio-임시.png" alt="포트폴리오" /></div>
-                <div class="mode chrome"><img src="./img/hell-mode-임시.png" alt="모드" /></div>
-                <div class="heejoo chrome">
-                    <img src="./img/hell-hee-임시.png" alt="희" />
-                    <img src="./img/hell-joo-임시.png" alt="주" />
+        <main class="hell">
+            <div class="hell-only">
+                <div class="name-marquee">
+                    <strong class="hee">HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</strong>
+                    <strong class="joo">JOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</strong>
                 </div>
-                <div class="process chrome">
-                    <a href="./projects.html#portfolio-process"
-                        ><img src="./img/hell-process-임시.png" alt="프로세스"
-                    /></a>
+                <strong class="info-text">UI/UX 디자이너 퍼블리셔 포트폴리오</strong>
+                <div class="chrome">
+                    <div class="portfolio chrome"><img src="./img/hell-chrome-star.png" alt="포트폴리오" /></div>
+                    <div class="mode chrome"><img src="./img/hell-chrome-arrow.png" alt="모드" /></div>
+                    <div class="heejoo chrome">
+                        <img src="./img/hell-chrome-hee.png" alt="희" />
+                        <img src="./img/hell-chrome-joo.png" alt="주" />
+                    </div>
+                    <div class="process chrome">
+                        <a href="./projects.html#portfolio-process"
+                            ><img src="./img/hell-chrome-blob.png" alt="프로세스"
+                        /></a>
+                    </div>
+                    <div class="wandoo chrome"><img src="./img/hell-chrome-wandoo.png" alt="완두" /></div>
                 </div>
-                <div class="wandoo chrome"><img src="./img/hell-wandoo-임시.png" alt="완두" /></div>
-            </div>
 
-            <div class="heaven grid-wrap">
-                <section class="portfolio">
-                    <h2>PORTFOLIO</h2>
-                    <div class="behind">
-                        <dl>
-                            <dt>PERIOD.</dt>
-                            <dd>2024.11 - 2025.04</dd>
-                        </dl>
-                        <dl>
-                            <dt>TOOLS.</dt>
-                            <dd>
-                                <p>Figma</p>
-                                <p>HTML</p>
-                                <p>CSS</p>
-                                <p>JavaScript</p>
-                                <p>JQuery</p>
-                                <p>Photoshop</p>
-                                <p>Illustrator</p>
-                            </dd>
-                        </dl>
-                    </div>
-                </section>
-                <section class="mode">
-                    <h2>MODE</h2>
-                    <div class="behind">
-                        <dl>
-                            <dt class="heaven">TO HELL.</dt>
-                            <dd class="heaven">
-                                정적인 분위기가 지루하시다면, <br />
-                                토글을 눌러 헬모드를 이용해보세요.
-                            </dd>
-                        </dl>
-                    </div>
-                </section>
-                <section class="heejoo">
-                    <h2>HEEJOO</h2>
-                    <div class="behind">
-                        <div class="left">
+                <div class="popup">
+                    <section class="portfolio">
+                        <h2>PORTFOLIO</h2>
+                        <div class="popup-text">
+                            <dl>
+                                <dt>PERIOD.</dt>
+                                <dd>2024.11 - 2025.04</dd>
+                            </dl>
+                            <dl>
+                                <dt>TOOLS.</dt>
+                                <dd class="dd-wrap">
+                                    <p>Figma</p>
+                                    <p>HTML</p>
+                                    <p>CSS</p>
+                                    <p>JavaScript</p>
+                                    <p>JQuery</p>
+                                    <p>Photoshop</p>
+                                    <p>Illustrator</p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </section>
+                    <section class="mode">
+                        <h2>MODE</h2>
+                        <div class="popup-text">
+                            <dl>
+                                <dt>TO HEAVEN.</dt>
+                                <dd>천국가기</dd>
+                            </dl>
+                        </div>
+                    </section>
+                    <section class="heejoo">
+                        <h2>HEEJOO</h2>
+                        <div class="popup-text">
                             <dl>
                                 <dt>NAME.</dt>
                                 <dd>정희주</dd>
@@ -149,8 +142,6 @@
                                 <dt>BIRTH.</dt>
                                 <dd>1997. 09. 04</dd>
                             </dl>
-                        </div>
-                        <div class="right">
                             <dl>
                                 <dt>PHONE.</dt>
                                 <dd>010.2679.2914</dd>
@@ -160,111 +151,118 @@
                                 <dd>heehappyjoo@gmail.com</dd>
                             </dl>
                         </div>
-                    </div>
-                </section>
-                <section class="process">
-                    <h2>PROCESS</h2>
-                    <div class="behind">
-                        <a href="./projects.html#portfolio">
+                    </section>
+                    <section class="process">
+                        <h2>PROCESS</h2>
+                        <div class="popup-text">
                             <dl>
                                 <dt>PORTFOLIO.</dt>
                                 <dd>H34V3N vs H311</dd>
                             </dl>
-                        </a>
-                    </div>
-                </section>
-                <section class="wandoo">
-                    <h2>WANDOO</h2>
-                    <div class="behind">
+                        </div>
+                    </section>
+                    <section class="wandoo">
+                        <h2>WANDOO</h2>
                         <video src="" autoplay muted loop>고양이 완두에게 냥냥펀치를 맞아보세요</video>
+                    </section>
+                </div>
+                <div class="skill-marquee-wrap">
+                    <div class="skill-marquee">
+                        <p>
+                            에이치티엠엘 씨에스에스 자바스크립트 제이쿼리 포토샵 일러스트레이터 인디자인 피그마 서비스
+                            판매 음료제조 재고관리 인력관리 외국어응대 SNS관리
+                        </p>
+                        <p>
+                            에이치티엠엘 씨에스에스 자바스크립트 제이쿼리 포토샵 일러스트레이터 인디자인 피그마 서비스
+                            판매 음료제조 재고관리 인력관리 외국어응대 SNS관리
+                        </p>
                     </div>
-                </section>
+                </div>
             </div>
 
-            <div class="popup hell">
-                <section class="portfolio">
-                    <h2>PORTFOLIO</h2>
-                    <div class="popup-text">
-                        <dl>
-                            <dt>PERIOD.</dt>
-                            <dd>2024.11 - 2025.04</dd>
-                        </dl>
-                        <dl>
-                            <dt>TOOLS.</dt>
-                            <dd class="dd-wrap">
-                                <p>Figma</p>
-                                <p>HTML</p>
-                                <p>CSS</p>
-                                <p>JavaScript</p>
-                                <p>JQuery</p>
-                                <p>Photoshop</p>
-                                <p>Illustrator</p>
-                            </dd>
-                        </dl>
-                    </div>
-                </section>
-                <section class="mode">
-                    <h2>MODE</h2>
-                    <div class="popup-text">
-                        <dl>
-                            <dt class="hell">TO HEAVEN.</dt>
-                            <dd class="hell">천국가기</dd>
-                        </dl>
-                    </div>
-                </section>
-                <section class="heejoo">
-                    <h2>HEEJOO</h2>
-                    <div class="popup-text">
-                        <dl>
-                            <dt>NAME.</dt>
-                            <dd>정희주</dd>
-                        </dl>
-                        <dl>
-                            <dt>BIRTH.</dt>
-                            <dd>1997. 09. 04</dd>
-                        </dl>
-                        <dl>
-                            <dt>PHONE.</dt>
-                            <dd>010.2679.2914</dd>
-                        </dl>
-                        <dl>
-                            <dt>EMAIL.</dt>
-                            <dd>heehappyjoo@gmail.com</dd>
-                        </dl>
-                    </div>
-                </section>
-                <section class="process">
-                    <h2>PROCESS</h2>
-                    <div class="popup-text">
-                        <dl>
-                            <dt>PORTFOLIO.</dt>
-                            <dd>H34V3N vs H311</dd>
-                        </dl>
-                    </div>
-                </section>
-
-                <section class="wandoo">
-                    <h2>WANDOO</h2>
-                    <video src="" autoplay muted loop>고양이 완두에게 냥냥펀치를 맞아보세요</video>
-                </section>
-            </div>
-
-            <div class="skill-marquee-wrap hell">
-                <div class="skill-marquee">
-                    <p>
-                        에이치티엠엘 씨에스에스 자바스크립트 제이쿼리 포토샵 일러스트레이터 인디자인 피그마 서비스 판매
-                        음료제조 재고관리 인력관리 외국어응대 SNS관리
-                    </p>
-                    <p>
-                        에이치티엠엘 씨에스에스 자바스크립트 제이쿼리 포토샵 일러스트레이터 인디자인 피그마 서비스 판매
-                        음료제조 재고관리 인력관리 외국어응대 SNS관리
-                    </p>
+            <div class="heaven-only">
+                <div class="grid-wrap">
+                    <section class="portfolio">
+                        <h2>PORTFOLIO</h2>
+                        <div class="behind">
+                            <dl>
+                                <dt>PERIOD.</dt>
+                                <dd>2024.11 - 2025.04</dd>
+                            </dl>
+                            <dl>
+                                <dt>TOOLS.</dt>
+                                <dd>
+                                    <p>Figma</p>
+                                    <p>HTML</p>
+                                    <p>CSS</p>
+                                    <p>JavaScript</p>
+                                    <p>JQuery</p>
+                                    <p>Photoshop</p>
+                                    <p>Illustrator</p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </section>
+                    <section class="mode">
+                        <h2>MODE</h2>
+                        <div class="behind">
+                            <dl>
+                                <dt>TO HELL.</dt>
+                                <dd>
+                                    정적인 분위기가 지루하시다면, <br />
+                                    토글을 눌러 헬모드를 이용해보세요.
+                                </dd>
+                            </dl>
+                        </div>
+                    </section>
+                    <section class="heejoo">
+                        <h2>HEEJOO</h2>
+                        <div class="behind">
+                            <div class="left">
+                                <dl>
+                                    <dt>NAME.</dt>
+                                    <dd>정희주</dd>
+                                </dl>
+                                <dl>
+                                    <dt>BIRTH.</dt>
+                                    <dd>1997. 09. 04</dd>
+                                </dl>
+                            </div>
+                            <div class="right">
+                                <dl>
+                                    <dt>PHONE.</dt>
+                                    <dd>010.2679.2914</dd>
+                                </dl>
+                                <dl>
+                                    <dt>EMAIL.</dt>
+                                    <dd>heehappyjoo@gmail.com</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="process">
+                        <h2>PROCESS</h2>
+                        <div class="behind">
+                            <a href="./projects.html#portfolio">
+                                <dl>
+                                    <dt>PORTFOLIO.</dt>
+                                    <dd>H34V3N vs H311</dd>
+                                </dl>
+                            </a>
+                        </div>
+                    </section>
+                    <section class="wandoo">
+                        <h2>WANDOO</h2>
+                        <div class="behind">
+                            <video src="" autoplay muted loop>고양이 완두에게 냥냥펀치를 맞아보세요</video>
+                        </div>
+                    </section>
                 </div>
             </div>
         </main>
         <!-- e: main -->
 
-        <footer>
+        <footer class="hell">
             <div class="mode-wrap">
                 <input type="checkbox" id="mode" />
                 <label for="mode"><span>HEAVEN</span><span>HELL</span></label>
