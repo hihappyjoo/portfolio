@@ -672,7 +672,10 @@ footer.hell .mode-wrap #mode + label {
     display: block;
     width: 7rem;
     height: 7rem;
-    background: red 50% / cover;
+
+    background: no-repeat 50% 50% / cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px var(--black30p);
 }
 
 /* e: popup-skills */
@@ -898,11 +901,11 @@ footer.hell .mode-wrap #mode + label {
 
 /* e: list2,3 공통설정 */
 
-.heaven-only .heaven section {
+.heaven-only section {
     position: relative;
 }
 
-.heaven-only .heaven .education::before {
+.heaven-only .education::before {
     content: "";
 
     position: absolute;
@@ -919,7 +922,7 @@ footer.hell .mode-wrap #mode + label {
     animation: spin2 5s infinite both;
 }
 
-.heaven-only .heaven .education::after {
+.heaven-only .education::after {
     content: "";
 
     position: absolute;
@@ -933,7 +936,7 @@ footer.hell .mode-wrap #mode + label {
     opacity: 0.5;
 }
 
-.heaven-only .heaven .experience::before {
+.heaven-only .experience::before {
     content: "";
 
     position: absolute;
@@ -950,7 +953,7 @@ footer.hell .mode-wrap #mode + label {
     animation: spin 3s infinite both;
 }
 
-.heaven-only .heaven .license::before {
+.heaven-only .license::before {
     content: "";
 
     position: absolute;

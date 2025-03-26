@@ -9,10 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const $listpopup = $("#listpopup");
 
     const $toggle = $("#mode");
-    // const toggleText = document.querySelector(".mode-wrap label");
 
     // 페이지가 로딩되면 localStorage에 저장된 값을 가져와서 비교
-    const saveModeValue = localStorage.getItem("saveMode");
+    let saveModeValue = localStorage.getItem("saveMode");
+
+    // saveMode가 없으면 기본값을 "hell"로 설정
+    if (!saveModeValue) {
+        localStorage.setItem("saveMode", "hell");
+        saveModeValue = "hell";
+    }
+
     console.log(saveModeValue);
 
     if (saveModeValue === "hell") {
@@ -34,42 +40,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function applyHell() {
-        $body.removeClass("heaven");
-        $header.removeClass("heaven");
-        $main.removeClass("heaven");
-        $banner.removeClass("heaven");
-        $other.removeClass("heaven");
-        $listpopup.removeClass("heaven");
-        $footer.removeClass("heaven");
-
-        $body.addClass("hell");
-        $header.addClass("hell");
-        $main.addClass("hell");
-        $banner.addClass("hell");
-        $other.addClass("hell");
-        $listpopup.addClass("hell");
-        $footer.addClass("hell");
-
+        $body
+            .add($header)
+            .add($main)
+            .add($footer)
+            .add($banner)
+            .add($other)
+            .add($listpopup)
+            .removeClass("heaven")
+            .addClass("hell");
         localStorage.setItem("saveMode", "hell");
     }
 
     function applyHeaven() {
-        $body.removeClass("hell");
-        $header.removeClass("hell");
-        $main.removeClass("hell");
-        $banner.removeClass("hell");
-        $other.removeClass("hell");
-        $listpopup.removeClass("hell");
-        $footer.removeClass("hell");
-
-        $body.addClass("heaven");
-        $header.addClass("heaven");
-        $main.addClass("heaven");
-        $banner.addClass("heaven");
-        $other.addClass("heaven");
-        $listpopup.addClass("heaven");
-        $footer.addClass("heaven");
-
+        $body
+            .add($header)
+            .add($main)
+            .add($footer)
+            .add($banner)
+            .add($other)
+            .add($listpopup)
+            .removeClass("hell")
+            .addClass("heaven");
         localStorage.setItem("saveMode", "heaven");
     }
 });

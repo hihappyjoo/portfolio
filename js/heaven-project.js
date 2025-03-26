@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const $window = $(window);
-    const $header = $("header");
+    const $header = $("header.heaven");
 
     let lastScrollTop = 0;
 
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         on: {
             slideChange: function () {
-                const liEl = document.querySelectorAll(".heaven .web .info-list li");
+                const liEl = document.querySelectorAll(".heaven-only .web .info-list li");
                 liEl.forEach((item) => {
                     item.classList.remove("active");
                     setTimeout(() => {
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
-    const mainSwiper = new Swiper(".main-swiper", {
+    const mainSwiper = new Swiper("#banner.heaven .main-swiper", {
         direction: "horizontal",
         loop: true,
         autoplay: {
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
-    const subSwiper = new Swiper(".sub-swiper", {
+    const subSwiper = new Swiper("#banner.heaven .sub-swiper", {
         direction: "horizontal",
         loop: true,
         spaceBetween: 50,
@@ -101,9 +101,9 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
-    const $mainImg = $(".main-swiper .swiper-wrapper .swiper-slide figure img");
-    const $btnClose = $("#banner .sub-swiper-wrapper .btn-close");
-    const $subSwiper = $("#banner .sub-swiper-wrapper");
+    const $mainImg = $("#banner.heaven .main-swiper .swiper-wrapper .swiper-slide figure img");
+    const $btnClose = $("#banner.heaven .sub-swiper-wrapper .btn-close");
+    const $subSwiper = $("#banner.heaven .sub-swiper-wrapper");
 
     $btnClose.on("click", () => {
         $subSwiper.fadeOut();
@@ -133,9 +133,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const $processSrc = $(this).data("process");
 
         console.log($processSrc);
-        const $listpopup = $("#listpopup");
-        const $listpopupImg = $("#listpopup .inner figure");
-        const $listpopupClose = $("#listpopup .btn-close");
+        const $listpopup = $("#listpopup.heaven");
+        const $listpopupImg = $("#listpopup.heaven .inner figure");
+        const $listpopupClose = $("#listpopup.heaven .btn-close");
 
         $listpopup.fadeIn();
         $listpopup.css("display", "flex");
@@ -149,13 +149,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // e: listpopup
 
-    const otherSwiper = new Swiper(".other-swiper", {
+    const otherSwiper = new Swiper("#other.heaven .other-swiper", {
         direction: "horizontal",
         loop: true,
         autoplay: { delay: 0 },
         speed: 3000,
 
-        slidesPerView: 4,
+        slidesPerView: 3.5,
         spaceBetween: 10,
     });
 

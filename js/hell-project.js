@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const $window = $(window);
-    const $header = $("header");
+    const $header = $("header.hell");
 
     let lastScrollTop = 0;
 
@@ -52,7 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 200)
     );
 
-    const mainSwiper = new Swiper(".main-swiper", {
+    // 메인스와이퍼
+    const mainSwiper = new Swiper("#banner.hell .main-swiper", {
         direction: "horizontal",
         loop: true,
         spaceBetween: 20,
@@ -63,7 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
-    const subSwiper = new Swiper(".sub-swiper", {
+    // 서브스와이퍼
+    const subSwiper = new Swiper("#banner.hell .sub-swiper", {
         direction: "horizontal",
         loop: true,
         spaceBetween: 50,
@@ -74,33 +76,38 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     });
 
-    const otherSwiper = new Swiper(".other-swiper", {
+    // 아더스와이퍼
+    const otherSwiper = new Swiper(".hell .other-swiper", {
         direction: "horizontal",
         loop: true,
         autoplay: { delay: 0 },
         speed: 3000,
 
-        slidesPerView: 4,
+        slidesPerView: 3.5,
         spaceBetween: 10,
     });
 
-    const $worklistEl = $(" .works-wrap li");
-    const $stickyImg = $(".sticky figure");
-    const $btnProcess = $(".btn-process");
-    const $btnLink = $(".link-website");
-    const $listpopup = $("#listpopup");
-    const $listpopupImg = $("#listpopup .inner figure");
-    const $listpopupClose = $("#listpopup .btn-close");
+    // 스티키
+    const $worklistEl = $(".hell-only  .works-wrap li");
+    const $stickyImg = $(".hell-only .sticky figure");
+    const $btnProcess = $(".hell-only .btn-process");
+    const $btnLink = $(".hell-only .link-website");
+    const $listpopup = $("#listpopup.hell");
+    const $listpopupImg = $("#listpopup.hell .inner figure");
+    const $listpopupClose = $("#listpopup.hell .btn-close");
 
+    // 기본작동정지
     $btnLink.on("click", function (event) {
         event.preventDefault();
     });
 
+    // 리스트에 엑티브클래스부여
     function giveClass(item) {
         $worklistEl.removeClass("active");
         $(item).addClass("active");
     }
 
+    //포트폴리오액티브
     window.onload = function () {
         const hash = location.hash;
         if (hash) {
@@ -109,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
+    // 스티키정보값 펑션
     function worklistClick(item) {
         giveClass(item);
 
@@ -123,6 +131,24 @@ document.addEventListener("DOMContentLoaded", () => {
         $btnLink.off("click");
         $btnLink.attr("href", $linkSrc).attr("target", "_blank");
 
+        if ($(item).hasClass("nonpro")) {
+            $btnProcess.hide();
+        } else {
+            $btnProcess.show();
+        }
+
+        if ($(item).hasClass("nonweb")) {
+            $btnLink.hide();
+        } else {
+            $btnLink.show();
+        }
+
+        if ($(item).hasClass("figma")) {
+            $btnLink.text("FIGMA");
+        } else {
+            $btnLink.text("WEBSITE");
+        }
+
         $btnProcess.on("click", () => {
             $listpopup.fadeIn();
             $listpopup.css("display", "flex");
@@ -134,13 +160,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // 실행
     $worklistEl.on("click", function () {
         worklistClick(this);
     });
 
-    const $mainImg = $(".main-swiper .swiper-wrapper .swiper-slide figure img");
-
-    const $btnClose = $("#banner .sub-swiper-wrapper .btn-close");
+    // 메인-서브스와이퍼 연동
+    const $mainImg = $("#banner.hell .main-swiper .swiper-wrapper .swiper-slide figure img");
+    const $btnClose = $("#banner.hell .sub-swiper-wrapper .btn-close");
 
     $btnClose.on("click", () => {
         $subSwiper.fadeOut();
@@ -157,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
         subSwiper.slideToLoop(index, 500);
     }
 
-    const $subSwiper = $("#banner .sub-swiper-wrapper");
+    const $subSwiper = $("#banner.hell .sub-swiper-wrapper");
     function openPopup() {
         $subSwiper.fadeIn();
         console.log($mainImg);

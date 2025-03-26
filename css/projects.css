@@ -154,6 +154,10 @@ h2.hell-only {
     transition: 0.5s;
 }
 
+.hell-only .works-wrap .sections ol li:hover {
+    background: var(--white70p);
+}
+
 .hell-only .works-wrap .sections ol li.active {
     background: #fff;
 }
@@ -336,6 +340,8 @@ h2.hell-only {
     display: block;
     width: 34.5rem;
     height: 34.5rem;
+    background: var(--main-color-dark);
+    box-shadow: inset 0 0 32px var(--white90p);
 
     cursor: pointer;
 }
@@ -343,7 +349,6 @@ h2.hell-only {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background: var(--black50p);
 }
 
 #banner.hell .main-swiper-wrapper .swiper-scrollbar.swiper-scrollbar-horizontal {
@@ -365,7 +370,7 @@ h2.hell-only {
     top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 99;
+    z-index: 101;
 
     width: 65%;
     height: 75rem;
@@ -378,6 +383,10 @@ h2.hell-only {
     border-radius: 16px;
 
     display: none;
+}
+
+#banner.hell .sub-swiper-wrapper .swiper-wrapper {
+    height: calc(100% - 1.5rem);
 }
 
 #banner.hell .sub-swiper-wrapper .btn-close {
@@ -488,23 +497,11 @@ h2.hell-only {
 }
 
 #other.hell .other-swiper-wrapper {
-    display: flex;
-    justify-content: center;
-
     margin-top: 5rem;
-}
-
-#other.hell .other-swiper-wrapper .other-swiper {
-    width: 220rem;
-    overflow: visible;
 }
 
 #other.hell .other-swiper-wrapper .other-swiper .swiper-wrapper {
     transition-timing-function: linear;
-}
-
-#other.hell .other-swiper-wrapper .other-swiper .swiper-wrapper .swiper-slide {
-    aspect-ratio: 1;
 }
 
 #other.hell .other-swiper-wrapper .other-swiper .swiper-wrapper .swiper-slide img {
@@ -622,11 +619,15 @@ body.heaven h3::after {
 
 /* e: web app text 설정 */
 
-.heaven-only .web .buttons,
-.heaven-only .app .buttons {
+.heaven-only .web .buttons {
     display: flex;
     flex-direction: column;
     width: 22.2rem;
+    gap: 1.5rem;
+}
+
+.heaven-only .app .buttons {
+    display: flex;
     gap: 1.5rem;
 }
 
@@ -842,7 +843,15 @@ body.heaven h3::after {
 
     position: relative;
 
-    background: rgba(0, 0, 0, 0.5);
+    background: no-repeat 50% 50% / cover;
+}
+
+.heaven-only .micro-site ul li:nth-child(1) {
+    background-image: url(../img/heaven-micro-inside.jpg);
+}
+
+.heaven-only .micro-site ul li:nth-child(2) {
+    background-image: url(../img/heaven-micro-darkest.jpg);
 }
 
 .heaven-only .micro-site ul li .card {
@@ -1016,6 +1025,8 @@ body.heaven h3::after {
     display: block;
     width: 34.5rem;
     height: 34.5rem;
+    background: var(--main-color-dark);
+    box-shadow: inset 0 0 32px var(--white90p);
 
     cursor: pointer;
 }
@@ -1023,7 +1034,6 @@ body.heaven h3::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background: var(--black50p);
 }
 
 #banner.heaven .main-swiper-wrapper .swiper-scrollbar.swiper-scrollbar-horizontal {
@@ -1058,6 +1068,10 @@ body.heaven h3::after {
     border-radius: 16px;
 
     display: none;
+}
+
+#banner.heaven .sub-swiper-wrapper .swiper-wrapper {
+    height: calc(100% - 1.5rem);
 }
 
 #banner.heaven .sub-swiper-wrapper .btn-close {
@@ -1167,23 +1181,11 @@ body.heaven h3::after {
 }
 
 #other.heaven .other-swiper-wrapper {
-    display: flex;
-    justify-content: center;
-
     margin-top: 8rem;
-}
-
-#other.heaven .other-swiper-wrapper .other-swiper {
-    width: 220rem;
-    overflow: visible;
 }
 
 #other.heaven .other-swiper-wrapper .other-swiper .swiper-wrapper {
     transition-timing-function: linear;
-}
-
-#other.heaven .other-swiper-wrapper .other-swiper .swiper-wrapper .swiper-slide {
-    aspect-ratio: 1;
 }
 
 #other.heaven .other-swiper-wrapper .other-swiper .swiper-wrapper .swiper-slide img {
