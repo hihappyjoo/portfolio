@@ -225,6 +225,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     $megaMenu.removeClass("active");
                 }, 150);
             });
+
+            const $caution = $(".mega-menu .caution");
+            setTimeout(() => {
+                gsap.to($caution, { y: 100, autoAlpha: 1, duration: 1, ease: "bounce.out" });
+            }, 500);
         });
     }
 

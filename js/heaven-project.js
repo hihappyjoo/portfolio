@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // e: scroll header
 
-    const webSwiper = new Swiper(".web-swiper", {
+    const webSwiper = new Swiper(".heaven-only .web-swiper", {
         direction: "horizontal",
         loop: true,
 

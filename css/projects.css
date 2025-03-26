@@ -351,6 +351,19 @@ h2.hell-only {
     object-fit: cover;
 }
 
+#banner.hell .main-swiper-wrapper .main-swiper .swiper-slide figure p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: #fff;
+}
+
 #banner.hell .main-swiper-wrapper .swiper-scrollbar.swiper-scrollbar-horizontal {
     bottom: 3.5rem;
     left: calc((100% - 1440px) / 2);
@@ -1034,6 +1047,19 @@ body.heaven h3::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+#banner.heaven .main-swiper-wrapper .main-swiper .swiper-slide figure p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-weight: 700;
+    font-size: 3.2rem;
+    color: #fff;
 }
 
 #banner.heaven .main-swiper-wrapper .swiper-scrollbar.swiper-scrollbar-horizontal {

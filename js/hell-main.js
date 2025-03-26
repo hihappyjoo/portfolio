@@ -13,8 +13,6 @@ $(function () {
     const $skillMarquee = $(".hell-only .skill-marquee p");
     const $skillMarqueeWrap = $(".hell-only .skill-marquee-wrap");
 
-    console.log($modeChrome);
-
     const tl = gsap.timeline();
     const width = $hee.outerWidth() * 1.27;
 
@@ -48,6 +46,13 @@ $(function () {
         },
         "-=2"
     );
+    // e: intro animation
+
+    tl.from($modeChrome, { y: -15, x: 10, yoyo: true, repeat: -1, ease: "power1.inOut" }, "<");
+    tl.from($portChrome, { y: -30, yoyo: true, repeat: -1, duration: 1.5 }, "<");
+    tl.from($wandooChrome, { y: -10, yoyo: true, repeat: -1, duration: 1 }, "<");
+    tl.from($processChrome, { y: -10, yoyo: true, repeat: -1, duration: 1 }, "<");
+
     // e: gsap
 
     const $chrome = $(".chrome");

@@ -13,18 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // 페이지가 로딩되면 localStorage에 저장된 값을 가져와서 비교
     let saveModeValue = localStorage.getItem("saveMode");
 
-    // saveMode가 없으면 기본값을 "hell"로 설정
-    if (!saveModeValue) {
-        localStorage.setItem("saveMode", "hell");
-        saveModeValue = "hell";
-    }
-
-    console.log(saveModeValue);
-
-    if (saveModeValue === "hell") {
-        applyHell();
-    } else {
+    if (saveModeValue === "heaven") {
         applyHeaven();
+    } else {
+        applyHell();
     }
 
     // toggle을 클릭했을 때 동작

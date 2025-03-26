@@ -356,6 +356,8 @@ footer.hell .update {
     color: #fff;
 }
 
+/* s: MEGAMENU */
+
 body.hell .mega-menu {
     position: fixed;
     top: 0;
@@ -372,6 +374,55 @@ body.hell .mega-menu {
 
 body.hell .mega-menu.active {
     right: 0;
+}
+
+body.hell .mega-menu .caution {
+    position: absolute;
+    top: -5rem;
+    left: 7rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    gap: 3rem;
+
+    background: yellow;
+
+    box-shadow: 0 4px 8px var(--black50p);
+
+    opacity: 0;
+}
+
+body.hell .mega-menu .caution dl:nth-child(1) {
+    font-weight: 900;
+    font-size: 7.2rem;
+    line-height: 1.2;
+    color: red;
+}
+body.hell .mega-menu .caution dl:nth-child(1) dd {
+    font-size: 3.2rem;
+}
+
+body.hell .mega-menu .caution dl:nth-child(2) {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.2;
+
+    color: #000;
+}
+
+body.hell .mega-menu .caution dl:nth-child(2) dt {
+    letter-spacing: 2.5rem;
+}
+
+body.hell .mega-menu .caution dl:nth-child(2) dd {
+    font-size: 2rem;
+}
+
+body.hell .mega-menu .caution dl:nth-child(2) dd p + p {
+    font-weight: 500;
+    margin-top: 2rem;
 }
 
 body.hell #text-container {
