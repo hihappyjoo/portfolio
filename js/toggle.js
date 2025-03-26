@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // 페이지가 로딩되면 localStorage에 저장된 값을 가져와서 비교
     let saveModeValue = localStorage.getItem("saveMode");
 
+    // saveModeValue가 null인 경우 기본값을 "hell"로 설정
+    if (!saveModeValue) {
+        localStorage.setItem("saveMode", "hell");
+        saveModeValue = "hell";
+    }
+
     if (saveModeValue === "heaven") {
         applyHeaven();
     } else {
