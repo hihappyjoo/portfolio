@@ -110,7 +110,7 @@ header nav {
     display: block;
     width: 7rem;
     height: 7rem;
-    background: #000 url() 50% 50% / contain;
+    /* background: #000 url() 50% 50% / contain; */
 }
 
 footer {
@@ -442,7 +442,6 @@ body.hell .text-element.logo a {
     display: block;
     width: 7rem;
     height: 7rem;
-    background: #000 url() 50% 50% / contain;
 }
 
 body.hell .text-element.btn-close > button {
