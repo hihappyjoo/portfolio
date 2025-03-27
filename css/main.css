@@ -222,6 +222,10 @@ body.hell {
     border-radius: 5rem;
 }
 
+.hell-only .popup .popup-text dl dt {
+    min-width: 15rem;
+}
+
 .hell-only .popup .popup-text dl .dd-wrap {
     display: flex;
     flex-wrap: wrap;
