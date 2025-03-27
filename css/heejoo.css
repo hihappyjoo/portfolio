@@ -360,7 +360,7 @@ footer.hell .mode-wrap #mode + label {
         "portrait portrait portrait strength1"
         "portrait portrait portrait strength2"
         "portrait portrait portrait strength3";
-    gap: 1.5rem 2rem;
+    gap: 1.5rem;
 
     justify-content: center;
     align-content: center;
