@@ -161,10 +161,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // e: other swiper
 
-    window.onload = function () {
-        const hash = location.hash;
-        if (hash) {
-            webSwiper.slideToLoop(4, 500);
-        }
-    };
+    const hash = location.hash;
+    console.log(hash);
+
+    if (hash) {
+        webSwiper.slideToLoop(4, 500);
+    }
 });

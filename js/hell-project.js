@@ -96,25 +96,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const $listpopupImg = $("#listpopup.hell .inner figure");
     const $listpopupClose = $("#listpopup.hell .btn-close");
 
-    // 기본작동정지
-    $btnLink.on("click", function (event) {
-        event.preventDefault();
-    });
+    //포트폴리오액티브
+    const hash = location.hash;
+
+    if (hash) {
+        giveClass(hash);
+        worklistClick(hash);
+    } else {
+        giveClass($worklistEl[0]);
+        worklistClick($worklistEl[0]);
+    }
 
     // 리스트에 엑티브클래스부여
     function giveClass(item) {
         $worklistEl.removeClass("active");
         $(item).addClass("active");
     }
-
-    //포트폴리오액티브
-    window.onload = function () {
-        const hash = location.hash;
-        if (hash) {
-            giveClass(hash);
-            worklistClick(hash);
-        }
-    };
 
     // 스티키정보값 펑션
     function worklistClick(item) {

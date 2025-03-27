@@ -14,11 +14,11 @@ $(function () {
     const $skillMarqueeWrap = $(".hell-only .skill-marquee-wrap");
 
     const tl = gsap.timeline();
-    const width = $hee.outerWidth() * 1.27;
+    const width = $hee.outerWidth() * 1.29;
 
-    tl.from($body, { backgroundColor: "#fff", duration: 4, ease: "power2.in" });
-    tl.from($hee, { x: width + "px", duration: 4, ease: "power2.in" }, "<");
-    tl.from($joo, { x: width + "px", duration: 4, ease: "power2.in" }, "-=3.3");
+    tl.from($body, { backgroundColor: "#fff", duration: 3, ease: "power2.in" });
+    tl.from($hee, { x: width + "px", duration: 3, ease: "power2.in" }, "<");
+    tl.from($joo, { x: width + "px", duration: 3, ease: "power2.in" }, "-=2.5");
     tl.from($skillMarqueeWrap, { autoAlpha: 0 });
     tl.from($heeChrome, { x: 500, duration: 2, ease: "elastic.out(1,0.1.5)" }, "-=1.5");
     tl.from($jooChrome, { x: 500, duration: 2, ease: "elastic.out(1,0.1.5)" }, "-=1.2");
