@@ -127,7 +127,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // e: banner swiper
 
-    const $btnProcess = $(".btn-process");
+
+    const $btnOnpro = $(".heaven-only .buttons.onprogress");
+    const $btnProcess = $(".heaven-only .btn-process");
 
     $btnProcess.on("click", function () {
         const $processSrc = $(this).data("process");
@@ -146,6 +148,11 @@ document.addEventListener("DOMContentLoaded", () => {
             $listpopup.fadeOut();
         });
     });
+
+     $btnOnpro.find(".link-website").on("click", function (e) {
+       e.preventDefault();
+    });
+    $btnOnpro.find(".btn-process").off("click");
 
     // e: listpopup
 

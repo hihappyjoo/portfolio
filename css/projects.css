@@ -144,6 +144,36 @@ h2.hell-only {
     filter: brightness(0) invert(1);
 }
 
+.hell-only .works-wrap .sticky .buttons.onprogress * {
+    background: #eee;
+    box-shadow: none;
+    border: 2px solid #ddd;
+
+    cursor: default;
+}
+
+.hell-only .works-wrap .sticky .buttons.onprogress *::before {
+    filter: brightness(0) invert(0.4);
+}
+
+.hell-only .works-wrap .sticky .buttons.onprogress *:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0;
+    padding: 1.2rem 3rem;
+    gap: 0.7rem;
+    color: var(--text-color);
+}
+
+.hell-only .works-wrap .sticky .buttons.onprogress *::after{
+    display: none;
+}
+
+.hell-only .works-wrap .sticky .buttons.onprogress *:hover::after {
+    display: none;
+}
+
 /* e:sticky */
 
 .hell-only .works-wrap .sections ol {
@@ -723,6 +753,36 @@ body.heaven h3::after {
     filter: brightness(0) invert(1);
 }
 
+.heaven-only  .buttons.onprogress * {
+    background: #eee;
+    box-shadow: none;
+    border: 2px solid #ddd;
+
+    cursor: default;
+}
+
+.heaven-only  .buttons.onprogress *::before {
+    filter: brightness(0) invert(0.4);
+}
+
+.heaven-only  .buttons.onprogress *:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0;
+    padding: 1.2rem 3rem;
+    gap: 0.7rem;
+    color: var(--text-color);
+}
+
+.heaven-only  .buttons.onprogress *::after{
+    display: none;
+}
+
+.heaven-only  .buttons.onprogress *:hover::after {
+    display: none;
+}
+
 /* e: button 공통설정 */
 
 .heaven-only .web {
@@ -768,6 +828,8 @@ body.heaven h3::after {
     opacity: 1;
 }
 
+
+
 .heaven-only .web .info .web-swiper-wrap {
     display: flex;
     flex-direction: column;
@@ -783,13 +845,15 @@ body.heaven h3::after {
 }
 
 .heaven-only .web .info .web-swiper-wrap .web-swiper .swiper-slide {
-    border-radius: 16px;
-    overflow: hidden;
+    padding: 16px;
 }
 
 .heaven-only .web .info .web-swiper-wrap .web-swiper figure {
     width: 100%;
     height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px var(--black30p);
 }
 
 .heaven-only .web .info .web-swiper-wrap .swiper-pagination {

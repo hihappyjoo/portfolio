@@ -90,6 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 스티키
     const $worklistEl = $(".hell-only  .works-wrap li");
     const $stickyImg = $(".hell-only .sticky figure");
+    const $stickyBtns = $(".hell-only .sticky .buttons")
     const $btnProcess = $(".hell-only .btn-process");
     const $btnLink = $(".hell-only .link-website");
     const $listpopup = $("#listpopup.hell");
@@ -142,19 +143,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if ($(item).hasClass("figma")) {
             $btnLink.text("FIGMA");
-        } else {
+        } else if ($(item).hasClass("micros")) {
+            $btnLink.text("MICROSITE");
+        }
+        else {
             $btnLink.text("WEBSITE");
         }
 
-        $btnProcess.on("click", () => {
-            $listpopup.fadeIn();
-            $listpopup.css("display", "flex");
-            $listpopupImg.html(`<img src="${$processSrc}" alt="${$titleSrc}" />`);
-            $listpopupImg.find("img").show();
-        });
-        $listpopupClose.on("click", () => {
-            $listpopup.fadeOut();
-        });
+        if ($(item).hasClass("onprogress")) {
+            $stickyBtns.addClass("onprogress");
+
+            // 버튼과 링크의 기본 동작 정지
+            $btnLink.on("click.prevent", function (e) {
+                e.preventDefault();
+            });
+            $btnProcess.off("click")
+
+        } else {
+            $stickyBtns.removeClass("onprogress");
+
+            // 버튼과 링크의 기본 동작 복원
+            $btnLink.find("button, a").off("click.prevent");
+            $btnProcess.on("click", () => {
+                $listpopup.fadeIn();
+                $listpopup.css("display", "flex");
+                $listpopupImg.html(`<img src="${$processSrc}" alt="${$titleSrc}" />`);
+                $listpopupImg.find("img").show();
+            });
+            $listpopupClose.on("click", () => {
+                $listpopup.fadeOut();
+            });
+        }
     }
 
     // 실행
