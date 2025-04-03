@@ -897,6 +897,7 @@ body.heaven h3::after {
     height: 75rem;
     border-radius: 16px;
     overflow: hidden;
+    box-shadow: 0 4px 8px var(--black30p);
 }
 
 .heaven-only .app .info .info-con {
@@ -1009,6 +1010,8 @@ body.heaven h3::after {
 }
 
 .heaven-only .micro-site ul li .popup p {
+    font-size: 2rem;
+    color: #fff;
     text-align: center;
 }
 
